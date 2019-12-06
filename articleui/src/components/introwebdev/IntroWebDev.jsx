@@ -4,7 +4,9 @@ import {
     Section,
     List,
     ListItem,
-    CodeSnip
+    CodeSnip,
+    SubSection,
+    Code
 } from '../compstore';
 
 import {Badge, Card, CardDeck} from 'react-bootstrap';
@@ -20,19 +22,46 @@ export default function IntroWebDev(props) {
                 A guide to the resources needed to get started.
             </h4>
             <TableOfContents>
-                <Section link="starting" label="Getting Started" badge={{variant: "warning", text: "Both"}}>
+                <Section link="starting" label="Getting Started" badge={<Badge
+                    variant="warning">Full</Badge>}>
                     <p>
                         Web development can mean a lot of different things. It's important to have a clear learning
                         goal. For example if you are interested in user interface or front end design its best to learn
-                        HTML and CSS first than migrate to JS for interactive web pages. This tutorial will cover three
-                        topics Front End Development, Backend Development, and Full Stack development (both frontend and
-                        backend). Every section will be labeled either <Badge variant="primary">Front</Badge>, <Badge
+                        HTML and CSS first than migrate to JS for interactive web pages. Or if you are interested in
+                        creating complex interactive applications then backend may be a good place to start. This
+                        tutorial will cover three topics Front End Development, Backend Development, and Full Stack
+                        development (both frontend and backend). Every section will be labeled either <Badge
+                        variant="primary">Front</Badge>, <Badge
                         variant="success">Back</Badge> or <Badge variant="warning">Both</Badge>. Based on what your goal
                         is you can choose to read the relevant sections.
                     </p>
+                    <p>
+                        This tutorial is to give you an flavor of web development and link to resources to expand your
+                        knowledge. It provides a brief overview so you cn start connecting to pieces to understand how a
+                        web page is constructed.
+                    </p>
+                    <p>
+                        Here are a few key tips to help you succeed:
+                        <ul>
+                            <li>Programming is difficult, you can't expect to pick it up in only a few hours. It will
+                                require practice and time.
+                            </li>
+                            <li>Google is a programmers best friend. Learning how to Google effectively is a skill.
+                                Checkout my tutorial on how to Google on the left.
+                            </li>
+                            <li>For frontend find simple website and try to remake them. Don't worry about interaction
+                                or colors at the start, try to replicate the structure and move up from there.
+                            </li>
+                            <li>Having a project to motivate you work is key. Check out the project ideas below.</li>
+                            <li>If you start with web development and aren't sure you like it try exploring Python. It
+                                allows you to dive into the code faster without needing to learn as much syntax. I'll be
+                                making a tutorial soon.
+                            </li>
+                        </ul>
+                    </p>
                 </Section>
                 <Section link="ides" label="Interactive Developer Environment (IDEs)"
-                         badge={{variant: "warning", text: "Both"}}>
+                         badge={<Badge variant="warning">Full</Badge>}>
                     <p>
                         IDEs are applications used for editing code. They improve over simple text editors by adding
                         shortcuts, template, or other features that make writing code easier. Finding the right IDE
@@ -56,7 +85,8 @@ export default function IntroWebDev(props) {
                         </ListItem>
                     </List>
                 </Section>
-                <Section link="basichtml" label="Basic HTML Elements" badge={{variant: "primary", text: "Front"}}>
+                <Section link="basichtml" label="Basic HTML Elements" badge={<Badge
+                    variant="primary">Front</Badge>}>
                     <p>
                         HTML is a language for displaying items in a certain order on screen. HTML has many different
                         components for displaying various items. HTML can be thought of as the skeleton of the web page.
@@ -116,7 +146,8 @@ export default function IntroWebDev(props) {
                     </p>
 
                 </Section>
-                <Section link="basiccss" label="Basic CSS" badge={{variant: "primary", text: "Front"}}>
+                <Section link="basiccss" label="Basic CSS" badge={<Badge
+                    variant="primary">Front</Badge>}>
                     <p>
                         CSS is used to decorate the page. Changing the font color, size, background color, and borders
                         are all done through CSS. To apply a CSS property to an element you use the following syntax for
@@ -247,6 +278,103 @@ export default function IntroWebDev(props) {
                             <div style={{backgroundColor: "darkblue", color: "white"}}>18px text</div>
                         </CodeSnip.Snip>
                     </CardDeck>
+                </Section>
+                <Section link={"basicjs"} label={"Basic Javascript"} badge={<Badge
+                    variant="success">Back</Badge>}>
+                    <p>
+                        Javascript is the programming language that allows users to interact with a web page. When a
+                        user clicks on a button the events that follow are programmed in Javascript.
+                        Javascript has the same main components of other popular programming languages like C, Java, and
+                        Python. The best way to improve at programming in general is practice. It is no different for
+                        Javascript.
+                    </p>
+                    <p>
+                        Below are important concepts to understand Javascript.
+                    </p>
+                    <SubSection link={"basicjsvariables"} label={"Variables"}>
+                        Variables are how data is stored. You can define variables
+                        using <code>let</code>, <code>var</code>, or <code>const</code>. <code>let</code> defines a
+                        local variable only defined in the scope of the current block. <code>var</code> defines a
+                        variable accessible within the entire function. <code>const</code> defines a variable that
+                        cannot change and is usually denoted in an all upper case variable name.
+                        <Code.Wrapper>
+                            <Code.Title>
+                                Example Variable Initialization (Creation):
+                            </Code.Title>
+                            <Code.Code>
+                                <Code.Line>
+                                    let numberOfDogs = 10;
+                                </Code.Line>
+                                <Code.Line>
+                                    var numberOfCats = 10;
+                                </Code.Line>
+                                <Code.Line>
+                                    const NUMBER_OF_ANIMALS = 20;
+                                </Code.Line>
+                            </Code.Code>
+                        </Code.Wrapper>
+                    </SubSection>
+                    <SubSection link={'basicjsfunctions'} label={"Functions"}>
+                        <p>
+                            Functions are used to perform specific tasks. A example function could be one that displays
+                            "Hello World" to the user. Every function has input values, called parameters, and most have
+                            output values.
+                            Parameters are values given to the function so it can perform a calculation. Once the
+                            function is complete it returns the calculated value. Functions are used on tasks repeated
+                            often to reduce writing the same code more than once.
+                        </p>
+
+                        <p>
+                            <Code.Wrapper>
+                                <Code.Title>
+                                    Defining a Function
+                                </Code.Title>
+                                <Code.Code>
+                                    <Code.Line>
+                                        function addOne(number) &#123;
+                                    </Code.Line>
+                                    <Code.Line>
+                                        {`  return number + 1;`}
+                                    </Code.Line>
+                                    <Code.Line>
+                                        &#125;
+                                    </Code.Line>
+                                </Code.Code>
+                                <Code.Description>
+                                    The function is named addOne. It takes a parameter number and returns the number
+                                    plus 1.
+                                    This function assumes the input value is a number.
+                                </Code.Description>
+                            </Code.Wrapper>
+                        </p>
+                        <p>
+                            Running a function is referred to as Calling a function. If I said I called addOne it means
+                            I am running the function with a specified variable.
+                        </p>
+                        <p>
+                            <Code.Wrapper>
+                                <Code.Title>
+                                    Calling a Function
+                                </Code.Title>
+                                <Code.Code>
+                                    <Code.Line>
+                                        addOne(5)
+                                    </Code.Line>
+                                </Code.Code>
+                                <Code.Description>
+                                    This code calls function addOne with the parameter 5. When the function is run the
+                                    parameter 5 is assigned to number. The function adds 1 to number then returns it.
+                                </Code.Description>
+                            </Code.Wrapper>
+                        </p>
+                    </SubSection>
+
+                   <SubSection link={"basicjsloops"} label={"Loops"}>
+
+                   </SubSection>
+                </Section>
+                <Section link="beginner" label="Beginner Projects" badge={<Badge variant={"warning"}>Full</Badge>}>
+
                 </Section>
             </TableOfContents>
         </div>

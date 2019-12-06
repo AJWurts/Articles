@@ -17,7 +17,9 @@ function List(props) {
         <Nav defaultActiveKey="/" className="flex-column">
             {children ? children.map((child, index) => {
                 return (
-                    <Nav.Link key={index} href={'#' + child.props.link} target={props.newPage ? "_blank" : ""}>{props.noNumbers ? "" : index + 1 + "."} {child.props.label || child.props.children}</Nav.Link>
+                    <Nav.Link key={index} href={'#' + child.props.link} target={props.newPage ? "_blank" : ""}>
+                        {props.noNumbers ? "" : index + 1 + "."} {child.props.label || child.props.children} {child.props.badge}
+                    </Nav.Link>
                 )
             }) : null}
         </Nav>

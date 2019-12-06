@@ -25,7 +25,17 @@ function Example(props) {
     );
 }
 
+function Result(props) {
+    return (
+        <div>
+            <b>Result:</b> <br/>
+            {props.children}
+        </div>
+    )
+}
+
 export default {
     Snip,
-    Example
+    Example,
+    Result
 }

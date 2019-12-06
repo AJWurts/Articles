@@ -61,10 +61,7 @@ body {
     background-color: white;
   }
   
-  .topbar-link:first {
-    border-radius: 8px;
-    
-  }
+
   
   .topbar-link:hover {
     background-color: rgb(92, 92, 92);
@@ -76,7 +73,11 @@ body {
   .topbar-link-instalogo:hover {
     background-color: rgb(241, 241, 241);
   }
-  
+
+  .sidebar-item:hover {
+    background-color: #d3d3d3;
+    cursor: pointer;
+  }
   
   
   .front-picture {

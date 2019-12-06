@@ -27,7 +27,7 @@ function App() {
 
 
     return (
-        <div className="App">
+        <div className="App" style={{backgroundColor: "white"}}>
             <NavBar/>
             <div style={{display: "flex", maxWidth: '1000px', marginLeft: "auto", marginRight: 'auto'}}>
                 <SideBar.Wrapper style={{minWidth: "150px", maxWidth: "250px"}}>

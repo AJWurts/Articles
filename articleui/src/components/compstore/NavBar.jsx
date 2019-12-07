@@ -15,13 +15,13 @@ export default function NavBar(props) {
                     
                     </div>
                     <div className='topbar-buttons flex'>
-                        <div className='topbar-link' onClick={()=> window.location.href="#biography"}>
+                        <div className='topbar-link' onClick={()=> window.location.href="http://www.alexwurts.com/#biography"}>
                             About Me
                         </div>
-                        <div className='topbar-link' onClick={() => window.location.href="#projects"}>
+                        <div className='topbar-link' onClick={() => window.location.href="http://www.alexwurts.com/#projects"}>
                             Projects
                         </div>
-                        <div className='topbar-link' onClick={() => window.location.href="#experience"}>
+                        <div className='topbar-link' onClick={() => window.location.href="http://www.alexwurts.com/#experience"}>
                             Experience
                         </div>
                         <div className='topbar-link-instalogo topbar-link' style={{ padding: "6px 10px 7px 10px" }}

@@ -21,13 +21,18 @@ export default function IntroWebDev(props) {
             <h4>
                 A minimal guide to get started.
             </h4>
+            <p>
+                If you have any questions, comments, or think there is an error please email me at
+                <b> alexwurtsfeedback@gmail.com</b>.
+            </p>
             <TableOfContents>
                 <Section link="starting" label="Getting Started" badge={<><span><Badge
                     variant="primary">Front</Badge></span><span><Badge variant="success">Back</Badge></span></>}>
                     <p>
                         Web development can mean a lot of different things. It's important to have a clear learning
-                        goal. For example if you are interested in user interface or front end design it's best to learn
-                        HTML and CSS first than migrate to JS for interactive web pages. Or if you are interested in
+                        goal. For example if you are interested in user interfaces or front end design it's best to
+                        learn
+                        HTML and CSS first than move to JS for interactive web pages. If you are interested in
                         creating interactive applications, or programming the site logic then backend may be a good
                         place to start. This
                         tutorial will cover three topics Front End Development, Backend Development, and Full Stack
@@ -61,6 +66,32 @@ export default function IntroWebDev(props) {
                         </ul>
                     </p>
                 </Section>
+                <Section link={"resources"} label={"Learning Resources"} badge={<><span><Badge
+                    variant="primary">Front</Badge></span><span><Badge variant="success">Back</Badge></span></>}>
+                    <p>
+                        There are a lot of good resources for learning, but some are better than others. Here are my
+                        personal favorites:
+                        <ul>
+                            <li><a href={"https://developer.mozilla.org/en-US/"}>Mozilla Web Docs</a> - Long but
+                                thorough tutorials for CSS and HTML
+                            </li>
+                            <li><a href={"https://www.w3schools.com/"}>w3schools</a> - Good for reference, but I
+                                wouldn't recommend the tutorials. They are repetitive and too easy to learn anything.
+                            </li>
+                            <li><a href={"https://stackoverflow.com/"}>Stackoverflow</a> - Has an answer to every
+                                question,if you know how to word your google search.
+                            </li>
+                            <li><a href={"https://javascript.info/"}>Javascript.Info</a> - Very comprehensive tutorial
+                                on JS. Can be overwhelming at the start.
+                            </li>
+                            <li><a href={"https://www.amazon.com/dp/1118907442/ref=cm_sw_em_r_mt_dp_U_tsW6DbD71567R"}>HTML,
+                                CSS, JS, and JQuery</a> - If you are willing to spend a few bucks these books are a
+                                great
+                                reference. I have them sitting on my desk.
+                            </li>
+                        </ul>
+                    </p>
+                </Section>
                 <Section link="ides" label="Interactive Developer Environment (IDEs)"
                          badge={<><span><Badge
                              variant="primary">Front</Badge></span><span><Badge
@@ -74,7 +105,6 @@ export default function IntroWebDev(props) {
                         Here are a list of IDEs that I recommend. I personally use Visual Studio code because it works
                         well with Javascript and Python, my two main languages.
                     </p>
-
                     <List newPage={true}>
                         <ListItem link="https://code.visualstudio.com/">
                             Visual Studio Code - Great for Front and Backend Development. Good for beginners.
@@ -83,7 +113,7 @@ export default function IntroWebDev(props) {
                             WebStorm - Aimed more at backend development. $59/year
                         </ListItem>
                         <ListItem link="https://atom.io/">
-                            Atom -
+                            Atom - Light weight but powerful.
                         </ListItem>
                     </List>
                 </Section>
@@ -93,30 +123,32 @@ export default function IntroWebDev(props) {
                              variant="success">Back</Badge></span></>}>
                     <p>
                         For frontend development download <a
-                        href={"https://github.com/AJWurts/Articles/blob/master/articleui/src/components/introwebdev/index.html"}>this</a> template
+                        href={"https://github.com/AJWurts/Articles/blob/master/articleui/src/components/introwebdev/introfronttemplate.html"}>this</a> template
                         file. Then you can open the file in any browser by double clicking it.
                     </p>
                     <p>
                         For backend development there are two main approaches. If you want to write scripts you can
                         install and use <a href={"https://nodejs.org/en/"}>Node</a> or you can embed scripts in an html
                         file. To print a variable or string inside an HTML file you can
-                        use <code>console.log(variable)</code>. Hers is a s
-                        I recommend embedding text in a browser to start, then move to Node if you want to do more
-                        complex projects that don't require a browser.
+                        use <code>console.log(variable)</code>. Here is a <a href="html">template file</a> to start
+                        with. Open it in your favorite browser.
+                        I recommend writing scripts in your browser to start, then move to Node if you want to do more
+                        complex projects that doesn't require a browser.
                     </p>
                 </Section>
                 <Section link="basichtml" label="Basic HTML Elements" badge={<Badge
                     variant="primary">Front</Badge>}>
                     <p>
-                        HTML is a language for displaying items in a certain order on screen. HTML has many different
-                        components for displaying various items. HTML can be thought of as the skeleton of the web page.
+                        HTML is a language for displaying items in a certain configuration on screen. HTML has many
+                        different
+                        components for displaying items. HTML can be thought of as the skeleton of the web page.
                         It defines the layout and then CSS adds style and coloring. HTML consists of a hierarchy of
-                        elements where each element has a set of children. The children are contained with in the parent
+                        elements where each element has a set of children. The children are contained within the parent
                         element. The children can either be text, or other elements.
                     </p>
                     <p>
                         All HTML elements can have attributes which change or add features to the element. For example
-                        the button element can have a <code>onclick</code> attribute to determine how the page should
+                        the button element can have an <code>onclick</code> attribute to determine how the page should
                         react when clicked.
                     </p>
                     <Code.Wrapper>
@@ -138,15 +170,16 @@ export default function IntroWebDev(props) {
                         A complete list of elements is available at <a
                         href={"https://developer.mozilla.org/en-US/docs/Web/HTML/Element"}>Mozilla MDN Web Docs</a>.
                         <CardDeck noNumbers={true}>
-                            <CodeSnip.Snip title={"<div></div>"} subtitle={"div tag"}>
+                            <CodeSnip.Snip title={"<div></div>"} subtitle={"Div"}>
                                 Used for placing items vertically on a screen. A div tag takes up the entire screen
                                 from left to right. Items are placed inside
                             </CodeSnip.Snip>
-                            <CodeSnip.Snip title={"<span></span>"} subtitle={"span tag"}>
-                                Used for placing items next to each other as opposed to on top of each other.
+                            <CodeSnip.Snip title={"<span></span>"} subtitle={"Span"}>
+                                Used for placing items next to each other as opposed to on top of each other. Spans is
+                                an inline element which means it doesn't create a new line.
                             </CodeSnip.Snip>
-                            <CodeSnip.Snip title={"<a></a>"} subtitle={"Link Tag"}>
-                                Used for linking to other pages.
+                            <CodeSnip.Snip title={"<a></a>"} subtitle={"Anchor (Link)"}>
+                                Used for linking to other pages. Inline element.
                                 <CodeSnip.Example>
                                     {`<a href="'http://otherpage.com"> link text </a>`}
                                 </CodeSnip.Example>
@@ -155,7 +188,7 @@ export default function IntroWebDev(props) {
                         <CardDeck>
                             <CodeSnip.Snip title={"<h1></h1>"} subtitle={"Header "}>
                                 Headers are defined with h1 down to h5 the larger the number the smaller the text.
-                                On this page the text "Welcome to Intro Web Dev" uses the h1 tag.
+                                On this page the text "Welcome to Intro to Web Dev" uses the h1 tag.
                                 <CodeSnip.Example>
                                     {`<h1> Main Page Title </h1>`}
                                 </CodeSnip.Example>
@@ -174,11 +207,11 @@ export default function IntroWebDev(props) {
                             </CodeSnip.Snip>
                             <CodeSnip.Snip title={"<head></head>"} subtitle={"Head "}>
                                 All imports and other page data is stored here or used to import other libraries into
-                                the web page. The font this web page uses is Roboto. It is downloaded from Google every
-                                time the page is loaded.
+                                the web page. The font this web page uses is Roboto. It is imported in the head.
                             </CodeSnip.Snip>
                             <CodeSnip.Snip title={"<p></p>"} subtitle={"Paragraph "}>
-                                A paragraph tag is used for adding space between paragraphs.
+                                A paragraph tag is used to define a section of text.
+                                It automatically adds space above and below the paragraph.
                                 <CodeSnip.Example>
                                     {`<p > Paragraph Text Here </p>`}
                                 </CodeSnip.Example>
@@ -187,7 +220,7 @@ export default function IntroWebDev(props) {
                         <CardDeck>
 
                             <CodeSnip.Snip title={"<input></input>"} subtitle={"Input "}>
-                                Adds an entry box that a user can type into.
+                                Creates an entry box that a user can type into.
                                 <CodeSnip.Example>
                                     {`<input type="text"></input>`}
                                 </CodeSnip.Example>
@@ -212,7 +245,7 @@ export default function IntroWebDev(props) {
                         <CardDeck>
 
                             <CodeSnip.Snip title={"<ul></ul>"} subtitle={"Un-ordered List "}>
-                                A list with dots infront.
+                                A list with dots.
                                 <CodeSnip.Example>
                                     {`<ul>...</ul>`}
                                 </CodeSnip.Example>
@@ -223,7 +256,8 @@ export default function IntroWebDev(props) {
                                 </CodeSnip.Result>
                             </CodeSnip.Snip>
                             <CodeSnip.Snip title={"<li></li>"} subtitle={"List Item "}>
-                                Add an item to the list. Add text in the middle. These elements need to be placed within <code>{`<ol></ol>`}</code> or <code>{`<ul></ul>`}</code>.
+                                An item in a list. This elements need to be placed
+                                within <code>{`<ol></ol>`}</code> or <code>{`<ul></ul>`}</code>.
                                 <CodeSnip.Example>
                                     <Code.Line>
                                         {`<ul>`}
@@ -260,19 +294,32 @@ export default function IntroWebDev(props) {
                     <p>
                         CSS is used to decorate the page. Changing the font color, size, background color, and borders
                         are all done through CSS. To apply a CSS property to an element you use the following syntax for
-                        in-line css: <br/>
-                        <code>{`<div style="tagname: tagvalue" >text </div>`}</code> <br/>
+                        in-line css:
+                    </p>
+                    <p>
+                        <code>{`<div style="tagname: tagvalue" >text </div>`}</code>
+                    </p>
+                    <p>
                         However in-line should be avoided as it can become difficult to modify, maintain and use for
                         more than one element. The better way is be creating a new .css file and defining CSS classes. A
                         CSS Class is a set of properties that can be applied to an HTML object using the class option:
-                        <br/>
+                    </p>
+                    <p>
                         <code> {`<div class="title">title text</div>`}</code>
-                        <br/>
-                        An attached file styles.css will have the following format for the title class:
-                        <br/>
+                    </p>
+
+                    <p>
+                        An attached styles.css file will have the following format for the title class:
+                    </p>
+                    <p>
                         <Code.Wrapper>
                             <Code.Code>
                                 <Code.Line>.title {`{`}</Code.Line>
+                                <Code.Line tabs={1}> color: red;</Code.Line>
+                                <Code.Line tabs={1}> background-color: black; </Code.Line>
+                                <Code.Line>}</Code.Line>
+                                <Code.Line>p {`{`} // Used to stylize all of one HTML element, in this case
+                                    all <code>p</code>.</Code.Line>
                                 <Code.Line tabs={1}> color: red;</Code.Line>
                                 <Code.Line tabs={1}> background-color: black; </Code.Line>
                                 <Code.Line>}</Code.Line>
@@ -289,11 +336,13 @@ export default function IntroWebDev(props) {
                             Changes the text color. Web color is based on the RGB color palette. The colors are Red,
                             Green, and Blue respectively and referred to as color channels. Their values are always
                             between 0 and 255. The ratio of the three colors defines the final color. The simplest way
-                            to choose a color is using a build in color like, red, white, black, gray, light gray and so
-                            on. A complete list of built in colors can be seen <a target="_blank"
-                                                                                  href="http://www.colors.commutercreative.com/grid/">here</a>.
-                            Another way to specify colors is rgb(30, 40, 50) where each number corresponds to the
-                            respective color channel. White in this format is rgb(255, 255, 255). Black is rgb(0, 0, 0).
+                            to choose a color is using built in colors like, red, white, black, gray, teal, and so
+                            on. A complete list of built in colors is available <a target="_blank"
+                                                                                   href="http://www.colors.commutercreative.com/grid/">here</a>.
+                            Another way to specify colors is <code>rgb(30, 40, 50)</code> where each number corresponds
+                            to the
+                            respective color channel. White in this format is <code>rgb(255, 255, 255)</code>. Black
+                            is <code>rgb(0, 0, 0)</code>.
                             <CodeSnip.Example>
                                 {`<div style="color: rgb(100, 100, 200)"> Purple Text </div>`}
 
@@ -302,38 +351,12 @@ export default function IntroWebDev(props) {
                             <div style={{color: "rgb(100, 100, 200)"}}>Purple Text</div>
                         </CodeSnip.Snip>
                     </CardDeck>
-                    <CardDeck>
-                        <CodeSnip.Snip title={"font-size"} subtitle={"Font Size"}>
-                            Changes the text size. The most common unit to use is px for pixels. Normal text sizes are
-                            between 12 for paragraphs of text to 40 for large titles.
-                            <CodeSnip.Example>
-                                {`<div style="font-size: 18px"> 18px text</div>`}
-                            </CodeSnip.Example>
-                            <b>Result:</b>
-                            <div style={{fontSize: "18px"}}>18px text</div>
-                        </CodeSnip.Snip>
-                        <CodeSnip.Snip title={"background-color"} subtitle={"Element Background Color"}>
-                            Sets the background color. In the following example the background is set to Dark Blue and
-                            the text is set to white to remain readable.
-                            <CodeSnip.Example>
-                                {`<div style="background-color: darkblue; color: white"> </div>`}
-                            </CodeSnip.Example>
-                            <b>Result:</b>
-                            <div style={{backgroundColor: "darkblue", color: "white"}}>18px text</div>
-                        </CodeSnip.Snip>
-                        <CodeSnip.Snip title={"display"} subtitle={"Display"}>
-                            Sets the element display behavior. The default value is block. Block means the item will
-                            take up the entire width like {`<p>`} or {`<div>`}. A commonly used alternative is flex if
-                            you want the elements children
-                            <CodeSnip.Example>
-                                {`<div style="display: block"> </div>`}
-                            </CodeSnip.Example>
-                        </CodeSnip.Snip>
-                    </CardDeck>
+
                     <CardDeck>
                         <CodeSnip.Snip title={"margin"} subtitle={"Margin around element"}>
                             Sets the space between the edge of the element and the surrounding elements. It is outside
-                            of padding. Margin uses pixels or other units to define its size.
+                            of padding. Margin uses pixels or other units to define its size. If you want to center an
+                            item you can set margin to <code>auto</code>.
                             <CodeSnip.Example>
                                 {`<span style="margin: 5px; "> text1 </span>`}
                             </CodeSnip.Example>
@@ -390,35 +413,129 @@ export default function IntroWebDev(props) {
                         </CodeSnip.Snip>
                     </CardDeck>
                     <CardDeck>
-                        <CodeSnip.Snip title={"display"} subtitle={"Display"}>
+                        <CodeSnip.Snip title={"font-size"} subtitle={"Font Size"}>
+                            Changes the text size. The most common unit to use is px for pixels. Normal text sizes are
+                            between 12 for paragraphs to 40 for large titles.
+                            <CodeSnip.Example>
+                                {`<div style="font-size: 18px"> 18px text</div>`}
+                            </CodeSnip.Example>
+                            <b>Result:</b>
+                            <div style={{fontSize: "18px"}}>18px text</div>
+                        </CodeSnip.Snip>
+                        <CodeSnip.Snip title={"background-color"} subtitle={"Element Background Color"}>
                             Sets the background color. In the following example the background is set to Dark Blue and
-                            the text is set to white to remain readable.
+                            the text is set to white to stay readable.
                             <CodeSnip.Example>
                                 {`<div style="background-color: darkblue; color: white"> </div>`}
                             </CodeSnip.Example>
                             <b>Result:</b>
-                            <div style={{backgroundColor: "darkblue", color: "white"}}>18px text</div>
+                            <div style={{backgroundColor: "darkblue", color: "white"}}>white text</div>
                         </CodeSnip.Snip>
+                        <CodeSnip.Snip title={"display"} subtitle={"Display"}>
+                            Sets the element display behavior. The default value is block. Block means the item will
+                            take up the entire width like {`<p>`} or {`<div>`}. A commonly used alternative
+                            is <code>flex</code>. It forces the children to all be on the same line, space permitting.
+                            <CodeSnip.Example>
+                                <Code.Code>
+                                    <Code.Line>
+                                        {`<div style="display: flex">`}
+                                    </Code.Line>
+                                    <Code.Line tabs={1}>
+                                        {`<div>div1</div> `}
+                                    </Code.Line>
+                                    <Code.Line tabs={1}>
+                                        {`<div>div2</div>`}
+                                    </Code.Line>
+                                    <Code.Line>
+                                        {`</div>`}
+                                    </Code.Line>
+                                </Code.Code>
+                            </CodeSnip.Example>
+                            <CodeSnip.Result>
+                                <div style={{display: "inline-flex"}}> div1</div>
+                                <div style={{display: "inline-flex"}}> div2</div>
+                            </CodeSnip.Result>
+                        </CodeSnip.Snip>
+                    </CardDeck>
+                    <CardDeck>
+                        <CodeSnip.Snip title={"width and height"} subtitle={"Width and Height"}>
+                            Sets the width or height of the element respectively. All sizes in CSS can be defined with
+                            multiple units. Here are the most common:
+                            <ul>
+                                <li>px (pixels) - pixels are the same for every page</li>
+                                <li>% (percent) - Relative to the parent component</li>
+                                <li>vw - Equal to 1% of the width of the window</li>
+                                <li>vh - Equal to 1% of the height of the window</li>
+                            </ul>
+                            All units can be viewed on <a
+                            href="https://www.w3schools.com/cssref/css_units.asp">w3schools.com</a>
+                            <CodeSnip.Example>
+                                {`<div style="width: 50%; height=20px"> Text <div>`}
+                            </CodeSnip.Example>
+                            <Code.Result>
+                                <div style={{width: "50%", height: "50px", backgroundColor: "darkgray"}}>
+                                    Text
+                                </div>
+                            </Code.Result>
+                            Background color added to visualize <code>div</code> true size.
+                        </CodeSnip.Snip>
+                        <CodeSnip.Snip title={"border"} subtitle={"Border"}>
+                            Sets the thickness, line type and color of the component border. The border is displayed
+                            outside of padding but inside margin.
+                            A trick to making modern looking components is using <code>border-radius</code>. It adds the
+                            rounded look to a component. Your component does
+                            not need to have a defined border to use <code>border-radius</code>.
+                            <CodeSnip.Example>
+                                {`<div style="border: 1px solid black; border-radius: 8px"> </div>`}
+                            </CodeSnip.Example>
+
+                            <CodeSnip.Result>
+                                <div style={{border: "5px solid black", borderRadius: "8px"}}> Border Example</div>
+                            </CodeSnip.Result>
+                        </CodeSnip.Snip>
+                    </CardDeck>
+                    <CardDeck>
+                        <CodeSnip.Snip title={"text-align"} subtitle={"Horizontal Text Alignment"}>
+                            Used to align text horizontally. It can be set
+                            to <code>start</code>, <code>center</code> or <code>end</code>.
+
+                            <CodeSnip.Example>
+                                {`<div style="text-align: center"> center text</div>`}
+                            </CodeSnip.Example>
+                            <b>Result:</b>
+                            <div style={{textAlign: "center"}}>center text</div>
+                        </CodeSnip.Snip>
+                        <CodeSnip.Snip title={"vertical-align"} subtitle={"Element Background Color"}>
+                            Aligns content vertically. Mainly used for items in tables. NOTE: It only applies to inline,
+                            inline-block and table-cell
+                            elements. It will not work on <code>div></code> but it will work on text.
+                            <CodeSnip.Example>
+                                {`<div style="display: inline-flex; vertical-align: top"> text</div>`}
+                            </CodeSnip.Example>
+                            <b>Result:</b>
+                            <div style={{verticalAlign: "bottom", display: 'inline-flex', height: "30px"}}>white text
+                            </div>
+                        </CodeSnip.Snip>
+
                     </CardDeck>
                 </Section>
                 <Section link={"basicjs"} label={"Basic Javascript"} badge={<Badge
                     variant="success">Back</Badge>}>
                     <p>
-                        Javascript is the programming language that allows users to interact with a web page. When a
+                        Javascript is the language that allows users to interact with a web page. When a
                         user clicks on a button the events that follow are programmed in Javascript.
                         Javascript has the same main components of other popular programming languages like C, Java, and
                         Python. The best way to improve at programming in general is practice. It is no different for
                         Javascript.
                     </p>
-                    <p>
-                        Below are important concepts to understand Javascript.
-                    </p>
+
                     <SubSection link={"basicjsvariables"} label={"Variables"}>
                         Variables are how data is stored. You can define variables
                         using <code>let</code>, <code>var</code>, or <code>const</code>. Javascript is a duck
                         typed language which means you don't specify the variable type in your code. It looks at the
                         data and determines what type it is. Two forward slashes <code>//</code> are used to start a
-                        comment, or code that is not run.
+                        comment, or code that is not run. Every line of JS (javascript) code is followed by a
+                        semi-colon.
                         <Code.Wrapper>
                             <Code.Title>
                                 Example Variable Initialization (Creation):
@@ -439,7 +556,7 @@ export default function IntroWebDev(props) {
                                 <code>let</code> defines a local variable only defined in the scope of the current
                                 block. <code>var</code> defines
                                 a variable accessible within the entire function. <code>const</code> defines a variable
-                                that cannot change and is usually denoted in an all upper case variable name.
+                                that cannot change and is usually denoted in all upper case.
                             </Code.Description>
                         </Code.Wrapper>
                         <Code.Wrapper>
@@ -472,7 +589,7 @@ export default function IntroWebDev(props) {
                                     let car = {`{`} // An <span
                                     style={{color: 'rgb(40, 116, 166)'}}>object</span> representing a car. The data can
                                     be accessed using
-                                    car.model.
+                                    car.model
                                 </Code.Line>
                                 <Code.Line>
                                     {`    `}model: "Rav4",
@@ -481,7 +598,13 @@ export default function IntroWebDev(props) {
                                     {`    `}miles: 12040
                                 </Code.Line>
                                 <Code.Line>
-                                    }
+                                    } // Values can be set in an object using brackets <code>car['model'] =
+                                    "corolla";</code>
+                                </Code.Line>
+                                <Code.Line>
+                                    let array1 = [0,1,2,3,4,5]; // An <span
+                                    style={{color: 'rgb(40, 116, 166)'}}>array</span> is used to hold more than one
+                                    value of any type.
                                 </Code.Line>
                             </Code.Code>
                             <Code.Description>
@@ -496,13 +619,12 @@ export default function IntroWebDev(props) {
                             output values.
                         </p>
                         <p>
-                            Parameters are values given to the function so it can perform a calculation. Once the
-                            function is complete it returns the calculated value. Functions are used on tasks repeated
+                            Parameters are values passed to the function, so it can perform a calculation or task. Once
+                            the
+                            function is complete it returns a value. Functions are used on tasks repeated
                             often to reduce writing the same code more than once. Functions can have multiple
                             parameters.
                         </p>
-
-
                         <p>
                             <Code.Wrapper>
                                 <Code.Title>
@@ -528,7 +650,7 @@ export default function IntroWebDev(props) {
                         </p>
                         <p>
                             Running a function is referred to as Calling a function. If I said I called addOne it means
-                            I am running the function with a specified variable.
+                            I am running the function by passing in a variable.
                         </p>
                         <p>
                             <Code.Wrapper>
@@ -590,53 +712,54 @@ export default function IntroWebDev(props) {
                                 after each repeat <code
                                 style={{color: '#2874A6'}}>i++</code>. Inside the for loop array1 is being accessed at
                                 index i: <code style={{color: '#922B21'}}>array1[i]</code>. The i surrounded by brackets
-                                is used to access the array.
+                                is used to access the array. Sum would equal {1 + 2 + 4 + 5 + 6} after the loop
+                                finished.
                             </Code.Description>
                         </Code.Wrapper>
                     </SubSection>
-                    <SubSection link={"basicjs"} label={"Loops"}>
-                        <p>Loops are sections of code that are repeated. If you had a grocery store list and wanted to
-                            check whether milk was on the list, a loop could do that. There are two types of loops, for
-                            loops, and while loops. For loops are generally used for iterating through lists. While
-                            loops are used when the finish condition is not known at the start.
-                        </p>
-                        <Code.Wrapper>
-                            <Code.Title>
-                                For Loop
-                            </Code.Title>
-                            <Code.Code>
-                                <Code.Line>
-                                    let array1 = [0,1,2,4,5,6];
-                                </Code.Line>
-                                <Code.Line>
-                                    let sum = 0;
-                                </Code.Line>
-                                <Code.Line>
-                                    for (<span style={{color: "#E67E22"}}>let i = 0</span>; <span
-                                    style={{color: '#0E6251'}}>i {`<`} array1.length</span>;<span
-                                    style={{color: '#2874A6'}}> i++</span>) {`{`}
-                                </Code.Line>
-                                {`    `}sum = sum + <span style={{color: '#922B21'}}>array1[i]</span>
-                                <Code.Line>
-                                    {'}'}
-                                </Code.Line>
-                            </Code.Code>
-                            <Code.Description>
-                                The above code is used find the total of the numbers in array1. A for loop is
-                                initialized with 3 parts: creating an index variable <code style={{color: "#E67E22"}}>let
-                                i = 0</code>, setting the finish point <code
-                                style={{color: '#0E6251'}}>i {`<`} array1.length</code>, and incrementing the index
-                                after each repeat <code
-                                style={{color: '#2874A6'}}>i++</code>. Inside the for loop array1 is being accessed at
-                                index i: <code style={{color: '#922B21'}}>array1[i]</code>. The i surrounded by brackets
-                                is used to access the array.
-                            </Code.Description>
-                        </Code.Wrapper>
-                    </SubSection>
+                    {/*<SubSection link={"basicjs"} label={"Loops"}>*/}
+                    {/*    <p>Loops are sections of code that are repeated. If you had a grocery store list and wanted to*/}
+                    {/*        check whether milk was on the list, a loop could do that. There are two types of loops, for*/}
+                    {/*        loops, and while loops. For loops are generally used for iterating through lists. While*/}
+                    {/*        loops are used when the finish condition is not known at the start.*/}
+                    {/*    </p>*/}
+                    {/*    <Code.Wrapper>*/}
+                    {/*        <Code.Title>*/}
+                    {/*            For Loop*/}
+                    {/*        </Code.Title>*/}
+                    {/*        <Code.Code>*/}
+                    {/*            <Code.Line>*/}
+                    {/*                let array1 = [0,1,2,4,5,6];*/}
+                    {/*            </Code.Line>*/}
+                    {/*            <Code.Line>*/}
+                    {/*                let sum = 0;*/}
+                    {/*            </Code.Line>*/}
+                    {/*            <Code.Line>*/}
+                    {/*                for (<span style={{color: "#E67E22"}}>let i = 0</span>; <span*/}
+                    {/*                style={{color: '#0E6251'}}>i {`<`} array1.length</span>;<span*/}
+                    {/*                style={{color: '#2874A6'}}> i++</span>) {`{`}*/}
+                    {/*            </Code.Line>*/}
+                    {/*            {`    `}sum = sum + <span style={{color: '#922B21'}}>array1[i]</span>*/}
+                    {/*            <Code.Line>*/}
+                    {/*                {'}'}*/}
+                    {/*            </Code.Line>*/}
+                    {/*        </Code.Code>*/}
+                    {/*        <Code.Description>*/}
+                    {/*            The above code is used find the total of the numbers in array1. A for loop is*/}
+                    {/*            initialized with 3 parts: creating an index variable <code style={{color: "#E67E22"}}>let*/}
+                    {/*            i = 0</code>, setting the finish point <code*/}
+                    {/*            style={{color: '#0E6251'}}>i {`<`} array1.length</code>, and incrementing the index*/}
+                    {/*            after each repeat <code*/}
+                    {/*            style={{color: '#2874A6'}}>i++</code>. Inside the for loop array1 is being accessed at*/}
+                    {/*            index i: <code style={{color: '#922B21'}}>array1[i]</code>. The i surrounded by brackets*/}
+                    {/*            is used to access the array.*/}
+                    {/*        </Code.Description>*/}
+                    {/*    </Code.Wrapper>*/}
+                    {/*</SubSection>*/}
 
                 </Section>
                 <Section link={"pagemanip"} label={"Changing a web page with code"}
-                         badge={<Badge variant={'success'}>Full</Badge>}>
+                         badge={<Badge variant={'success'}>Back</Badge>}>
                     <p>
                         Now that you have a brief overview of javascript, let's go over how to use code in a web
                         page.
@@ -862,7 +985,120 @@ export default function IntroWebDev(props) {
 
                     </ul>
                 </Section>
+                <Section link={'nextsteps'} label={"Next Steps"}
+                         badge={<span><Badge variant={"primary"}>Front</Badge><Badge
+                             variant={"success"}>Back</Badge></span>}>
+                    <p>
+                        Now that you have a brief overview of web development there are many paths to go.
+                        The web is built on a lot of different frameworks. Each one has their pros and cons, but all are
+                        built on HTML, CSS, and JS.
+                    </p>
+                    <p>
+                        For complete beginners, try completing some of the projects above, then move on to the sections
+                        below.
+                    </p>
+
+                    <p>
+                        For people who already have coding experience start looking into libraries and frameworks.
+                        I recommend starting to learn a framework and use that as motivation to improve your HTML, CSS,
+                        and JS skills.
+                    </p>
+                    <SubSection label={"Frontend Libraries"} badge={<Badge variant={"primary"}>Front</Badge>}>
+                        <p>
+                            These libraries are primarily used for user interface creation, however they heavily rely on
+                            JS to
+                            make them.
+                            <ul>
+                                <li>
+                                    <a href={"https://jquery.com/"}>jQuery</a> makes
+                                    writing JS easier by adding more functionality, and more powerful syntax.
+                                </li>
+                                <li>
+                                    <a href={'https://reactjs.org/'}>React</a> is a good library for creating large web
+                                    applications
+                                    that use the same code sections multiple times. React Native is a very similar
+                                    library
+                                    that is used for writing mobile apps. This page was built with React.
+                                </li>
+                                <li>
+                                    <a href={"https://angular.io/"}>Angular</a> is similar to React. Also can be used
+                                    for
+                                    writing mobile apps.
+                                </li>
+                            </ul>
+                        </p>
+                    </SubSection>
+                    <SubSection label={"Databases"} badge={<Badge variant={"success"}>Back</Badge>}>
+                        <p>
+                            Databases are ways to store information across multiple user sessions. Every time you log
+                            into a
+                            website the website looks in their database and pulls your data to verify your password
+                            matches. Virtually every website is built on a database. Every time the user interact they
+                            are either viewing, changing, or adding data to the database in one way or another.
+                            Understanding how databases work and how to work with them is essential to backend and full
+                            stack development.
+                        </p>
+                        <p>
+                            SQL is the language most often used for database manipulation. It is
+                            relatively simple and definitely worth learning. <a
+                            href={"https://www.geeksforgeeks.org/structured-query-language/"}>Geeks for Geeks</a> has a
+                            good tutorial. Most companies use some derivative of SQL.
+                        </p>
+                        <p>
+                            Universities teach whole classes just on databases. They require a lot of time to understand
+                            and use. Take your time choosing a database for a project because you'll be stuck with it
+                            all the way through. Here are some common database libraries.
+                            <ul>
+                                <li>
+                                    <a href={'https://www.mongodb.com/'}>MongoDB</a> Built on a document-based
+                                    structure. NOT a SQL framework.
+                                </li>
+                                <li>
+                                    <a href={"https://www.mysql.com/"}>MySQL</a> Made by Oracle aimed at companies. Uses
+                                    SQL.
+                                </li>
+                                <li>
+                                    <a href={"https://www.postgresql.org/"}>postgresql</a> Another SQL framework. It is
+                                    open
+                                    source and has a good SQL tutorial starting <a
+                                    href={"https://www.postgresql.org/docs/12/tutorial-sql.html"}>here</a>.
+                                </li>
+                            </ul>
+                        </p>
+                    </SubSection>
+                    <SubSection label={"REST APIs: Connecting the Database and the Frontend"}
+                                badge={<span><Badge variant={"primary"}>Back</Badge><Badge
+                                    variant={"success"}>Back</Badge></span>}>
+                        <p>
+                            REST APIs also known as Representational State Transfer Application Programming Interface
+                            are used to access information from a website, database, or service.
+                            Every REST API has a set of endpoints. Each endpoint allows you to get an item or perform a
+                            task on one or multiple items. This website <a
+                            href={"https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/"}>Smashing
+                            Magazine</a> has a good
+                            introductory tutorial. <a href={"https://developers.strava.com/docs/reference/"}>Strava</a>,
+                            an athletic social media website, has very good documentation of their API. It is a good
+                            example to understand how an good API look.
+                        </p>
+
+                    </SubSection>
+                    <SubSection label={"Hosting your app"}>
+                        <p>
+                            Hosting is a whole problem in itself. If you are working on simple web pages <a
+                            href={"https://github.com"}>Github</a> offers free hosting for small pages. Amazon, Google,
+                            and Microsoft all offer hosting services. I personally use <a
+                            href={"https://cloud.google.com/appengine/"}>Google Cloud Platform's App
+                            Engine</a> for hosting my react apps because it was the easiest to set up. Plus their free
+                            quota
+                            is pretty sizable. <a href={"https://aws.amazon.com/lambda/"}>Amazon Lambda</a> is also good
+                            services, but I haven't explored it fully. Microsoft has an <a
+                            href={"https://azure.microsoft.com/en-us/services/app-service/"}>app service</a> that I have
+                            used,
+                            but their platform user interface is not beginner friendly.
+                        </p>
+                    </SubSection>
+                </Section>
             </TableOfContents>
         </div>
-)
+    )
 }

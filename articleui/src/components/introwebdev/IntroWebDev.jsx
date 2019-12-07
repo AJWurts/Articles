@@ -122,15 +122,15 @@ export default function IntroWebDev(props) {
                              variant="primary">Front</Badge></span><span><Badge
                              variant="success">Back</Badge></span></>}>
                     <p>
-                        For frontend development download <a
+                        For frontend development download<a target="_blank"
                         href={"https://github.com/AJWurts/Articles/blob/master/articleui/src/components/introwebdev/introfronttemplate.html"}>this</a> template
                         file. Then you can open the file in any browser by double clicking it.
                     </p>
                     <p>
                         For backend development there are two main approaches. If you want to write scripts you can
-                        install and use <a href={"https://nodejs.org/en/"}>Node</a> or you can embed scripts in an html
+                        install and use<a target="_blank" href={"https://nodejs.org/en/"}>Node</a> or you can embed scripts in an html
                         file. To print a variable or string inside an HTML file you can
-                        use <code>console.log(variable)</code>. Here is a <a href="html">template file</a> to start
+                        use <code>console.log(variable)</code>. Here is a<a target="_blank" href="html">template file</a> to start
                         with. Open it in your favorite browser.
                         I recommend writing scripts in your browser to start, then move to Node if you want to do more
                         complex projects that doesn't require a browser.
@@ -167,7 +167,7 @@ export default function IntroWebDev(props) {
                     </Code.Wrapper>
                     <p>
                         Here are the elements I use the most. There are many more, but they aren't used nearly as often.
-                        A complete list of elements is available at <a
+                        A complete list of elements is available at<a target="_blank"
                         href={"https://developer.mozilla.org/en-US/docs/Web/HTML/Element"}>Mozilla MDN Web Docs</a>.
                         <CardDeck noNumbers={true}>
                             <CodeSnip.Snip title={"<div></div>"} subtitle={"Div"}>
@@ -327,7 +327,7 @@ export default function IntroWebDev(props) {
                         </Code.Wrapper>
                     </p>
                     <p>
-                        For a list of all CSS properties goto <a
+                        For a list of all CSS properties goto<a target="_blank"
                         href={"https://www.w3schools.com/cssref/"}>w3schools.com</a>. Here are the most used CSS
                         properties:
                     </p>
@@ -337,7 +337,7 @@ export default function IntroWebDev(props) {
                             Green, and Blue respectively and referred to as color channels. Their values are always
                             between 0 and 255. The ratio of the three colors defines the final color. The simplest way
                             to choose a color is using built in colors like, red, white, black, gray, teal, and so
-                            on. A complete list of built in colors is available <a target="_blank"
+                            on. A complete list of built in colors is available<a target="_blank" target="_blank"
                                                                                    href="http://www.colors.commutercreative.com/grid/">here</a>.
                             Another way to specify colors is <code>rgb(30, 40, 50)</code> where each number corresponds
                             to the
@@ -467,7 +467,7 @@ export default function IntroWebDev(props) {
                                 <li>vw - Equal to 1% of the width of the window</li>
                                 <li>vh - Equal to 1% of the height of the window</li>
                             </ul>
-                            All units can be viewed on <a
+                            All units can be viewed on<a target="_blank"
                             href="https://www.w3schools.com/cssref/css_units.asp">w3schools.com</a>
                             <CodeSnip.Example>
                                 {`<div style="width: 50%; height=20px"> Text <div>`}
@@ -1010,18 +1010,18 @@ export default function IntroWebDev(props) {
                             make them.
                             <ul>
                                 <li>
-                                    <a href={"https://jquery.com/"}>jQuery</a> makes
+                                   <a target="_blank" href={"https://jquery.com/"}>jQuery</a> makes
                                     writing JS easier by adding more functionality, and more powerful syntax.
                                 </li>
                                 <li>
-                                    <a href={'https://reactjs.org/'}>React</a> is a good library for creating large web
+                                   <a target="_blank" href={'https://reactjs.org/'}>React</a> is a good library for creating large web
                                     applications
                                     that use the same code sections multiple times. React Native is a very similar
                                     library
                                     that is used for writing mobile apps. This page was built with React.
                                 </li>
                                 <li>
-                                    <a href={"https://angular.io/"}>Angular</a> is similar to React. Also can be used
+                                   <a target="_blank" href={"https://angular.io/"}>Angular</a> is similar to React. Also can be used
                                     for
                                     writing mobile apps.
                                 </li>
@@ -1040,7 +1040,7 @@ export default function IntroWebDev(props) {
                         </p>
                         <p>
                             SQL is the language most often used for database manipulation. It is
-                            relatively simple and definitely worth learning. <a
+                            relatively simple and definitely worth learning.<a target="_blank"
                             href={"https://www.geeksforgeeks.org/structured-query-language/"}>Geeks for Geeks</a> has a
                             good tutorial. Most companies use some derivative of SQL.
                         </p>
@@ -1050,17 +1050,17 @@ export default function IntroWebDev(props) {
                             all the way through. Here are some common database libraries.
                             <ul>
                                 <li>
-                                    <a href={'https://www.mongodb.com/'}>MongoDB</a> Built on a document-based
+                                   <a target="_blank" href={'https://www.mongodb.com/'}>MongoDB</a> Built on a document-based
                                     structure. NOT a SQL framework.
                                 </li>
                                 <li>
-                                    <a href={"https://www.mysql.com/"}>MySQL</a> Made by Oracle aimed at companies. Uses
+                                   <a target="_blank" href={"https://www.mysql.com/"}>MySQL</a> Made by Oracle aimed at companies. Uses
                                     SQL.
                                 </li>
                                 <li>
-                                    <a href={"https://www.postgresql.org/"}>postgresql</a> Another SQL framework. It is
+                                   <a target="_blank" href={"https://www.postgresql.org/"}>postgresql</a> Another SQL framework. It is
                                     open
-                                    source and has a good SQL tutorial starting <a
+                                    source and has a good SQL tutorial starting<a target="_blank"
                                     href={"https://www.postgresql.org/docs/12/tutorial-sql.html"}>here</a>.
                                 </li>
                             </ul>
@@ -1073,10 +1073,10 @@ export default function IntroWebDev(props) {
                             REST APIs also known as Representational State Transfer Application Programming Interface
                             are used to access information from a website, database, or service.
                             Every REST API has a set of endpoints. Each endpoint allows you to get an item or perform a
-                            task on one or multiple items. This website <a
+                            task on one or multiple items. This website<a target="_blank"
                             href={"https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/"}>Smashing
                             Magazine</a> has a good
-                            introductory tutorial. <a href={"https://developers.strava.com/docs/reference/"}>Strava</a>,
+                            introductory tutorial.<a target="_blank" href={"https://developers.strava.com/docs/reference/"}>Strava</a>,
                             an athletic social media website, has very good documentation of their API. It is a good
                             example to understand how an good API look.
                         </p>
@@ -1084,14 +1084,14 @@ export default function IntroWebDev(props) {
                     </SubSection>
                     <SubSection label={"Hosting your app"}>
                         <p>
-                            Hosting is a whole problem in itself. If you are working on simple web pages <a
+                            Hosting is a whole problem in itself. If you are working on simple web pages<a target="_blank"
                             href={"https://github.com"}>Github</a> offers free hosting for small pages. Amazon, Google,
-                            and Microsoft all offer hosting services. I personally use <a
+                            and Microsoft all offer hosting services. I personally use<a target="_blank"
                             href={"https://cloud.google.com/appengine/"}>Google Cloud Platform's App
                             Engine</a> for hosting my react apps because it was the easiest to set up. Plus their free
                             quota
-                            is pretty sizable. <a href={"https://aws.amazon.com/lambda/"}>Amazon Lambda</a> is also good
-                            services, but I haven't explored it fully. Microsoft has an <a
+                            is pretty sizable.<a target="_blank" href={"https://aws.amazon.com/lambda/"}>Amazon Lambda</a> is also good
+                            services, but I haven't explored it fully. Microsoft has an<a target="_blank"
                             href={"https://azure.microsoft.com/en-us/services/app-service/"}>app service</a> that I have
                             used,
                             but their platform user interface is not beginner friendly.

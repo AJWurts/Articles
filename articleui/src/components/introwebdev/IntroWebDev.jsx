@@ -6,10 +6,13 @@ import {
     ListItem,
     CodeSnip,
     SubSection,
-    Code
+    Code,
+    C
 } from '../compstore';
 
 import {Badge, Table, CardDeck} from 'react-bootstrap';
+
+
 
 export default function IntroWebDev(props) {
 
@@ -30,16 +33,16 @@ export default function IntroWebDev(props) {
                     variant="primary">Front</Badge></span><span><Badge variant="success">Back</Badge></span></>}>
                     <p>
                         Web development can mean a lot of different things. It's important to have a clear learning
-                        goal. For example if you are interested in user interfaces or front end design it's best to
+                        goal. If you are interested in user interfaces or front end design it's best to
                         learn
                         HTML and CSS first than move to JS for interactive web pages. If you are interested in
-                        creating interactive applications, or programming the site logic then backend may be a good
+                        creating interactive applications, or programming the site logic then backend is a good
                         place to start. This
                         tutorial will cover three topics Front End Development, Backend Development, and Full Stack
                         development (both frontend and backend). Every section will be labeled either <Badge
                         variant="primary">Front</Badge>, or <Badge
-                        variant="success">Back</Badge>. Based on what your goal
-                        is you can choose to read the relevant sections.
+                        variant="success">Back</Badge>. Based on your goal
+                        you can choose to read the relevant sections.
                     </p>
                     <p>
                         This tutorial is to give you an flavor of web development and link to resources to expand your
@@ -48,7 +51,11 @@ export default function IntroWebDev(props) {
                     </p>
                     <p>
                         Here are a few key tips to help you succeed:
+                        </p>
                         <ul>
+                        <li>
+                            Trial and error is the best way to learn. If you aren't sure how a certain function or element works. try writing code that tests multiple ways of using it, and see what works. Using the browser console can allow for rapid testing. I'll tell you how below.
+                        </li>
                             <li>Programming is difficult, you can't expect to pick it up in only a few hours. It will
                                 require practice and time.
                             </li>
@@ -64,41 +71,40 @@ export default function IntroWebDev(props) {
                                 making a tutorial soon.
                             </li>
                         </ul>
-                    </p>
                 </Section>
                 <Section link={"resources"} label={"Learning Resources"} badge={<><span><Badge
                     variant="primary">Front</Badge></span><span><Badge variant="success">Back</Badge></span></>}>
                     <p>
                         There are a lot of good resources for learning, but some are better than others. Here are my
                         personal favorites:
+                        </p>
                         <ul>
-                            <li><a target="_blank" href={"https://developer.mozilla.org/en-US/"}>Mozilla Web Docs</a> - Long but
+                            <li><a target="_blank" rel="noopener noreferrer"  href={"https://developer.mozilla.org/en-US/"}>Mozilla Web Docs</a> - Long but
                                 thorough tutorials for CSS and HTML
                             </li>
-                            <li><a target="_blank" href={"https://www.w3schools.com/"}>w3schools</a> - Good for reference, but I
+                            <li><a target="_blank" rel="noopener noreferrer"  href={"https://www.w3schools.com/"}>w3schools</a> - Good for reference, but I
                                 wouldn't recommend the tutorials. They are repetitive and too easy to learn anything.
                             </li>
-                            <li><a target="_blank" href={"https://stackoverflow.com/"}>Stackoverflow</a> - Has an answer to every
-                                question,if you know how to word your google search.
+                            <li><a target="_blank" rel="noopener noreferrer"  href={"https://stackoverflow.com/"}>Stackoverflow</a> - Has an answer to every
+                                question, if you know how to word your google search.
                             </li>
-                            <li><a target="_blank" href={"https://javascript.info/"}>Javascript.Info</a> - Very comprehensive tutorial
+                            <li><a target="_blank" rel="noopener noreferrer"  href={"https://javascript.info/"}>Javascript.Info</a> - Very comprehensive tutorial
                                 on JS. Can be overwhelming at the start.
                             </li>
-                            <li><a target="_blank" href={"https://www.amazon.com/dp/1118907442/ref=cm_sw_em_r_mt_dp_U_tsW6DbD71567R"}>HTML,
+                            <li><a target="_blank" rel="noopener noreferrer"  href={"https://www.amazon.com/dp/1118907442/ref=cm_sw_em_r_mt_dp_U_tsW6DbD71567R"}>HTML,
                                 CSS, JS, and JQuery</a> - If you are willing to spend a few bucks these books are a
                                 great
                                 reference. I have them sitting on my desk.
                             </li>
                         </ul>
-                    </p>
                 </Section>
-                <Section link="ides" label="Interactive Developer Environment (IDEs)"
+                <Section link="ides" label="Integrated Development Environment (IDEs)"
                          badge={<><span><Badge
                              variant="primary">Front</Badge></span><span><Badge
                              variant="success">Back</Badge></span></>}>
                     <p>
                         IDEs are applications used for editing code. They improve over simple text editors by adding
-                        shortcuts, templates, or other features that make writing code easier. Finding the right IDE
+                        shortcuts, templates, or other features that make writing code faster and easier. Finding the right IDE
                         requires trying a lot of different ones.
                     </p>
                     <p>
@@ -110,7 +116,7 @@ export default function IntroWebDev(props) {
                             Visual Studio Code - Great for Front and Backend Development. Good for beginners.
                         </ListItem>
                         <ListItem link="https://www.jetbrains.com/webstorm/">
-                            WebStorm - Aimed more at backend development. $59/year
+                            WebStorm - Aimed more at backend development. $59/year. If you are a college student you can get all Jetbrains IDEs for free.
                         </ListItem>
                         <ListItem link="https://atom.io/">
                             Atom - Light weight but powerful.
@@ -122,18 +128,23 @@ export default function IntroWebDev(props) {
                              variant="primary">Front</Badge></span><span><Badge
                              variant="success">Back</Badge></span></>}>
                     <p>
-                        For frontend development download <a target="_blank"
-                        href={"https://github.com/AJWurts/Articles/blob/master/articleui/src/components/introwebdev/introfronttemplate.html"}>this</a> template
-                        file. Then you can open the file in any browser by double clicking it.
+                        For frontend development download <a target="_blank" rel="noopener noreferrer" download
+                        href={"/files/introfronttemplate.html"}>this</a> template
+                        file. Place it in a folder and open the folder with one of the IDEs. To run the file open it in any browser by double clicking it.
                     </p>
                     <p>
                         For backend development there are two main approaches. If you want to write scripts you can
-                        install and use <a target="_blank" href={"https://nodejs.org/en/"}>Node</a> or you can embed scripts in an html
-                        file. To print a variable or string inside an HTML file you can
-                        use <code>console.log(variable)</code>. Here is a <a target="_blank" href="html">template file</a> to start
+                        install and use <a target="_blank" rel="noopener noreferrer"  href={"https://nodejs.org/en/"}>Node</a> or you can embed scripts in an html file. To edit place the file in a folder and open the folder with one of the IDEs.
+                        </p>
+                        <p>
+                        To print a variable or string inside an HTML file you can
+                        use <code>console.log(variable)</code>. To view the output of <code>console.log</code> you need to open the browser console. On most browsers you can right click directly on the page then click <i>inspect</i>, or <i>inspect element</i>. A window should popup. Click on <i>console</i> and you can now write Javascript code and see the result immediately. Any <code>console.log</code> commands you write will output here.
+                        </p>  
+                        <p>
+                        Here is a <a target="_blank" download href="/files/introbacktemplate.html">template file</a> to start
                         with. Open it in your favorite browser.
-                        I recommend writing scripts in your browser to start, then move to Node if you want to do more
-                        complex projects that doesn't require a browser.
+                        I recommend writing scripts for your browser to start, then move to Node if you want to do more
+                        complex projects that do not require a browser.
                     </p>
                 </Section>
                 <Section link="basichtml" label="Basic HTML Elements" badge={<Badge
@@ -147,6 +158,9 @@ export default function IntroWebDev(props) {
                         element. The children can either be text, or other elements.
                     </p>
                     <p>
+                        All HTML elements are started with <C>{`<element>`}</C>, where element is the name of the element. They are closed with <C>{`</element>`}</C>. Everything between those items are the element's children. 
+                    </p>
+                    <p>
                         All HTML elements can have attributes which change or add features to the element. For example
                         the button element can have an <code>onclick</code> attribute to determine how the page should
                         react when clicked.
@@ -157,7 +171,7 @@ export default function IntroWebDev(props) {
                         </Code.Title>
                         <Code.Code>
                             <Code.Line>
-                                {`<button onclick="handleClick">Submit</button>`}
+                                {`<button`} <span style={{color: "blue"}}>onclick="handleClick"</span>{`>Submit</button>`}
                             </Code.Line>
                         </Code.Code>
                         <Code.Description>
@@ -167,12 +181,13 @@ export default function IntroWebDev(props) {
                     </Code.Wrapper>
                     <p>
                         Here are the elements I use the most. There are many more, but they aren't used nearly as often.
-                        A complete list of elements is available at <a target="_blank"
+                        A complete list of elements is available at <a target="_blank" rel="noopener noreferrer" 
                         href={"https://developer.mozilla.org/en-US/docs/Web/HTML/Element"}>Mozilla MDN Web Docs</a>.
-                        <CardDeck noNumbers={true}>
+                        </p>
+                        <CardDeck >
                             <CodeSnip.Snip title={"<div></div>"} subtitle={"Div"}>
-                                Used for placing items vertically on a screen. A div tag takes up the entire screen
-                                from left to right. Items are placed inside
+                                Used to define a section or division of the screen. A div tag takes up the entire screen horizontally
+                                from left to right. Items are placed inside.
                             </CodeSnip.Snip>
                             <CodeSnip.Snip title={"<span></span>"} subtitle={"Span"}>
                                 Used for placing items next to each other as opposed to on top of each other. Spans is
@@ -187,7 +202,7 @@ export default function IntroWebDev(props) {
                         </CardDeck>
                         <CardDeck>
                             <CodeSnip.Snip title={"<h1></h1>"} subtitle={"Header "}>
-                                Headers are defined with h1 down to h5 the larger the number the smaller the text.
+                                Headers are defined with h1 down to h5. The higher the number the smaller the text. Read that again, it's probably reverse to what you thought.
                                 On this page the text "Welcome to Intro to Web Dev" uses the h1 tag.
                                 <CodeSnip.Example>
                                     {`<h1> Main Page Title </h1>`}
@@ -220,7 +235,7 @@ export default function IntroWebDev(props) {
                         <CardDeck>
 
                             <CodeSnip.Snip title={"<input></input>"} subtitle={"Input "}>
-                                Creates an entry box that a user can type into.
+                                Creates an entry box that a user can type into. Input boxes can be many different types. The one below is a text input.
                                 <CodeSnip.Example>
                                     {`<input type="text"></input>`}
                                 </CodeSnip.Example>
@@ -287,7 +302,6 @@ export default function IntroWebDev(props) {
                                 </CodeSnip.Result>
                             </CodeSnip.Snip>
                         </CardDeck>
-                    </p>
                 </Section>
                 <Section link="basiccss" label="Basic CSS" badge={<Badge
                     variant="primary">Front</Badge>}>
@@ -311,7 +325,6 @@ export default function IntroWebDev(props) {
                     <p>
                         An attached styles.css file will have the following format for the title class:
                     </p>
-                    <p>
                         <Code.Wrapper>
                             <Code.Code>
                                 <Code.Line>.title {`{`}</Code.Line>
@@ -325,19 +338,18 @@ export default function IntroWebDev(props) {
                                 <Code.Line>}</Code.Line>
                             </Code.Code>
                         </Code.Wrapper>
-                    </p>
                     <p>
-                        For a list of all CSS properties goto <a target="_blank"
+                        For a list of all CSS properties go to <a target="_blank" rel="noopener noreferrer" 
                         href={"https://www.w3schools.com/cssref/"}>w3schools.com</a>. Here are the most used CSS
                         properties:
                     </p>
                     <CardDeck>
                         <CodeSnip.Snip title={"color"} subtitle={"Text Color"}>
-                            Changes the text color. Web color is based on the RGB color palette. The colors are Red,
+                            Changes the text color. Web color is based on the RGB color encoding. The colors are Red,
                             Green, and Blue respectively and referred to as color channels. Their values are always
                             between 0 and 255. The ratio of the three colors defines the final color. The simplest way
                             to choose a color is using built in colors like, red, white, black, gray, teal, and so
-                            on. A complete list of built in colors is available <a target="_blank" target="_blank"
+                            on. A complete list of built in colors is available <a target="_blank" rel="noopener noreferrer" 
                                                                                    href="http://www.colors.commutercreative.com/grid/">here</a>.
                             Another way to specify colors is <code>rgb(30, 40, 50)</code> where each number corresponds
                             to the
@@ -467,7 +479,7 @@ export default function IntroWebDev(props) {
                                 <li>vw - Equal to 1% of the width of the window</li>
                                 <li>vh - Equal to 1% of the height of the window</li>
                             </ul>
-                            All units can be viewed on <a target="_blank"
+                            All units can be viewed on <a target="_blank" rel="noopener noreferrer" 
                             href="https://www.w3schools.com/cssref/css_units.asp">w3schools.com</a>
                             <CodeSnip.Example>
                                 {`<div style="width: 50%; height=20px"> Text <div>`}
@@ -516,7 +528,6 @@ export default function IntroWebDev(props) {
                             <div style={{verticalAlign: "bottom", display: 'inline-flex', height: "30px"}}>white text
                             </div>
                         </CodeSnip.Snip>
-
                     </CardDeck>
                 </Section>
                 <Section link={"basicjs"} label={"Basic Javascript"} badge={<Badge
@@ -524,7 +535,7 @@ export default function IntroWebDev(props) {
                     <p>
                         Javascript is the language that allows users to interact with a web page. When a
                         user clicks on a button the events that follow are programmed in Javascript.
-                        Javascript has the same main components of other popular programming languages like C, Java, and
+                        Javascript has the same main features of other popular programming languages like C, Java, and
                         Python. The best way to improve at programming in general is practice. It is no different for
                         Javascript.
                     </p>
@@ -538,7 +549,7 @@ export default function IntroWebDev(props) {
                         semi-colon.
                         <Code.Wrapper>
                             <Code.Title>
-                                Example Variable Initialization (Creation):
+                                Example Variable Initialization (Creation).
                             </Code.Title>
                             <Code.Code>
                                 <Code.Line>
@@ -553,10 +564,10 @@ export default function IntroWebDev(props) {
 
                             </Code.Code>
                             <Code.Description>
-                                <code>let</code> defines a local variable only defined in the scope of the current
+                                Each example has an <C>=</C> operator. A single <C>=</C> is called the assignment operator. It allows you to assign the value on the right to the variable on the left. <code>let</code> defines a local variable only defined in the scope of the current
                                 block. <code>var</code> defines
                                 a variable accessible within the entire function. <code>const</code> defines a variable
-                                that cannot change and is usually denoted in all upper case.
+                                that cannot change and is denoted in all upper case.
                             </Code.Description>
                         </Code.Wrapper>
                         <Code.Wrapper>
@@ -566,9 +577,8 @@ export default function IntroWebDev(props) {
                             <Code.Code>
                                 <Code.Line>
                                     let name = "Ben"; // A <span
-                                    style={{color: 'rgb(40, 116, 166)'}}>string</span> represents a collection of
-                                    characters in this case:
-                                    Ben
+                                    style={{color: 'rgb(40, 116, 166)'}}>string</span> represents a sequence of
+                                    characters. Always surrounded by <C>""</C>, <C>''</C>, or <C>``</C>.
                                 </Code.Line>
                                 <Code.Line>
                                     let monthInYear = {(new Date()).getMonth() + 1}; // An <span
@@ -608,24 +618,56 @@ export default function IntroWebDev(props) {
                                 </Code.Line>
                             </Code.Code>
                             <Code.Description>
-                                These are some of the main types of variables.
+                                These are some of the main types of variables. A more in-depth overview is available on <a target="_blank" rel="noopener noreferrer"  href="https://www.w3schools.com/js/js_datatypes.asp">w3schools</a>.
                             </Code.Description>
                         </Code.Wrapper>
                     </SubSection>
+                    <SubSection link={"basicjs-operators"} label={"Operators"}>
+                    <p>
+                    Operators are used to combine and maniuplate variables. Here are the three main types.
+                    </p>
+                     Math operators behave like the standard math operations.
+                       <ul>
+                                    
+                           <li><C>+</C> - Addition. <C>{`5 + 5`}</C> returns <C>10</C></li>
+                           <li><C>-</C> - Subtraction. <C>{`5 - 3`}</C> returns <C>2</C></li>
+                           <li><C>/</C> - Division. <C>{`10 / 5`}</C> returns <C>2</C></li>
+                           <li><C>*</C> - Multiplication. <C>{`10 * 2.5`}</C> returns <C>25</C>. All operators work for integers and floats.</li>
+                           <li><C>%</C> - Modulus. The remainder operator. Takes the remainder after division. <C>{`12 % 5`}</C> returns <C>2</C> because 12 / 5 = 10 remainder <C>2</C>.</li>
+                           <li><C>++</C> - Increment. Increments the variable by one and saves it. <C>{`i++`}</C> returns nothing, but now <C>i</C> is one greater.</li>
+                           <li><C>--</C> - Decrement. Decrements the variable by one and saves it. <C>{`i--`}</C> returns nothing, but now <C>i</C> is one less.</li>
+                       </ul>
+                       Comparison operators compare two variables and return a boolean. 
+                       <ul>
+                           <li><C>{`<`}</C> - less than. <C>{`3 < 5`}</C> returns <C>true</C></li>
+                           <li><C>{`>`}</C> - greater than. <C>{`7 > 5`}</C> returns <C>true</C>. <C>{`5 > 5`}</C> returns <C>false</C></li>
+                           <li><C>{`>=`}</C> - greater than or equal. <C>{`5 >= 5`}</C> returns <C>true</C></li>
+                           <li><C>{`<=`}</C> - less than or equal. <C>{`5 <= 6`}</C> returns <C>true</C></li>
+                           <li><C>{`===`}</C> - equals. <C>{`3 === 5`}</C> returns <C>false</C>. There is a <C>==</C> operator, but you should primarily use <C>===</C>. This page <a target="_blank" rel="noopener noreferrer" href="https://codeburst.io/javascript-double-equals-vs-triple-equals-61d4ce5a121a"> explains the difference well.</a></li>
+                          
+                       </ul>
+                       Boolean Operators combine one or two booleans and return a boolean. 
+                       <ul>
+                           <li><C>{`!`}</C> - not. Changes a boolean to the opposite state. <C>{`!true`}</C> returns <C>false</C></li>
+                           <li><C>{`&&`}</C> - and. if both are true returns true. <C>{`true && true`}</C> returns <C>true</C></li>
+                           <li><C>{`||`}</C> - or. if either are true returns true. <C>{`true || false`}</C> returns <C>true</C></li>
+                       </ul>
+                       
+                    </SubSection>
+                {/* </Section> */}
                     <SubSection link={'basicjsfunctions'} label={"Functions"}>
                         <p>
                             Functions are used to perform specific tasks. A example function could be one that displays
                             "Hello World" to the user. Every function has input values, called parameters, and most have
-                            output values.
+                            output values, called return values.
                         </p>
                         <p>
                             Parameters are values passed to the function, so it can perform a calculation or task. Once
                             the
                             function is complete it returns a value. Functions are used on tasks repeated
-                            often to reduce writing the same code more than once. Functions can have multiple
+                            often to reduce writing the same code more than once. They are also used as callbacks when a user interacts with the page. Functions can have multiple
                             parameters.
                         </p>
-                        <p>
                             <Code.Wrapper>
                                 <Code.Title>
                                     Defining a Function
@@ -642,17 +684,15 @@ export default function IntroWebDev(props) {
                                     </Code.Line>
                                 </Code.Code>
                                 <Code.Description>
-                                    The function is named addOne. It takes a parameter number and returns the number
+                                    The function is named addOne. It takes a parameter, number, and returns the number
                                     plus 1.
                                     This function assumes the input value is a number.
                                 </Code.Description>
                             </Code.Wrapper>
-                        </p>
                         <p>
-                            Running a function is referred to as Calling a function. If I said I called addOne it means
+                            Running a function is referred to as calling a function. If I called addOne it means
                             I am running the function by passing in a variable.
                         </p>
-                        <p>
                             <Code.Wrapper>
                                 <Code.Title>
                                     Calling a Function
@@ -662,17 +702,18 @@ export default function IntroWebDev(props) {
                                         let numberOfCats = 10;
                                     </Code.Line>
                                     <Code.Line>
-                                        numberOfCats = addACat(numberOfCats);
+                                        numberOfCats = addACat(numberOfCats); 
+                                    </Code.Line>
+                                    <Code.Line>
+                                        console.log(numberOfCats);
                                     </Code.Line>
                                 </Code.Code>
                                 <Code.Description>
                                     This code calls the function addACat with the parameter numberOfCats. When the
                                     function is run the number parameter is assigned the value of numberOfCats. The
-                                    function adds 1 to number then returns it. numberOfCats is then set to the return
-                                    value of 11.
+                                    function adds 1 to number then returns it. The output in the console in this case is 11.
                                 </Code.Description>
                             </Code.Wrapper>
-                        </p>
 
                     </SubSection>
 
@@ -705,59 +746,19 @@ export default function IntroWebDev(props) {
 
                             </Code.Code>
                             <Code.Description>
-                                The above code is used find the total of the numbers in array1. A for loop is
-                                initialized with 3 parts: creating an index variable <code style={{color: "#E67E22"}}>let
-                                i = 0</code>, setting the finish point <code
+                                The above code is used find the total of the numbers in array1. A <C>for loop</C> is
+                                initialized with 3 parts: creating an index variable: <code style={{color: "#E67E22"}}>let
+                                i = 0</code>, setting the finish point: <code
                                 style={{color: '#0E6251'}}>i {`<`} array1.length</code>, and incrementing the index
-                                after each repeat <code
+                                after each repeat: <code
                                 style={{color: '#2874A6'}}>i++</code>. Inside the for loop array1 is being accessed at
                                 index i: <code style={{color: '#922B21'}}>array1[i]</code>. The i surrounded by brackets
-                                is used to access the array. Sum would equal {1 + 2 + 4 + 5 + 6} after the loop
+                                is used to access the i-th item in the array. Sum would equal {1 + 2 + 4 + 5 + 6} after the loop
                                 finished.
                             </Code.Description>
                         </Code.Wrapper>
                     </SubSection>
-                    {/*<SubSection link={"basicjs"} label={"Loops"}>*/}
-                    {/*    <p>Loops are sections of code that are repeated. If you had a grocery store list and wanted to*/}
-                    {/*        check whether milk was on the list, a loop could do that. There are two types of loops, for*/}
-                    {/*        loops, and while loops. For loops are generally used for iterating through lists. While*/}
-                    {/*        loops are used when the finish condition is not known at the start.*/}
-                    {/*    </p>*/}
-                    {/*    <Code.Wrapper>*/}
-                    {/*        <Code.Title>*/}
-                    {/*            For Loop*/}
-                    {/*        </Code.Title>*/}
-                    {/*        <Code.Code>*/}
-                    {/*            <Code.Line>*/}
-                    {/*                let array1 = [0,1,2,4,5,6];*/}
-                    {/*            </Code.Line>*/}
-                    {/*            <Code.Line>*/}
-                    {/*                let sum = 0;*/}
-                    {/*            </Code.Line>*/}
-                    {/*            <Code.Line>*/}
-                    {/*                for (<span style={{color: "#E67E22"}}>let i = 0</span>; <span*/}
-                    {/*                style={{color: '#0E6251'}}>i {`<`} array1.length</span>;<span*/}
-                    {/*                style={{color: '#2874A6'}}> i++</span>) {`{`}*/}
-                    {/*            </Code.Line>*/}
-                    {/*            {`    `}sum = sum + <span style={{color: '#922B21'}}>array1[i]</span>*/}
-                    {/*            <Code.Line>*/}
-                    {/*                {'}'}*/}
-                    {/*            </Code.Line>*/}
-                    {/*        </Code.Code>*/}
-                    {/*        <Code.Description>*/}
-                    {/*            The above code is used find the total of the numbers in array1. A for loop is*/}
-                    {/*            initialized with 3 parts: creating an index variable <code style={{color: "#E67E22"}}>let*/}
-                    {/*            i = 0</code>, setting the finish point <code*/}
-                    {/*            style={{color: '#0E6251'}}>i {`<`} array1.length</code>, and incrementing the index*/}
-                    {/*            after each repeat <code*/}
-                    {/*            style={{color: '#2874A6'}}>i++</code>. Inside the for loop array1 is being accessed at*/}
-                    {/*            index i: <code style={{color: '#922B21'}}>array1[i]</code>. The i surrounded by brackets*/}
-                    {/*            is used to access the array.*/}
-                    {/*        </Code.Description>*/}
-                    {/*    </Code.Wrapper>*/}
-                    {/*</SubSection>*/}
-
-                </Section>
+        </Section>
                 <Section link={"pagemanip"} label={"Changing a web page with code"}
                          badge={<Badge variant={'success'}>Back</Badge>}>
                     <p>
@@ -874,7 +875,8 @@ export default function IntroWebDev(props) {
                     These projects are just a recommendation. Try to find a project you're passionate about and pursue
                     that.
                     <Table>
-                        <thead>
+                    <thead>
+                        <tr>
                         <th>
                             Project Name
                         </th>
@@ -890,6 +892,7 @@ export default function IntroWebDev(props) {
                         <th>
                             Estimated Time
                         </th>
+                        </tr>
                         </thead>
                         <tbody>
                         <tr>
@@ -948,7 +951,8 @@ export default function IntroWebDev(props) {
                                 Calculator
                             </td>
                             <td>
-                                <Badge variant={"warning"}>Full</Badge>
+                            <Badge variant={"warning"}>Both</Badge>
+
                             </td>
                             <td>
                                 Create a calculator that has two inputs and lets the user decide what calculation to
@@ -966,11 +970,11 @@ export default function IntroWebDev(props) {
                                 Random Item Selector
                             </td>
                             <td>
-                                <Badge variant={"warning"}>Full</Badge>
+                                <Badge variant={"warning"}>Both</Badge>
                             </td>
                             <td>
                                 Let the user enter a list of items and then randomly select one. This could be used for
-                                deciding what restaurant to go to.
+                                randomly deciding what restaurant to go to.
                             </td>
                             <td>
                                 Medium
@@ -994,10 +998,9 @@ export default function IntroWebDev(props) {
                         built on HTML, CSS, and JS.
                     </p>
                     <p>
-                        For complete beginners, try completing some of the projects above, then move on to the sections
-                        below.
+                        For complete beginners, look at some of the resources I posted throughout the article. Try completing some of the projects above, then move on to the sections
+                        below. Use google as much as possible so you don't get stuck.
                     </p>
-
                     <p>
                         For people who already have coding experience start looking into libraries and frameworks.
                         I recommend starting to learn a framework and use that as motivation to improve your HTML, CSS,
@@ -1008,39 +1011,42 @@ export default function IntroWebDev(props) {
                             These libraries are primarily used for user interface creation, however they heavily rely on
                             JS to
                             make them.
+                            </p>
                             <ul>
                                 <li>
-                                    <a target="_blank" href={"https://jquery.com/"}>jQuery</a> makes
-                                    writing JS easier by adding more functionality, and more powerful syntax.
+                                    <a target="_blank" rel="noopener noreferrer"  href={"https://jquery.com/"}>jQuery</a> makes
+                                    writing JS easier by adding functionality, and more powerful syntax.
                                 </li>
                                 <li>
-                                    <a target="_blank" href={'https://reactjs.org/'}>React</a> is a good library for creating large web
+                                    <a target="_blank" rel="noopener noreferrer"  href={'https://reactjs.org/'}>React</a> is a good library for creating large web
                                     applications
                                     that use the same code sections multiple times. React Native is a very similar
                                     library
                                     that is used for writing mobile apps. This page was built with React.
                                 </li>
                                 <li>
-                                    <a target="_blank" href={"https://angular.io/"}>Angular</a> is similar to React. Also can be used
+                                    <a target="_blank" rel="noopener noreferrer"  href={"https://angular.io/"}>Angular</a> is similar to React. Also can be used
                                     for
                                     writing mobile apps.
                                 </li>
+                                <li>
+                                    <a target="_blank" rel="noopener noreferrer"  href={"https://angular.io/"}>Bootstrap</a> is a CSS library. It has lots of built in styles to make your pages look good. This page was styled with Bootstrap.
+                                </li>
                             </ul>
-                        </p>
                     </SubSection>
                     <SubSection label={"Databases"} badge={<Badge variant={"success"}>Back</Badge>}>
                         <p>
                             Databases are ways to store information across multiple user sessions. Every time you log
                             into a
                             website the website looks in their database and pulls your data to verify your password
-                            matches. Virtually every website is built on a database. Every time the user interact they
+                            matches. Virtually every website is built on a database. Every time the user interacts they
                             are either viewing, changing, or adding data to the database in one way or another.
                             Understanding how databases work and how to work with them is essential to backend and full
                             stack development.
                         </p>
                         <p>
                             SQL is the language most often used for database manipulation. It is
-                            relatively simple and definitely worth learning. <a target="_blank"
+                            relatively simple and definitely worth learning. <a target="_blank" rel="noopener noreferrer" 
                             href={"https://www.geeksforgeeks.org/structured-query-language/"}>Geeks for Geeks</a> has a
                             good tutorial. Most companies use some derivative of SQL.
                         </p>
@@ -1048,50 +1054,55 @@ export default function IntroWebDev(props) {
                             Universities teach whole classes just on databases. They require a lot of time to understand
                             and use. Take your time choosing a database for a project because you'll be stuck with it
                             all the way through. Here are some common database libraries.
+                            </p>
                             <ul>
                                 <li>
-                                    <a target="_blank" href={'https://www.mongodb.com/'}>MongoDB</a> Built on a document-based
+                                    <a target="_blank" rel="noopener noreferrer"  href={'https://www.mongodb.com/'}>MongoDB</a> Built on a document-based
                                     structure. NOT a SQL framework.
                                 </li>
                                 <li>
-                                    <a target="_blank" href={"https://www.mysql.com/"}>MySQL</a> Made by Oracle aimed at companies. Uses
+                                    <a target="_blank" rel="noopener noreferrer"  href={"https://www.mysql.com/"}>MySQL</a> Made by Oracle aimed at companies. Uses
                                     SQL.
                                 </li>
                                 <li>
-                                    <a target="_blank" href={"https://www.postgresql.org/"}>postgresql</a> Another SQL framework. It is
+                                    <a target="_blank" rel="noopener noreferrer"  href={"https://www.postgresql.org/"}>postgresql</a> Another SQL framework. It is
                                     open
-                                    source and has a good SQL tutorial starting <a target="_blank"
+                                    source and has a good SQL tutorial starting <a target="_blank" rel="noopener noreferrer" 
                                     href={"https://www.postgresql.org/docs/12/tutorial-sql.html"}>here</a>.
                                 </li>
                             </ul>
-                        </p>
                     </SubSection>
                     <SubSection label={"REST APIs: Connecting the Database and the Frontend"}
-                                badge={<span><Badge variant={"primary"}>Back</Badge><Badge
+                                badge={<span><Badge variant={"primary"}>Front</Badge><Badge
                                     variant={"success"}>Back</Badge></span>}>
                         <p>
                             REST APIs also known as Representational State Transfer Application Programming Interface
                             are used to access information from a website, database, or service.
                             Every REST API has a set of endpoints. Each endpoint allows you to get an item or perform a
-                            task on one or multiple items. This website <a target="_blank"
+                            task on one or multiple items. This website <a target="_blank" rel="noopener noreferrer" 
                             href={"https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/"}>Smashing
                             Magazine</a> has a good
-                            introductory tutorial. <a target="_blank" href={"https://developers.strava.com/docs/reference/"}>Strava</a>,
+                            introductory tutorial. <a target="_blank" rel="noopener noreferrer"  href={"https://developers.strava.com/docs/reference/"}>Strava</a>,
                             an athletic social media website, has very good documentation of their API. It is a good
-                            example to understand how an good API look.
+                            example to understand how an good API looks.
                         </p>
 
                     </SubSection>
-                    <SubSection label={"Hosting your app"}>
+                    <SubSection label={"Hosting your app"} badge={<span><Badge variant={"primary"}>Front</Badge><Badge
+                                    variant={"success"}>Back</Badge></span>}>
                         <p>
-                            Hosting is a whole problem in itself. If you are working on simple web pages <a target="_blank"
-                            href={"https://github.com"}>Github</a> offers free hosting for small pages. Amazon, Google,
-                            and Microsoft all offer hosting services. I personally use <a target="_blank"
+                            Hosting is a whole problem in itself. If you are working on simple web pages <a target="_blank" rel="noopener noreferrer" 
+                            href={"https://github.com"}>Github</a> offers free hosting for small pages. </p>
+                            <p>
+                                PC Magazing has a good <a href="https://www.pcmag.com/roundup/316108/the-best-web-hosting-services">article</a> about places to host your website. I think most of them, for a small website, are between $2-5/month.
+                            </p>
+                            <p>Amazon, Google,
+                            and Microsoft all offer hosting services. They are free for small website.  I personally use <a target="_blank" rel="noopener noreferrer" 
                             href={"https://cloud.google.com/appengine/"}>Google Cloud Platform's App
-                            Engine</a> for hosting my react apps because it was the easiest to set up. Plus their free
+                            Engine</a> for hosting my web apps because it was the easiest to set up. Plus, their free
                             quota
-                            is pretty sizable. <a target="_blank" href={"https://aws.amazon.com/lambda/"}>Amazon Lambda</a> is also good
-                            services, but I haven't explored it fully. Microsoft has an <a target="_blank"
+                            is pretty big. <a target="_blank" rel="noopener noreferrer"  href={"https://aws.amazon.com/lambda/"}>Amazon Lambda</a> is also good
+                            services, but I haven't explored it fully. Microsoft has an <a target="_blank" rel="noopener noreferrer" 
                             href={"https://azure.microsoft.com/en-us/services/app-service/"}>app service</a> that I have
                             used,
                             but their platform user interface is not beginner friendly.

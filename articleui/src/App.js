@@ -9,7 +9,8 @@ import {
 
 import {
     IntroWebDev,
-    IntroPython
+    IntroPython,
+    HowToGoogle
 } from './components';
 
 
@@ -23,6 +24,8 @@ function App() {
         var content = <IntroWebDev />
     } else if (window === 1) {
         var content = <IntroPython />
+    } else if (window === 2) {
+        var content = <HowToGoogle />
     }
 
 
@@ -36,6 +39,9 @@ function App() {
                     </SideBar.Item>
                     <SideBar.Item onClick={() => setWindow(1)}>
                         Intro to Python
+                    </SideBar.Item>
+                    <SideBar.Item onClick={() => setWindow(2)}>
+                        How to Google
                     </SideBar.Item>
                 </SideBar.Wrapper>
                 <div>

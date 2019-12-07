@@ -8,9 +8,9 @@ function Snip(props) {
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">{props.subtitle}</Card.Subtitle>
-                <Card.Text>
+                {/* <Card.Text> */}
                     {props.children}
-                </Card.Text>
+                {/* </Card.Text> */}
 
             </Card.Body>
         </Card>)

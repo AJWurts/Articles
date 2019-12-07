@@ -5,6 +5,7 @@ import SideBar from './SideBar';
 import CodeSnip from './CodeSnip';
 import SubSection from './SubSection';
 import Code from './Code'
+import C from './C';
 import {
     List,
     ListItem
@@ -18,5 +19,6 @@ export  {
     ListItem,
     CodeSnip,
     SubSection,
-    Code
+    Code,
+    C
 }

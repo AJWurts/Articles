@@ -7,7 +7,6 @@ export default function TableOfContents(props) {
     if (!children.length) {
         children = [children]
     }
-    console.log(children);
 
     return (
         <div>

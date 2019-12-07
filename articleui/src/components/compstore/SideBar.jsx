@@ -25,7 +25,6 @@ function Wrapper(props) {
     if (!children.length) {
         children = [children]
     }
-    console.log(children);
     return (
         <div {...props}>
             <h4>

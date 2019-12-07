@@ -9,6 +9,9 @@ body {
     margin-block-start: 0px;
     margin-block-end: 5px;
   }
+  ul {
+    margin-block-start: 0px;
+  }
    
   .page-wrapper {
     text-align: start;

@@ -271,9 +271,12 @@ export default function IntroPython(props) {
                         </SubSection>
                     </TableOfContents>
                 </Section>
-                <Section link="commandline" label="Command Line App">
+                <Section link="commandline" label="Practice App 1: Command Line Calculator">
                     <p>
-                        Coming Soon...
+                        Command line programs are very common in Python. Python is good for writing scripts. Scripts are small programs that do a set of tasks that save the user time.
+                    </p>
+                    <p>
+                        When I was a TA for an undergrad class we downloaded all the homework files for grading in a certain format. For each homework assigment we needed to make an excel file with the individuals name and email on a certain line. I didn't want to spend 20 minutes every assignment indivdually making and filling in the excel documents so I made a 40 line python script that did everything for me. All I did was tell it what folder to look at and where the excel rubric was, and it did the rest. 
                     </p>
                 </Section>
                 <Section link="turtles" label="Turtles">

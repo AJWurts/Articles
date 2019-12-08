@@ -45,7 +45,7 @@ function useWindowSize() {
   }
 
 function App(props) {
-    var [ frame, setWindow ] = useState(1);
+    var [ frame, setWindow ] = useState(0);
 
     const size = useWindowSize();
 

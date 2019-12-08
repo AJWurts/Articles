@@ -11,10 +11,10 @@ export default function TableOfContents(props) {
     return (
         <div>
             <div>
-                <h3>
+                <div style={{fontSize: props.fontSize || '30px'}}>
                     Table of Contents
-                </h3>
-                <List items={children} />
+                </div>
+                <List {...props} items={children} />
   
             </div>
             <div>

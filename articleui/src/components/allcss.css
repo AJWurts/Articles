@@ -15,8 +15,9 @@ body {
    
   .page-wrapper {
     text-align: start;
-    margin: 10px;
+    padding: 10px;
   }
+
   /* #c5c5c5 #335c81 #829191 #84a9c0 #279af1 */
   .title {
     font-size: 35px;
@@ -29,6 +30,7 @@ body {
   
   .topbar-wrapper {
     background-color: white;
+    
   }
   .topbar {
     padding-bottom: 5px;
@@ -46,7 +48,7 @@ body {
   }
   
   .topbar-buttons {
-    margin-left: 50px;
+    /* margin-left: 50px; */
   }
   
   .topbar-buttons:first-child {

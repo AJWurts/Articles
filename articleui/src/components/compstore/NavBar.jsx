@@ -3,18 +3,18 @@ import React from 'react';
 export default function NavBar(props) {
 
     return (
-        <div>
+        <div style={{display: props.width < 900 ? "block" : "flex"}}>
             <div id='top'></div>
 
-            <div className='topbar-wrapper'>
-                <div className='topbar flex'>
+            <div className='topbar-wrapper' style={{display: props.width < 900 ? "block" : "flex", marginLeft: props.width < 900 ? "0px" : "auto", marginRight: props.width < 900 ? "0px" : "auto", }}>
+                <div className='topbar flex' style={{display: props.width < 900 ? "block" : "flex", minWidth: props.width < 900 ? "" : "900px"}}>
                     <div>
                         <div className='title'>
                             Intro to Coding
                         </div>
                     
                     </div>
-                    <div className='topbar-buttons flex'>
+                    <div className='topbar-buttons flex' style={{display: props.width < 900 ? "block" : "flex"}}>
                         <div className='topbar-link' onClick={()=> window.location.href="http://www.alexwurts.com/#biography"}>
                             About Me
                         </div>

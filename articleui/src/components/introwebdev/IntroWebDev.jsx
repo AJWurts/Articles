@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
     TableOfContents,
     Section,
@@ -16,8 +16,9 @@ import {Badge, Table, CardDeck} from 'react-bootstrap';
 
 export default function IntroWebDev(props) {
 
+
     return (
-        <div className='page-wrapper'>
+        <div className='page-wrapper' style={{maxWidth: Math.min(props.width, 1000)}}>
             <h1>
                 Welcome to Intro to Web Dev.
             </h1>
@@ -40,8 +41,9 @@ export default function IntroWebDev(props) {
                         place to start. This
                         tutorial will cover three topics Front End Development, Backend Development, and Full Stack
                         development (both frontend and backend). Every section will be labeled either <Badge
-                        variant="primary">Front</Badge>, or <Badge
-                        variant="success">Back</Badge>. Based on your goal
+                        variant="primary">Front</Badge>, <Badge
+                        variant="success">Back</Badge>, or <Badge
+                        variant="warning">Back</Badge> which requires both. Based on your goal
                         you can choose to read the relevant sections.
                     </p>
                     <p>
@@ -196,7 +198,7 @@ export default function IntroWebDev(props) {
                             <CodeSnip.Snip title={"<a></a>"} subtitle={"Anchor (Link)"}>
                                 Used for linking to other pages. Inline element.
                                 <CodeSnip.Example>
-                                    {`<a href="'http://otherpage.com"> link text </a>`}
+                                    {`<a href="http://otherpage.com"> link text </a>`}
                                 </CodeSnip.Example>
                             </CodeSnip.Snip>
                         </CardDeck>
@@ -760,7 +762,7 @@ export default function IntroWebDev(props) {
                     </SubSection>
         </Section>
                 <Section link={"pagemanip"} label={"Changing a web page with code"}
-                         badge={<Badge variant={'success'}>Back</Badge>}>
+                         badge={<Badge variant={'warning'}>Full</Badge>}>
                     <p>
                         Now that you have a brief overview of javascript, let's go over how to use code in a web
                         page.
@@ -874,7 +876,10 @@ export default function IntroWebDev(props) {
                     variant={"success"}>Back</Badge></span>}>
                     These projects are just a recommendation. Try to find a project you're passionate about and pursue
                     that.
-                    <Table>
+                    <div style={{overflowX: 'scroll'}}>
+
+                    
+                    <Table >
                     <thead>
                         <tr>
                         <th>
@@ -951,7 +956,7 @@ export default function IntroWebDev(props) {
                                 Calculator
                             </td>
                             <td>
-                            <Badge variant={"warning"}>Both</Badge>
+                            <Badge variant={"warning"}>Full</Badge>
 
                             </td>
                             <td>
@@ -970,7 +975,7 @@ export default function IntroWebDev(props) {
                                 Random Item Selector
                             </td>
                             <td>
-                                <Badge variant={"warning"}>Both</Badge>
+                                <Badge variant={"warning"}>Full</Badge>
                             </td>
                             <td>
                                 Let the user enter a list of items and then randomly select one. This could be used for
@@ -985,9 +990,7 @@ export default function IntroWebDev(props) {
                         </tr>
                         </tbody>
                     </Table>
-                    <ul>
-
-                    </ul>
+                    </div>
                 </Section>
                 <Section link={'nextsteps'} label={"Next Steps"}
                          badge={<span><Badge variant={"primary"}>Front</Badge><Badge

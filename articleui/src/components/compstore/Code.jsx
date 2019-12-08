@@ -3,7 +3,7 @@ import React from 'react'
 function Wrapper(props) {
 
     return (
-        <div style={{   margin: "8px 0px"}}>
+        <div style={{ margin: "8px 0px" }}>
             {props.children}
         </div>
     )
@@ -11,11 +11,19 @@ function Wrapper(props) {
 
 function Code(props) {
     return (
-        <pre style={{backgroundColor: "lightgray", padding: "5px", borderRadius: "6px",  margin: "5px"}}>
+        <pre style={{ backgroundColor: "lightgray", padding: "5px", borderRadius: "6px", margin: "5px" }}>
             <code>
                 {props.children}
             </code>
         </pre>
+    )
+}
+
+function Comment(props) {
+    return (
+        <span style={{ color: "darkgreen"}}>
+            {props.children}
+        </span>
     )
 }
 
@@ -34,7 +42,7 @@ function Line(props) {
 
 function Title(props) {
     return (
-        <div style={{fontSize: "20px"}}>
+        <div style={{ fontSize: "20px" }}>
             {props.children}
         </div>
     )
@@ -51,7 +59,7 @@ function Description(props) {
 function Result(props) {
     return (
         <div>
-            <b>Result:</b><br/>
+            <b>Result:</b><br />
             {props.children}
         </div>
     )
@@ -63,5 +71,6 @@ export default {
     Title,
     Description,
     Result,
-    Wrapper
+    Wrapper,
+    Comment
 }

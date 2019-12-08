@@ -6,6 +6,9 @@ import CodeSnip from './CodeSnip';
 import SubSection from './SubSection';
 import Code from './Code'
 import C from './C';
+import S from './S';
+
+import Link from './Link';
 import {
     List,
     ListItem
@@ -20,5 +23,7 @@ export  {
     CodeSnip,
     SubSection,
     Code,
-    C
+    C,
+    Link,
+    S
 }

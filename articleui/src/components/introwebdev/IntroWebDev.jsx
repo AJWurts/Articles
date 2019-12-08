@@ -1076,8 +1076,8 @@ export default function IntroWebDev(props) {
                             </ul>
                     </SubSection>
                     <SubSection label={"REST APIs: Connecting the Database and the Frontend"}
-                                badge={<span><Badge variant={"primary"}>Front</Badge><Badge
-                                    variant={"success"}>Back</Badge></span>}>
+                                badge={<span><Badge
+                                    variant={"warning"}>Full</Badge></span>}>
                         <p>
                             REST APIs also known as Representational State Transfer Application Programming Interface
                             are used to access information from a website, database, or service.

@@ -1097,7 +1097,7 @@ export default function IntroWebDev(props) {
                             Hosting is a whole problem in itself. If you are working on simple web pages <a target="_blank" rel="noopener noreferrer" 
                             href={"https://github.com"}>Github</a> offers free hosting for small pages. </p>
                             <p>
-                                PC Magazing has a good <a href="https://www.pcmag.com/roundup/316108/the-best-web-hosting-services">article</a> about places to host your website. I think most of them, for a small website, are between $2-5/month.
+                                PC Magazine has a good <a href="https://www.pcmag.com/roundup/316108/the-best-web-hosting-services">article</a> about places to host your website. I think most of them, for a small website, are between $2-5/month.
                             </p>
                             <p>Amazon, Google,
                             and Microsoft all offer hosting services. They are free for small website.  I personally use <a target="_blank" rel="noopener noreferrer" 

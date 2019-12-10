@@ -5,7 +5,7 @@ export default function Link(props) {
 
     return (
         <a target="_blank" rel="noopener noreferrer" 
-        href={props.href}>
+         {...props}>
             {props.children} 
         </a>
     )

@@ -307,7 +307,7 @@ export default function IntroPython(props) {
                                             len(list1)
                                         </CodeSnip.Example>
                                         <CodeSnip.Result>
-                                            The code would return an integer with tht length of the list.
+                                            The code would return an integer with the length of the list.
                                         </CodeSnip.Result>
                                     </CodeSnip.Snip>
                                     <CodeSnip.Snip title="min" subtitle="Minimum">
@@ -431,6 +431,12 @@ export default function IntroPython(props) {
                                 </Code.Description>
                             </Code.Wrapper>
                         </SubSection>
+                        <SubSection link="syntax-lists" label="Lists">
+                           // ## On Stream
+                        </SubSection>
+                        <SubSection link="syntax-dicts" label="Dictionaries">
+                           // ## On Stream
+                        </SubSection>
                         <SubSection link="syntax-classes" label="Classes">
                             <p>
                                 Object orientated programming is a progrmaming method that organizes the program around
@@ -439,11 +445,61 @@ export default function IntroPython(props) {
                                 ontop of lists, also objects, or chars (not objects).
                             </p>
                             <p>
-                                Classes are used to define objects. A class can contain class variables and methods
-                                (functions in a class). Methods are special because they ahve access to the class
-                                variables. Therefore it is common for a method to have no parameters because it performs
-                                side effects on class variables.
+                                Classes are used to define objects. A class can contains variables and methods
+                                (functions in a class). Methods are special because they have access to the object
+                                variables. Therefore it is common for a method to have no parameters because it can use the object variables to do calculations.
                             </p>
+                            <Code.Wrapper>
+                                <Code.Title>
+                                    Example Dog Class
+                                </Code.Title>
+                                    <Code.Code>
+                                        <Code.Line tabs={0}>
+                                        class Dog():
+                                        </Code.Line>
+                                        <Code.Line tabs={1}>
+                                        def __init__(self, name, human_years, breed):
+                                        </Code.Line>
+                                        <Code.Line tabs={2}>
+                                        self.name = name
+                                        </Code.Line>
+                                        <Code.Line tabs={2}>
+                                        self.dog_years = human_years * 7
+                                        </Code.Line>
+                                        <Code.Line tabs={2}>
+                                        self.breed = breed
+                                        </Code.Line>
+                                        <br/>
+                                        <Code.Line tabs={1}>
+                                        def pet(self):
+                                        </Code.Line>
+                                        <Code.Line tabs={2}>
+                                        print(name, "wags their tail.")
+                                        </Code.Line>
+                                        <br/>
+                                        <Code.Line tabs={1}>
+                                        def feed(self, food_amount):
+                                        </Code.Line>
+                                        <Code.Line tabs={2}>
+                                        print(name, "eats")
+                                        </Code.Line>
+                                        <br/>
+                                        <Code.Line tabs={1}>
+                                        def getBreed(self):
+                                        </Code.Line>
+                                        <Code.Line tabs={2}>
+                                        return self.breed
+                                        </Code.Line>
+                                        <br/>
+                                        <Code.Line tabs={1}>
+                                        def setAge(self, human_years):
+                                        </Code.Line>
+                                        <Code.Line tabs={2}>
+                                        self.dog_years = human_years * 7
+                                        </Code.Line>
+                                        <br/>
+                                        </Code.Code>
+                            </Code.Wrapper>
                         </SubSection>
                         <SubSection link="syntax-forloops" label="For Loops">
                             <p>
@@ -515,15 +571,17 @@ export default function IntroPython(props) {
                                 </Code.Description>
                             </Code.Wrapper>
                         </SubSection>
-                        <SubSection label="If Statements">
-                        <p>If statements control the program flow. Based on variables you can decide whether to run sections of code or not.</p> 
+                        <SubSection link="ifstatement" label="if statements">
+                        <p>If statements control the program flow. Based on variables you can decide whether to run sections of code or not. 
+                        </p> 
                         <p>
                             There are multiple parts to an if statement. 
-                            <C> if</C>, <C>else</C>, and <C>elif</C>. <C> if</C> is always at the start of the if statement. It has a boolean conditional. <C>elif</C> can be used after the first. It will run if all of the conditionals above are false. 
+                            <C> if</C>, <C>else</C>, and <C>elif</C>. 
+                            <C> if</C> is always at the start of the if statement. After the <C>if</C> secion is a boolean. If the boolean is true the code within the if statement runs. If false, the code doesn't run. <C>elif</C> can be used after the first <C>if</C>. It will run when all of the conditionals above are false. If none of the <C>if</C> or <C>elif</C> statements are true above the <C>else</C> code will run. It can be used as a default if nothing is true. 
                         </p>
                         <Code.Wrapper>
                             <Code.Title>
-                                Example If Statement
+                                Example if statement
                             </Code.Title>
                             <Code.Code>
                                 <Code.Line>
@@ -549,7 +607,7 @@ export default function IntroPython(props) {
                                 </Code.Line>
                             </Code.Code>
                             <Code.Result>
-                                This example prints out whether you're a millionaire or not, based on the value of the money variable. The dark blue are the suntax for the if statement. The green are for the boolean statements. 
+                                This example prints out whether you're a millionaire or not, based on the value of the money variable. The dark blue is sthe syntax for the if statement. The green are for the boolean statements. If <C>money</C> was 1000, it would print "You're not a Millionaire". If <C>money</C> was greater than 1 Billion it would print "You're a Billionaire!"."
                             </Code.Result>
                         </Code.Wrapper>
                         </SubSection>
@@ -558,16 +616,14 @@ export default function IntroPython(props) {
         
                 <Section link="commandline" label="Practice App 1: Command Line Calculator">
                     <p>
-                        Command line programs are very common in Python. Python is good for writing scripts. Scripts are
-                        small programs that do a set of tasks that save the user time.
+                        Command line programs are very common in Python.  Scripts are small programs, such as command line programs, that do a set of tasks. Scripts are most often used to save time doing repetitive tasks. Python is good for writing scripts.
                     </p>
                     <p>
                         When I was a TA for an undergrad class we downloaded all the homework files for grading in a
                         certain format. For each homework assigment we needed to make an excel file with the individuals
-                        name and email on a certain line. I didn't want to spend 20 minutes every assignment individually
+                        name and email. I didn't want to spend 20 minutes every assignment individually
                         making and filling in the excel documents, so I made a 40 line python script that did everything
-                        for me. All I did was tell it what folder to look at and where the excel rubric was, and it did
-                        the rest.
+                        for me. I gave it a folder of homework assignments, and it did the rest. It reduced a 20 minute task down to 1 second.  
                     </p>
                     <p>
                         Start out by downloading the <Link href={"/files/commandline.py"} download >template file</Link>.
@@ -579,7 +635,7 @@ export default function IntroPython(props) {
                     <SubSection>
                         <Code.Wrapper>
                             <Code.Title>
-                                Starting Out
+                                Part 1: Read User Input
                             </Code.Title>
                             We start by downloading the template and adding three lines of code. Each code uses input to retrieve one piece of information from the user. Then we display the data in the console using <C>print</C> to verify they were entered properly.
                             <Code.Code>
@@ -603,7 +659,7 @@ export default function IntroPython(props) {
                         </Code.Wrapper>
                         <Code.Wrapper>
                             <Code.Title>
-                                Parsing the input
+                                Part 2: Parse User Input
                             </Code.Title>
                             Since the <C>input</C> function returns a string. We need to parse the user number inputs, so that we can use them as numbers.
                             <Code.Code>
@@ -620,7 +676,7 @@ export default function IntroPython(props) {
                         </Code.Wrapper>
                         <Code.Wrapper>
                             <Code.Title>
-                                Processing the operator
+                                Part 3: Process the Operator
                             </Code.Title>
                             After the user has entered in the data we need to process the numbers and operators to produce a result. We will use an if statement to process it.
                        
@@ -670,63 +726,75 @@ export default function IntroPython(props) {
                             </Code.Title>
                             <Code.Code>
                                 <Code.Line tabs={0}>
-                                number1 = input("Enter Number 1: ")
-                                </Code.Line>
-                                <Code.Line tabs={0}>
-                                number2 = input("Enter Number 2: ")
-                                </Code.Line>
-                                <Code.Line tabs={0}>
-                                operator = input("Enter Operator (+, -, /, *): ")
-                                </Code.Line>
-                                <br/>
-                                <Code.Line tabs={0}>
-                                number1 = int(number1)
-                                </Code.Line>
-                                <Code.Line tabs={0}>
-                                number2 = int(number2)
-                                </Code.Line>
-                                <br/>
-                                <Code.Line tabs={0}>
-                                result = 0
-                                </Code.Line>
-                                <Code.Line tabs={0}>
-                                if operator == "+":
-                                </Code.Line>
-                                <Code.Line tabs={1}>
-                                result = number1 + number2
-                                </Code.Line>
-                                <Code.Line tabs={0}>
-                                elif operator == "-":
-                                </Code.Line>
-                                <Code.Line tabs={1}>
-                                result = number1 - number2
-                                </Code.Line>
-                                <Code.Line tabs={0}>
-                                elif operator == '/':
-                                </Code.Line>
-                                <Code.Line tabs={1}>
-                                result = number1 / number2
-                                </Code.Line>
-                                <Code.Line tabs={0}>
-                                elif operator == '*':
-                                </Code.Line>
-                                <Code.Line tabs={1}>
-                                result = number1 * number2
-                                </Code.Line>
-                                <br/>
-                                <Code.Line tabs={0}>
-                                print(result)
-                                </Code.Line>
-                            </Code.Code>
+                                    <Code.Comment># Part 1: Retrieve user input using the built-in <C>input</C> function</Code.Comment>
+                                    </Code.Line>
+                                    <Code.Line tabs={0}>
+                                    number1 = input("Enter Number 1: ")
+                                    </Code.Line>
+                                    <Code.Line tabs={0}>
+                                    number2 = input("Enter Number 2: ")
+                                    </Code.Line>
+                                    <Code.Line tabs={0}>
+                                    operator = input("Enter Operator (+, -, /, *): ")
+                                    </Code.Line>
+                                    <br/>
+                                    <Code.Line tabs={0}>
+                                    <Code.Comment># Part 2: Parse the input and turn the strings into integers</Code.Comment>
+                                    </Code.Line>
+                                    <Code.Line tabs={0}>
+                                    number1 = int(number1)
+                                    </Code.Line>
+                                    <Code.Line tabs={0}>
+                                    number2 = int(number2)
+                                    </Code.Line>
+                                    <br/>
+                                    <Code.Line tabs={0}>
+                                    <Code.Comment># Part 3: Process the Operator using an if statement.</Code.Comment>
+                                    </Code.Line>
+                                    <Code.Line tabs={0}>
+                                    result = 0
+                                    </Code.Line>
+                                    <Code.Line tabs={0}>
+                                    if operator == "+":
+                                    </Code.Line>
+                                    <Code.Line tabs={1}>
+                                    result = number1 + number2
+                                    </Code.Line>
+                                    <Code.Line tabs={0}>
+                                    elif operator == "-":
+                                    </Code.Line>
+                                    <Code.Line tabs={1}>
+                                    result = number1 - number2
+                                    </Code.Line>
+                                    <Code.Line tabs={0}>
+                                    elif operator == '/':
+                                    </Code.Line>
+                                    <Code.Line tabs={1}>
+                                    result = number1 / number2
+                                    </Code.Line>
+                                    <Code.Line tabs={0}>
+                                    elif operator == '*':
+                                    </Code.Line>
+                                    <Code.Line tabs={1}>
+                                    result = number1 * number2
+                                    </Code.Line>
+                                    <br/>
+                                    <Code.Line tabs={0}>
+                                    <Code.Comment># Display the result to console.</Code.Comment>
+                                    </Code.Line>
+                                    <Code.Line tabs={0}>
+                                    print(result)
+                                    </Code.Line>
+                                </Code.Code>
                             <Code.Description>
-                                Part 1 pulls in user input. Part 2 turns the strings into numbers. Part 3 prrocesses the operator and performs the operation. Finally the output is printed in the console. 
+                                The calculation output will be printed to the console after the user enters the operator. 
                             </Code.Description>
                         </Code.Wrapper>
                 </SubSection>
-                <TableOfContents noNumbers >
+                <TableOfContents noNumbers fontSize={"20px"} >
                     <SubSection link="turtlecommands" label="Turtle Commands">
                         <p>
-                            The first step to turtle is creating a turtle. Then a turtle has a set of commands that you can use to move it around the screen. 
+                            The first step to turtle is creating a turtle. Once created a turtle has a set of commands that you can use to move it around the screen. 
                         </p>
                         <Code.Wrapper>
                             <Code.Title>
@@ -768,7 +836,7 @@ export default function IntroPython(props) {
                         </CardDeck>
                         <CardDeck>
                             <CodeSnip.Snip title="pencolor" label="Pen Color" >
-                                Chaanges the turtle pen color. Takes in a color string such as "blue", "red", "green", or "yellow".
+                                Changes the turtle pen color. Takes in a color string such as "blue", "red", "green", or "yellow".
                                 <CodeSnip.Example>
                                     bob_the_turtle.pencolor("blue")
                                 </CodeSnip.Example>
@@ -777,7 +845,6 @@ export default function IntroPython(props) {
                                 </CodeSnip.Result>
                             </CodeSnip.Snip>
                         </CardDeck>
-
                     </SubSection>
                     <SubSection  label="Project 1: Turtle Circle">
                         <p>

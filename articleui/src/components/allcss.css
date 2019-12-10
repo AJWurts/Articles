@@ -16,6 +16,7 @@ body {
   .page-wrapper {
     text-align: start;
     padding: 10px;
+    max-width: 900px
   }
 
   /* #c5c5c5 #335c81 #829191 #84a9c0 #279af1 */

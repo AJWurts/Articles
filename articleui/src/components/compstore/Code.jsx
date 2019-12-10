@@ -11,7 +11,7 @@ function Wrapper(props) {
 
 function Code(props) {
     return (
-        <pre style={{ backgroundColor: "lightgray", padding: "5px", borderRadius: "6px", margin: "5px" }}>
+        <pre style={{ backgroundColor: "lightgray", padding: "5px", borderRadius: "6px", margin: "5px"}}>
             <code>
                 {props.children}
             </code>

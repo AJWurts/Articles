@@ -62,7 +62,7 @@ function App(props) {
     return (
         <div className="App" style={{backgroundColor: "white"}}>
             <NavBar width={size.width}/>
-            <div style={{display: size.width < 900 ?  "block": "flex", maxWidth: Math.min(size.width , 1000) + "px", marginLeft: size.width > 900 ? "auto" : "0px", marginRight:  size.width > 900 ? "auto" : "0px"}}>
+            <div style={{display: size.width < 900 ?  "block": "flex", maxWidth: Math.min(size.width , 900) + "px", marginLeft: size.width > 900 ? "auto" : "0px", marginRight:  size.width > 900 ? "auto" : "0px"}}>
                 <SideBar.Wrapper style={{minWidth: "150px", maxWidth: "250px", marginLeft: "auto", marginRight: "auto"}}>
                     <SideBar.Item onClick={() => setWindow(0)}>
                         Intro to Web Dev
@@ -74,7 +74,7 @@ function App(props) {
                         How to Google
                     </SideBar.Item>
                 </SideBar.Wrapper>
-                <div>
+                <div style={{maxWidth: Math.min(size.width , 750) + "px"}}>
                     {content}
                 </div>
             </div>

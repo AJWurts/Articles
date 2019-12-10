@@ -664,65 +664,65 @@ export default function IntroPython(props) {
                                 The above code is a multiple line if statement. It uses both <C>if</C> and <C>elif</C>. The if statement will go through until the operator matches, and then run the code inside. It sues the if statement to process the operator.
                         </Code.Description>
                     </Code.Wrapper>
-                    <Code.Wrapper>
-                        <Code.Title>
-                        Putting Everything Together
-                        </Code.Title>
-                        <Code.Code><br/>
-                            <Code.Line tabs={0}>
-                            number1 = input("Enter Number 1: ")
-                            </Code.Line>
-                            <Code.Line tabs={0}>
-                            number2 = input("Enter Number 2: ")
-                            </Code.Line>
-                            <Code.Line tabs={0}>
-                            operator = input("Enter Operator (+, -, /, *): ")
-                            </Code.Line>
-                            <br/>
-                            <Code.Line tabs={0}>
-                            number1 = int(number1)
-                            </Code.Line>
-                            <Code.Line tabs={0}>
-                            number2 = int(number2)
-                            </Code.Line>
-                            <br/>
-                            <Code.Line tabs={0}>
-                            result = 0
-                            </Code.Line>
-                            <Code.Line tabs={0}>
-                            if operator == "+":
-                            </Code.Line>
-                            <Code.Line tabs={1}>
-                            result = number1 + number2
-                            </Code.Line>
-                            <Code.Line tabs={0}>
-                            elif operator == "-":
-                            </Code.Line>
-                            <Code.Line tabs={1}>
-                            result = number1 - number2
-                            </Code.Line>
-                            <Code.Line tabs={0}>
-                            elif operator == '/':
-                            </Code.Line>
-                            <Code.Line tabs={1}>
-                            result = number1 / number2
-                            </Code.Line>
-                            <Code.Line tabs={0}>
-                            elif operator == '*':
-                            </Code.Line>
-                            <Code.Line tabs={1}>
-                            result = number1 * number2
-                            </Code.Line>
-                            <br/>
-                            <Code.Line tabs={0}>
-                            print(result)
-                            </Code.Line>
-                            <br/>
-                            <br/>
-                            <br/>
+                        <Code.Wrapper>
+                            <Code.Title>
+                            Putting Everything Together
+                            </Code.Title>
+                            <Code.Code>
+                                <Code.Line tabs={0}>
+                                number1 = input("Enter Number 1: ")
+                                </Code.Line>
+                                <Code.Line tabs={0}>
+                                number2 = input("Enter Number 2: ")
+                                </Code.Line>
+                                <Code.Line tabs={0}>
+                                operator = input("Enter Operator (+, -, /, *): ")
+                                </Code.Line>
+                                <br/>
+                                <Code.Line tabs={0}>
+                                number1 = int(number1)
+                                </Code.Line>
+                                <Code.Line tabs={0}>
+                                number2 = int(number2)
+                                </Code.Line>
+                                <br/>
+                                <Code.Line tabs={0}>
+                                result = 0
+                                </Code.Line>
+                                <Code.Line tabs={0}>
+                                if operator == "+":
+                                </Code.Line>
+                                <Code.Line tabs={1}>
+                                result = number1 + number2
+                                </Code.Line>
+                                <Code.Line tabs={0}>
+                                elif operator == "-":
+                                </Code.Line>
+                                <Code.Line tabs={1}>
+                                result = number1 - number2
+                                </Code.Line>
+                                <Code.Line tabs={0}>
+                                elif operator == '/':
+                                </Code.Line>
+                                <Code.Line tabs={1}>
+                                result = number1 / number2
+                                </Code.Line>
+                                <Code.Line tabs={0}>
+                                elif operator == '*':
+                                </Code.Line>
+                                <Code.Line tabs={1}>
+                                result = number1 * number2
+                                </Code.Line>
+                                <br/>
+                                <Code.Line tabs={0}>
+                                print(result)
+                                </Code.Line>
                             </Code.Code>
-                    </Code.Wrapper>
-                </Subection>
+                            <Code.Description>
+                                Part 1 pulls in user input. Part 2 turns the strings into numbers. Part 3 prrocesses the operator and performs the operation. Finally the output is printed in the console. 
+                            </Code.Description>
+                        </Code.Wrapper>
+                </SubSection>
                 <TableOfContents noNumbers >
                     <SubSection link="turtlecommands" label="Turtle Commands">
                         <p>

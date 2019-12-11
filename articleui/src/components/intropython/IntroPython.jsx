@@ -382,6 +382,19 @@ export default function IntroPython(props) {
                     <C> [0,1,2,3,4]</C>
                   </CodeSnip.Result>
                 </CodeSnip.Snip>
+                <CodeSnip.Snip title="range" subtitle="Range Function">
+                  Return all integers between a starting point, and an ending point. The starting point is included in the range, and the end point is not. 
+                  <CodeSnip.Example>
+                    for i in range(4): <br/>
+                    <span>    print(i)</span> 
+                  </CodeSnip.Example>
+                  <CodeSnip.Result>
+                    <C>result</C> now equals the array passed in, sorted in ascending order:
+                    <C> [0,1,2,3,4]</C>
+                  </CodeSnip.Result>
+                </CodeSnip.Snip>
+                </CardDeck> 
+                <CardDeck>
                 <CodeSnip.Snip title={"input"} subtitle={"Input Function"}>
                   Takes in a string, displays the string to the user in the console and waits for the user to type something into the console and press enter. It always returns a <b>string</b>.
                   <CodeSnip.Example>
@@ -394,7 +407,7 @@ export default function IntroPython(props) {
 
                 </CodeSnip.Snip>
 
-                </CardDeck> 
+                </CardDeck>
               </Code.Wrapper>
               <Code.Wrapper>
                 <Code.Title>
@@ -719,8 +732,8 @@ export default function IntroPython(props) {
               </p>
               <p>
                 Python has two main formats, one iterates directly over a list, and the other iterates
-                over a range iterator. The first type is used when the index of an item is not needed.
-                The first for loop example below shows an example.
+                over a range iterator. The first type, direct iteration, is used when the index of an item is not needed. The second type iterates using the Range function.
+                
               </p>
               <Code.Wrapper>
                 <Code.Title>
@@ -742,7 +755,7 @@ export default function IntroPython(props) {
                   </Code.Line>
                 </Code.Code>
                 <Code.Description>
-                  The above code is used find the total of the numbers in <C>array1</C>. The for loop
+                  The above code is used find the sum of the numbers in <C>array1</C>. The for loop
                   iterates over <C>array1</C>. The first time the loop runs <S
                   color='#922B21'>val</S> is set to 0. <S color='#922B21'>val</S> is added to sum, and
                   sum is updated to 1. On the second iteration the <S color='#922B21'>val</S> is set
@@ -754,10 +767,10 @@ export default function IntroPython(props) {
                   For Loop: Range
                 </Code.Title>
                 This for loop uses two built-in functions, <C>range</C>, and <C>len</C>. <C>len</C> is
-                used to calculate the length of an object. When <C>len</C> is applied to a list
+                used to calculate the length of a alist. 
                 <Code.Code>
                   <Code.Line>
-                    array1 = ["a", "b", "c", "d", "e", "f"]
+                  array1 = [1,2,4,5,6]
                   </Code.Line>
                   <Code.Line>
                     summation = 0

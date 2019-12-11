@@ -833,7 +833,6 @@ export default function IntroPython(props) {
             </SubSection>
           </TableOfContents>
         </Section>
-    
         <Section link="commandline" label="Practice App 1: Command Line Calculator">
           <p>
             Command line programs are very common in Python.  Scripts are small programs, such as command line programs, that do a set of tasks. Scripts are most often used to save time doing repetitive tasks. Python is good for writing scripts.
@@ -1011,6 +1010,19 @@ export default function IntroPython(props) {
               </Code.Description>
             </Code.Wrapper>
         </SubSection>
+       
+
+        </Section>
+        <Section link="turtles" label="Turtle Module">
+        <p>
+          The turtle module is used for creating simple graphics. You control a turtle and move it around the screen. As it moves it draws a line behind it.
+        </p>
+        <Code.Wrapper>
+          <Code.Title>
+            Turtle Examples
+          </Code.Title>
+            Python has a lot of built in turtle examples. Check out <Link href="https://docs.python.org/3/library/turtle.html#module-turtledemo">this page</Link> to see all the examples and how to run them.
+        </Code.Wrapper>
         <TableOfContents noNumbers fontSize={"20px"} >
           <SubSection link="turtlecommands" label="Turtle Commands">
             <p>
@@ -1023,8 +1035,13 @@ export default function IntroPython(props) {
               <Code.Code>
                 bob_the_turtle = turtle.Turtle()
               </Code.Code>
+              <Code.Result>
+                Now that the turtle is made you can use the following commands to move the turtle around. 
+              </Code.Result>
             </Code.Wrapper>
-            
+            <Code.Title>
+              
+            </Code.Title>
             <CardDeck>
             <CodeSnip.Snip title="forward" label="Move Forward" >
               Moves the turtle forward a specified amount of units.
@@ -1168,33 +1185,31 @@ export default function IntroPython(props) {
           </SubSection>
         </TableOfContents>
           
-
         </Section>
         <Section link="modules" label="Built-in Python Modules">
         <p> Python has a lot of very useful modules built into the source code. Here are the most popular. </p>
           
           <CardDeck>
-            <CodeSnip.Snip title="math" subtitle="Math Module">
+            <CodeSnip.Snip title="import math" subtitle="Math Module">
               Calculates more complex math functions such as Trignometry, factorial, square root, exponents, Pi, e, logarithms, and rounding functions like floor and ceiling.
             </CodeSnip.Snip>
-            <CodeSnip.Snip title="random" subtitle="Random Module">
+            <CodeSnip.Snip title="import random" subtitle="Random Module">
               Generates pseudo-random numbers. Can generate random integers or floats. Not truly random, but good enough for simple programs. 
             </CodeSnip.Snip>
           </CardDeck>
           <CardDeck>
-            <CodeSnip.Snip title='time' subtitle="Time Module">
-              Used for any calculations that require time. Can be used to get the current time, or format time to make it more readable. 
+            <CodeSnip.Snip title='import time' subtitle="Time Module">
+              Used for any calculations that require time. Can be used to get the current time, or format time to make it more readable. Go <Link href="https://dev.to/zenulabidin/digesting-python-date-and-time-at-lightspeed-2c19">here</Link> for a good underestanding of the time module 
             </CodeSnip.Snip>
-            <CodeSnip.Snip title='statistics' subtitle="Statistics Module">
+            <CodeSnip.Snip title='import statistics' subtitle="Statistics Module">
               Calculate various statistics on a list. Some of the available functions cover mean, median, mode, quantiles, standard deviation, and variance. 
-            </CodeSnip.Snip>
-            
+            </CodeSnip.Snip>    
           </CardDeck>
           <CardDeck>
-            <CodeSnip.Snip title="sys" subtitle="System Module">
+            <CodeSnip.Snip title="import sys" subtitle="System Module">
               A module that provides access to interpreter variables. Can be used to access command line arguments. 
             </CodeSnip.Snip>
-            <CodeSnip.Snip title="smptplib" subtitle="Emailing Library">
+            <CodeSnip.Snip title="import smptplib" subtitle="Emailing Library">
               <p>
                 Create and send emails.
               </p>
@@ -1202,9 +1217,6 @@ export default function IntroPython(props) {
           </CardDeck>
         </Section>
         <Section link="projects" label="Projects">
-          <p>
-            Coming Soon...
-          </p>
           <Table >
             <thead>
               <tr>
@@ -1340,8 +1352,60 @@ export default function IntroPython(props) {
         </Section>
         <Section link="nextsteps" label="Next Steps">
           <p>
-            Coming Soon...
+            Python has many faces. It is capable at web development and and state of the art Deep Learning. Python's huge amount of open source libraries allow it to do almost anything. Django is used for backend web development. Pytorch and Tensorflow are used for deep learning. Numpy is for linear algebra. Python Image Library (PIL) is for image processing. Pandas and Matplotlib are for data science. Here is a list of plugins to learn based on the topics you're interested in.
           </p>
+          <Code.Title>
+            Data Aquisition, Processing, and Manipulation
+          </Code.Title>
+          <ul>
+            <li>
+              <Link href="https://pandas.pydata.org//">Pandas - Read/Write/Editing csv's and data</Link>
+            </li>
+            <li>
+              <Link href="https://docs.python.org/3/library/csv.html">csv module - read and write csv</Link>
+            </li>
+            <li>
+              <Link href="https://openpyxl.readthedocs.io/en/stable/">openpyxl - Excel Changing</Link>
+            </li>
+            <li>
+              <Link href="https://requests.readthedocs.io/en/master/">Requests - HTTP requests</Link>
+            </li>
+            <li>
+              <Link href="https://docs.python.org/3/library/json.html">JSON Module - Reading, Writing, and Parsing JSON </Link>
+            </li>
+            <li>
+              <Link href="https://docs.python.org/3/library/urllib.html">urllib module- HTTP request</Link>
+            </li>
+            <li>
+              <Link href="https://pytorch.org/"> Pytorch</Link>
+            </li>
+            <li>
+              <Link href="https://pytorch.org/"> Pytorch</Link>
+            </li>
+          </ul>
+          <Code.Title>
+            Machine Learning and Deep Learning
+          </Code.Title>
+          <ul>
+            <li>
+              <Link href="https://pytorch.org/">Pytorch - Deep Learning and Autograd</Link>
+            </li>
+            <li>
+              <Link href="https://www.tensorflow.org/">Tensorflow - Deep Learning and Machine Learning</Link>
+            </li>
+            <li>
+              <Link href="https://keras.io/">Keras - Built on top of Tensorflow</Link>
+            </li>
+            <li>
+              <Link href="https://numpy.org/">Numpy - Math and Linear Algebrad</Link>
+            </li>
+            <li>
+              <Link href="https://scikit-learn.org/stable/">Scikit-Learn - Machine Learning </Link>
+            </li>
+            <li>
+              <Link href="http://deeplearning.net/software/theano/">Theano - Array calculations heavily optimized</Link>
+            </li>
+          </ul>
         </Section>
       </TableOfContents>
     </div>

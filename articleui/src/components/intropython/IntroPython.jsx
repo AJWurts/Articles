@@ -241,19 +241,15 @@ export default function IntroPython(props) {
             </SubSection>
             <SubSection link={'syntax-functions'} label={"Functions"}>
               <p>
-                Functions are used to perform specific tasks. A example function could be one that
+                Functions are used to perform multiple operations on variables. They are used to group sections of code together that are repeated often. A example function <C>print</C>
                 displays
                 "Hello World" to the user. Every function has input values, called parameters, and most
                 have
                 output values, called return values.
               </p>
               <p>
-                Parameters are values passed to the function, so it can perform a calculation or task.
-                Once
-                the
-                function is complete it returns a value. Functions are used on tasks repeated
-                often to reduce writing the same code more than once. They are also used as callbacks
-                when a user interacts with the page. Functions can have multiple
+                Parameters are values passed to the function, so it can perform a calculation or task. Once the function is complete it returns a value. Functions are used on tasks repeated
+                often to reduce writing the same code more than once. Functions can have multiple
                 parameters.
               </p>
               <Code.Wrapper>
@@ -304,8 +300,19 @@ export default function IntroPython(props) {
                 </Code.Title>
                 Built-in functions are functions defined in the standard Python library. They are accessible without any imports. Here are popular ones, and <Link href="https://docs.Python.org/3/library/functions.html">here</Link> are all of them
                 <CardDeck>
-                  <CodeSnip.Snip title="len" subtitle="Length">
-                    Returns length of an object. Most common use is to find the length of a list.
+                  <CodeSnip.Snip title="print(value)" subtitle="Print">
+                    Prints the value to the console
+                    <CodeSnip.Example>
+                      print("Hello World")
+                    </CodeSnip.Example>
+                    <CodeSnip.Result>
+                      Prints <C>"Hello World"</C> to the console.
+                    </CodeSnip.Result>
+                  </CodeSnip.Snip>
+                </CardDeck>
+                <CardDeck>
+                  <CodeSnip.Snip title="len(item)" subtitle="Length">
+                    Returns length of the item. Most common use is to find the length of a list.
                     <CodeSnip.Example>
                       len(list1)
                     </CodeSnip.Example>
@@ -313,7 +320,7 @@ export default function IntroPython(props) {
                       The code would return an integer with the length of the list.
                     </CodeSnip.Result>
                   </CodeSnip.Snip>
-                  <CodeSnip.Snip title="min" subtitle="Minimum">
+                  <CodeSnip.Snip title="min(item1, ..., itemN)" subtitle="Minimum">
                     Returns the minimum of a list, or all parameters.
                     <CodeSnip.Example>
                       min(var1, var2, var3)
@@ -324,7 +331,7 @@ export default function IntroPython(props) {
                       Both are valid ways to call min. Example one will return either var1,var2, or var3 based on which is smallest. Example 2 will return the smallest value in list1.
                     </CodeSnip.Result>
                   </CodeSnip.Snip>
-                  <CodeSnip.Snip title="max" subtitle="Maximum">
+                  <CodeSnip.Snip title="max(item1, ..., itemN)" subtitle="Maximum">
                     Returns the maximum of a list, or all parameters.
                     <CodeSnip.Example>
                       max(var1, var2, var3)
@@ -337,8 +344,8 @@ export default function IntroPython(props) {
                   </CodeSnip.Snip>
                 </CardDeck>
                 <CardDeck>
-                  <CodeSnip.Snip title="sum" subtitle="Summation">
-                    Adds up all values in a list.
+                  <CodeSnip.Snip title="sum(list)" subtitle="Summation">
+                    Adds up all values in list.
                     <CodeSnip.Example>
                       sum([1,2,4,5,6]) 
                     </CodeSnip.Example>
@@ -347,8 +354,8 @@ export default function IntroPython(props) {
                     </CodeSnip.Result>
 
                   </CodeSnip.Snip>
-                  <CodeSnip.Snip title="int" subtitle="To Integer">
-                    Turns the input into an integer. Takes in either a float, a string, or another integer. If the result number has decimal places, it removes them. Most often used with strings.
+                  <CodeSnip.Snip title="int(value)" subtitle="To Integer">
+                    Turns the input value into an integer. Takes in either a float, a string, or another integer. If the result number has decimal places, it removes them. Most often used with strings.
                     <CodeSnip.Example>
                       int(10.05) # equals 10
                       <br/>
@@ -359,8 +366,8 @@ export default function IntroPython(props) {
                     </CodeSnip.Result>
 
                   </CodeSnip.Snip>
-                  <CodeSnip.Snip title="float" subtitle="To Float">
-                    Turns the input into a float. Takes in a string, integer, or other floats. Most often used with strings.
+                  <CodeSnip.Snip title="float(value)" subtitle="To Float">
+                    Turns the input value into a float. Takes in a string, integer, or other floats. Most often used with strings.
                     <CodeSnip.Example>
                       int(10) # equals 10.0
                       <br/>
@@ -372,8 +379,8 @@ export default function IntroPython(props) {
                   </CodeSnip.Snip>
                 </CardDeck>
                 <CardDeck>
-                <CodeSnip.Snip title="sorted" subtitle="Sorting">
-                  Sorts a list and returns the sorted list.
+                <CodeSnip.Snip title="sorted(list)" subtitle="Sorting">
+                  Sorts list and returns the sorted list.
                   <CodeSnip.Example>
                     result = sorted([1,3,4,2,0])
                   </CodeSnip.Example>
@@ -382,31 +389,29 @@ export default function IntroPython(props) {
                     <C> [0,1,2,3,4]</C>
                   </CodeSnip.Result>
                 </CodeSnip.Snip>
-                <CodeSnip.Snip title="range" subtitle="Range Function">
-                  Return all integers between a starting point, and an ending point. The starting point is included in the range, and the end point is not. 
-                  <CodeSnip.Example>
-                    for i in range(4): <br/>
-                    <span>    print(i)</span> 
-                  </CodeSnip.Example>
-                  <CodeSnip.Result>
-                    <C>result</C> now equals the array passed in, sorted in ascending order:
-                    <C> [0,1,2,3,4]</C>
-                  </CodeSnip.Result>
-                </CodeSnip.Snip>
-                </CardDeck> 
-                <CardDeck>
                 <CodeSnip.Snip title={"input"} subtitle={"Input Function"}>
-                  Takes in a string, displays the string to the user in the console and waits for the user to type something into the console and press enter. It always returns a <b>string</b>.
+                  Takes in a string, displays the string to the user in the console and waits for the user to type something in the console. Once the user finishes typing and presses return, it reads the input and returns the value as a <b>string</b>.
                   <CodeSnip.Example>
                     user_input = input("Enter your name:")
                   </CodeSnip.Example>
                   <CodeSnip.Result>
-                    <C>user_input</C> is now equal to whatever the user typed in the terminal.
+                    <C>user_input</C> is now equal to what the user typed in the console.
                   </CodeSnip.Result>
-
-
                 </CodeSnip.Snip>
-
+                </CardDeck> 
+                <CardDeck>
+          
+                <CodeSnip.Snip title="range" subtitle="Range Function">
+                  Return all integers between a starting point, and an ending point. Each number is diff numbers apart. The starting point is included in the range, and the end point is not. If it only has one parameter, that is the stop value. If it has two they are the start, and stop. If it has three it is start, stop, and diff.
+                  <CodeSnip.Example>
+                    range(4) # 0,1,2,3 - range(stop)<br/>
+                    range(10,20) # 10-19 - range(start, stop)<br/>
+                    range(0,10,2) # 0,2,4,6,8 - range(start, stop, diff)<br/>
+                  </CodeSnip.Example>
+                  <CodeSnip.Result>
+                    The numbers 0,1,2,3 will be printed to console on separate lines.
+                  </CodeSnip.Result>
+                </CodeSnip.Snip>
                 </CardDeck>
               </Code.Wrapper>
               <Code.Wrapper>
@@ -457,16 +462,25 @@ export default function IntroPython(props) {
                   Creating a List
                 </Code.Title>
                 <Code.Code>
-                
+                <Code.Line>
+                  <Code.Comment># Create a list with values 0,1,2,3,4,5</Code.Comment>
+                </Code.Line>
                 <Code.Line>
                   list1 = [0,1,2,3,4,5]
                 </Code.Line>
-               
+                <br/>
+               <Code.Line>
+               <Code.Comment># Lists can hold variables of different types, </Code.Comment>
+               </Code.Line>
+               <Code.Line>
+               <Code.Comment># but this is not recommended because it is difficult to process.</Code.Comment>
+               </Code.Line>
                 <Code.Line>
-                list2 = [1.5, "3.6", 1, "apples"]  <Code.Comment># Lists can hold variables of different types, but this is not recommended because it is difficult to deal with.</Code.Comment>
+                list2 = [1.5, "3.6", 1, "apples"]  
                 </Code.Line>
+                <br/>
                 <Code.Line>
-                  empty_list = [] <Code.Comment># If nothing is between the list is empty.</Code.Comment>
+                  empty_list = [] <Code.Comment># If nothing is inside the brackets, the list is empty.</Code.Comment>
                 </Code.Line>
                 </Code.Code>
                 <Code.Description>
@@ -517,13 +531,13 @@ export default function IntroPython(props) {
                   </Code.Line>
                 </Code.Code>
                 <Code.Description>
-                  Accesses the 0th and 2nd index of the letters list. After the code runs, letter_a equals "a" and char_c equals "c".
+                  Accesses the 0th and 2nd index of the letters list. After the code runs, <C>letter_a</C> equals "a" and <C>char_c</C> equals "c".
                 </Code.Description>
               </Code.Wrapper>
               <Code.Title>
                 Built-in list methods
               </Code.Title>
-              These are the most used methods on lists.
+              These are the most used methods on lists. <Link href="https://docs.python.org/3/tutorial/datastructures.html">Here</Link> are all of them.
               <CardDeck>
                   <CodeSnip.Snip title="append" subtitle="Append Item">
                     <C>append</C> is used to add an item to the end of a list.
@@ -696,6 +710,7 @@ export default function IntroPython(props) {
               <Code.Title>
                 Built-in dict methods
               </Code.Title>
+                More examples and methods can be found in the <Link href="https://docs.python.org/3/library/stdtypes.html#dict">Python documentation</Link> for dicts.
               <CardDeck>
                 <CodeSnip.Snip title="values" subtitle="Values List">
                   Returns the list of values in the dictionary.
@@ -792,7 +807,7 @@ export default function IntroPython(props) {
               </Code.Wrapper>
             </SubSection>
             <SubSection link="ifstatement" label="if statements">
-            <p>If statements control the program flow. Based on variables you can decide whether to run sections of code or not. 
+            <p><C>if</C> statements control the program flow. Based on variables you can decide whether to run sections of code or not. 
             </p> 
             <p>
               There are multiple parts to an if statement. 
@@ -808,7 +823,7 @@ export default function IntroPython(props) {
                   money = 1000
                 </Code.Line>
                 <Code.Line>
-                <S color="rgb(50, 116, 166)">if</S> <S color="#0E6251">money > 1000000000</S>:
+                <S color="rgb(50, 116, 166)">if</S> <S color="#0E6251">money > 1000000000</S>: <Code.Comment># You can use <C>1e9</C> for 1 billion</Code.Comment>
                 </Code.Line>
                 <Code.Line tabs={1}>
                   print("You're a Billionaire!")
@@ -827,7 +842,7 @@ export default function IntroPython(props) {
                 </Code.Line>
               </Code.Code>
               <Code.Result>
-                This example prints out whether you're a millionaire or not, based on the value of the money variable. The dark blue is sthe syntax for the if statement. The green are for the boolean statements. If <C>money</C> was 1000, it would print "You're not a Millionaire". If <C>money</C> was greater than 1 Billion it would print "You're a Billionaire!"."
+                This example prints out whether you're a millionaire or not, based on the value of the money variable. The dark blue is the syntax for the <C>if</C> statement. The green is for the boolean statements. If <C>money</C> was 1000, it would print "You're not a Millionaire". If <C>money</C> was greater than 1 Billion it would print "You're a Billionaire!"."
               </Code.Result>
             </Code.Wrapper>
             </SubSection>
@@ -835,15 +850,15 @@ export default function IntroPython(props) {
         </Section>
         <Section link="commandline" label="Practice App 1: Command Line Calculator">
           <p>
-            Command line programs are very common in Python.  Scripts are small programs, such as command line programs, that do a set of tasks. Scripts are most often used to save time doing repetitive tasks. Python is good for writing scripts.
+            Command line programs are very common in Python.  Scripts are small programs, such as command line programs, that do a set of tasks. Scripts are most often used to save time doing repetitive tasks. Python is good for writing scripts, because it doesn't require a class framework like Java, and it can be run without compiling for faster iterations.
           </p>
-          <p>
+          {/* <p>
             When I was a TA for an undergrad class we downloaded all the homework files for grading in a
             certain format. For each homework assigment we needed to make an excel file with the individuals
             name and email. I didn't want to spend 20 minutes every assignment individually
             making and filling in the excel documents, so I made a 40 line Python script that did everything
             for me. I gave it a folder of homework assignments, and it did the rest. It reduced a 20 minute task down to 1 second.  
-          </p>
+          </p> */}
           <p>
             Start out by downloading the <Link href={"/files/commandline.py"} download >template file</Link>.
             The template file contains boiler plate code to get you started. Open IDLE then click file, open, then browse to find the downloaded file and open it. Once IDLE opens make sure it says Python 3 or higher on the top bar. If it doesn't 
@@ -1015,7 +1030,7 @@ export default function IntroPython(props) {
         </Section>
         <Section link="turtles" label="Turtle Module">
         <p>
-          The turtle module is used for creating simple graphics. You control a turtle and move it around the screen. As it moves it draws a line behind it.
+          The <Link href="https://docs.python.org/3/library/turtle.html#module-turtle">turtle module</Link> is used for creating simple graphics. You control a turtle and move it around the screen. As it moves it draws a line behind it. Using this simple device you can draw a lot of cool stuff. There are a lot of cool art designs possible with spiral patterns. Check out the turtle examples below to see what crazy stuff you can do with turtles. 
         </p>
         <Code.Wrapper>
           <Code.Title>
@@ -1036,14 +1051,14 @@ export default function IntroPython(props) {
                 bob_the_turtle = turtle.Turtle()
               </Code.Code>
               <Code.Result>
-                Now that the turtle is made you can use the following commands to move the turtle around. 
+                Now that the turtle is made you can use the following commands to move the turtle around. A full list of commands is available <Link href="https://docs.python.org/3/library/turtle.html#turtle-motion">here</Link>.
               </Code.Result>
             </Code.Wrapper>
             <Code.Title>
               
             </Code.Title>
             <CardDeck>
-            <CodeSnip.Snip title="forward" label="Move Forward" >
+            <CodeSnip.Snip title="forward(distance)" label="Move Forward" >
               Moves the turtle forward a specified amount of units.
               <CodeSnip.Example>
                 bob_the_turtle.forward(10)
@@ -1052,7 +1067,7 @@ export default function IntroPython(props) {
                 Moves bob_the_turtle foward 10 units.
               </CodeSnip.Result>
             </CodeSnip.Snip>
-            <CodeSnip.Snip title="right(n)" label="Turn Right" >
+            <CodeSnip.Snip title="right(angle)" label="Turn Right" >
               Turns the turtle n degrees to the right.
               <CodeSnip.Example>
                 bob_the_turtle.right(10)
@@ -1061,7 +1076,7 @@ export default function IntroPython(props) {
                 Turns the turtle 10 degrees to the right.
               </CodeSnip.Result>
             </CodeSnip.Snip>
-            <CodeSnip.Snip title="left(n)" label="Turn Left" >
+            <CodeSnip.Snip title="left(angle)" label="Turn Left" >
               Turns the turtle n degrees to the left. There are 360 degrees in an entire circle. 
               <CodeSnip.Example>
                 bob_the_turtle.left(10)
@@ -1072,7 +1087,7 @@ export default function IntroPython(props) {
             </CodeSnip.Snip>
             </CardDeck>
             <CardDeck>
-              <CodeSnip.Snip title="pencolor" label="Pen Color" >
+              <CodeSnip.Snip title="pencolor(color)" label="Pen Color" >
                 Changes the turtle pen color. Takes in a color string such as "blue", "red", "green", or "yellow".
                 <CodeSnip.Example>
                   bob_the_turtle.pencolor("blue")
@@ -1083,7 +1098,7 @@ export default function IntroPython(props) {
               </CodeSnip.Snip>
             </CardDeck>
           </SubSection>
-          <SubSection  label="Project 1: Turtle Circle">
+          <SubSection  label="Turtle Project 1: Turtle Circle">
             <p>
               In this first project we will create a simple circle. This will build off everything you have read until this point. Don't worry if you don't understand all the code.
             </p>
@@ -1134,14 +1149,13 @@ export default function IntroPython(props) {
               <Code.Title>
                 Spiral Code
               </Code.Title>
-              
               <Code.Code>
                 <Code.Line>
                   import turtle <Code.Comment># Imports the turtle module</Code.Comment>
                 </Code.Line>
                 <br/>
                 <Code.Line>
-                  bob_the_turtle = turtle.Turtle() <Code.Comment># Imports the turtle module</Code.Comment>
+                  bob_the_turtle = turtle.Turtle() <Code.Comment># Create a turtle</Code.Comment>
                 </Code.Line>
                 <br/>
                 <Code.Line>
@@ -1190,28 +1204,31 @@ export default function IntroPython(props) {
         <p> Python has a lot of very useful modules built into the source code. Here are the most popular. </p>
           
           <CardDeck>
-            <CodeSnip.Snip title="import math" subtitle="Math Module">
+            <CodeSnip.Snip title="import math" subtitle="Math Module"
+            subtitleLink="https://docs.python.org/3/library/math.html?highlight=math#module-math">
               Calculates more complex math functions such as Trignometry, factorial, square root, exponents, Pi, e, logarithms, and rounding functions like floor and ceiling.
             </CodeSnip.Snip>
-            <CodeSnip.Snip title="import random" subtitle="Random Module">
+            <CodeSnip.Snip title="import random" subtitle="Random Module" subtitleLink="https://docs.python.org/3/library/random.html?highlight=random#module-random">
               Generates pseudo-random numbers. Can generate random integers or floats. Not truly random, but good enough for simple programs. 
             </CodeSnip.Snip>
           </CardDeck>
           <CardDeck>
-            <CodeSnip.Snip title='import time' subtitle="Time Module">
+            <CodeSnip.Snip title='import time' subtitle="Time Module" 
+            subtitleLink="https://docs.python.org/3/library/time.html?highlight=time#module-time">
               Used for any calculations that require time. Can be used to get the current time, or format time to make it more readable. Go <Link href="https://dev.to/zenulabidin/digesting-python-date-and-time-at-lightspeed-2c19">here</Link> for a good underestanding of the time module 
             </CodeSnip.Snip>
-            <CodeSnip.Snip title='import statistics' subtitle="Statistics Module">
+            <CodeSnip.Snip title='import statistics' subtitle="Statistics Module" subtitleLink="https://docs.python.org/3/library/statistics.html?highlight=statistics#module-statistics">
               Calculate various statistics on a list. Some of the available functions cover mean, median, mode, quantiles, standard deviation, and variance. 
             </CodeSnip.Snip>    
           </CardDeck>
           <CardDeck>
-            <CodeSnip.Snip title="import sys" subtitle="System Module">
+            <CodeSnip.Snip title="import sys" subtitle="System Module"
+            subtitleLink="https://docs.python.org/3/library/sys.html?highlight=sys#module-sys">
               A module that provides access to interpreter variables. Can be used to access command line arguments. 
             </CodeSnip.Snip>
-            <CodeSnip.Snip title="import smptplib" subtitle="Emailing Library">
+            <CodeSnip.Snip title="import email" subtitle="Emailing Library" subtitleLink="https://docs.python.org/3/library/email.examples.html#email-examples">
               <p>
-                Create and send emails.
+                Read, write, and send simple email messages. The link provides an example to work from. 
               </p>
             </CodeSnip.Snip>
           </CardDeck>
@@ -1351,6 +1368,9 @@ export default function IntroPython(props) {
           </Table>
         </Section>
         <Section link="nextsteps" label="Next Steps">
+        <p>
+          You now have a good idea of the basic components of Python. Try to work through the easy projects above and if you feel good go for the medium projects. Move on to the Advanced Python Tutorial (Coming Soon!) to learn more about what python can do. 
+        </p>
           <p>
             Python has many faces. It is capable at web development and and state of the art Deep Learning. Python's huge amount of open source libraries allow it to do almost anything. Django is used for backend web development. Pytorch and Tensorflow are used for deep learning. Numpy is for linear algebra. Python Image Library (PIL) is for image processing. Pandas and Matplotlib are for data science. Here is a list of plugins to learn based on the topics you're interested in.
           </p>
@@ -1376,12 +1396,6 @@ export default function IntroPython(props) {
             <li>
               <Link href="https://docs.python.org/3/library/urllib.html">urllib module- HTTP request</Link>
             </li>
-            <li>
-              <Link href="https://pytorch.org/"> Pytorch</Link>
-            </li>
-            <li>
-              <Link href="https://pytorch.org/"> Pytorch</Link>
-            </li>
           </ul>
           <Code.Title>
             Machine Learning and Deep Learning
@@ -1405,6 +1419,45 @@ export default function IntroPython(props) {
             <li>
               <Link href="http://deeplearning.net/software/theano/">Theano - Array calculations heavily optimized</Link>
             </li>
+          </ul>
+          <Code.Title>
+            Data Visualization and Graphics
+          </Code.Title>
+          <ul>
+            <li>
+              <Link href="https://matplotlib.org/">Matplotlib - Graphing and 3D Visualization </Link>
+            </li>
+            <li>
+              <Link href="https://seaborn.pydata.org/">Seaborn - statistical data visualization</Link>
+            </li>
+            <li>
+              <Link href="https://plot.ly/python/">Plotly - Graphing</Link>
+            </li>
+            <li>
+              <Link href="https://py.processing.org/">Processing - simple but powerful graphics library</Link>
+            </li>
+         
+          </ul>
+          <Code.Title>
+            Web Development
+          </Code.Title>
+          <ul>
+            <li>
+              <Link href="https://matplotlib.org/">Django - Backend server framework, interfaces with databases</Link>
+            </li>
+            <li>
+              <Link href="https://www.fullstackpython.com/flask.html">Flask - Lightweight server framework</Link>
+            </li>
+            <li>
+              <Link href="https://cherrypy.org/">CherryPy - Minimalist Web Framework</Link>
+            </li>
+            <li>
+              <Link href="https://py.processing.org/">Processing - simple but powerful graphics library</Link>
+            </li>
+            <li>
+              <Link href="https://bottlepy.org/docs/dev/">Bottle.py - Lighweight micro web framework</Link>
+            </li>
+         
           </ul>
         </Section>
       </TableOfContents>

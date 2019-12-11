@@ -756,21 +756,21 @@ export default function IntroPython(props) {
                 </Code.Title>
                 <Code.Code>
                   <Code.Line>
-                    array1 = [1,2,4,5,6]
+                    numbers = [1,2,4,5,6]
                   </Code.Line>
                   <Code.Line>
                     summation = 0
                   </Code.Line>
                   <Code.Line>
                     for <span style={{color: "#E67E22"}}>val</span> in <span
-                    style={{color: '#0E6251'}}>array1</span>:
+                    style={{color: '#0E6251'}}>numbers</span>:
                   </Code.Line>
                   <Code.Line tabs={1}>
                     sum += <span style={{color: '#922B21'}}>val</span>
                   </Code.Line>
                 </Code.Code>
                 <Code.Description>
-                  The above code is used find the sum of the numbers in <C>array1</C>. The for loop
+                  The above code is used find the sum of the <C>numbers</C>. The for loop
                   iterates over <C>array1</C>. The first time the loop runs <S
                   color='#922B21'>val</S> is set to 0. <S color='#922B21'>val</S> is added to sum, and
                   sum is updated to 1. On the second iteration the <S color='#922B21'>val</S> is set
@@ -779,29 +779,29 @@ export default function IntroPython(props) {
               </Code.Wrapper>
               <Code.Wrapper>
                 <Code.Title>
-                  For Loop: Range
+                  For Loop: Indices Iteration
                 </Code.Title>
                 This for loop uses two built-in functions, <C>range</C>, and <C>len</C>. <C>len</C> is
-                used to calculate the length of a alist. 
+                used to calculate the length of numbers. 
                 <Code.Code>
                   <Code.Line>
-                  array1 = [1,2,4,5,6]
+                  numbers = [1,2,4,5,6]
                   </Code.Line>
                   <Code.Line>
                     summation = 0
                   </Code.Line>
                   <Code.Line>
                     for <span style={{color: "#E67E22"}}>i</span> in <span
-                    style={{color: '#0E6251'}}>range(len(array1))</span>:
+                    style={{color: '#0E6251'}}>range(<S color="#123456">len(numbers)</S>)</span>:
                   </Code.Line>
                   <Code.Line tabs={1}>
-                    sum += <span style={{color: '#922B21'}}>array1[i]</span>
+                    sum += <span style={{color: '#922B21'}}>numbers[i]</span>
                   </Code.Line>
                 </Code.Code>
                 <Code.Description>
                   In this <C>for loop</C>, <S color="#922B21">i</S> is not set to the array values. <S
-                  color="#922B21">i</S> is set to each index from 0 until the length of array1,
-                  denoted <S color='#0E6251'>len(array1)</S>. The loop will run 6 times and <S
+                  color="#922B21">i</S> is set to each index from 0 until the length of numbers,
+                  denoted <C><S color='#123456'>len(numbers)</S></C>. The loop will run 6 times and <S
                   color="#922B21">i</S> will be 0-5.
                 </Code.Description>
               </Code.Wrapper>
@@ -1096,6 +1096,15 @@ export default function IntroPython(props) {
                   Changes the turtle pen color to blue.
                 </CodeSnip.Result>
               </CodeSnip.Snip>
+              <CodeSnip.Snip title="pensize(size)" label="Pen Size" >
+                Changes the turtle pen size. 
+                <CodeSnip.Example>
+                  bob_the_turtle.pencolor(20)
+                </CodeSnip.Example>
+                <CodeSnip.Result>
+                  The pen size is now 20. 
+                </CodeSnip.Result>
+              </CodeSnip.Snip>
             </CardDeck>
           </SubSection>
           <SubSection  label="Turtle Project 1: Turtle Circle">
@@ -1124,7 +1133,6 @@ export default function IntroPython(props) {
                 <Code.Line tabs={1}>
                   <Code.Comment># Move the turtle forward 10</Code.Comment>
                 </Code.Line>
-
                 <Code.Line tabs={1}>
                   bob_the_turtle.forward(10)
                 </Code.Line>
@@ -1142,59 +1150,107 @@ export default function IntroPython(props) {
             </Code.Wrapper>
           </SubSection>
           <SubSection link="turtlespiral" label="Turtle Project 2: Colored Spiral">
+          <div style={{backgroundImage: "url(/files/turtlespiral.png)", width: "100%", "height": "200px", backgroundPosition: "center"}}>
+          </div>
           <p>
-            Let's make the circle a little more exciting. We are going to turn it into a spiral that changes colors. A spiral is created by a drawing a circle of increasing radius. We are drawing a many sided shape that looks like a circle. In a many sided shape two values that determine radius are foward movement and turn size. If we increase forward movement distance every time we move the radius increases. The new code below shows this change. 
+            Let's make the circle a little more exciting. We are going to turn it into a spiral that changes colors. A spiral is created by a drawing a circle of increasing radius. We are drawing a many sided shape that looks like a circle. In a many sided shape two values that determine radius are side length and corner angle. If we increase side length  every time we move the radius increases. The new code below shows this change. 
           </p>
+          <p>
+            We also need to change the color for every line segment. Below I created a list of colors we want to use. Everytime we move foward we change bob's pen color using the <C>pencolor</C> command. We set the color based on the <C>color_index</C>. Everytime the for loop runs it increments the variable <C>i</C>. By using modulus (<C>%</C>) we can reduce <C>i</C> down to a number between 0 and 5 to index into the colors list. 
+          </p>
+
+        
+
+      
           <Code.Wrapper>
               <Code.Title>
                 Spiral Code
               </Code.Title>
               <Code.Code>
-                <Code.Line>
-                  import turtle <Code.Comment># Imports the turtle module</Code.Comment>
+                <Code.Line tabs={0}>
+                import turtle
                 </Code.Line>
                 <br/>
-                <Code.Line>
-                  bob_the_turtle = turtle.Turtle() <Code.Comment># Create a turtle</Code.Comment>
+                <Code.Line tabs={0}>
+                <Code.Comment># Create lists of colors</Code.Comment>
+                </Code.Line>
+                <Code.Line tabs={0}>
+                colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
                 </Code.Line>
                 <br/>
-                <Code.Line>
-                <Code.Comment># Initialize the foward movement to 20. The variable keeps track of the movement, so we can keep increasing it.</Code.Comment>
+                <Code.Line tabs={0}>
+                <Code.Comment># Create turtle and initialize pen size and pen color</Code.Comment>
                 </Code.Line>
-                <Code.Line>
-                  forward_distance = 20
+                <Code.Line tabs={0}>
+                bob_the_turtle = turtle.Turtle()
                 </Code.Line>
-
-                <br/>
-                <Code.Comment># Create a for loop to draw the pieces of the circle.</Code.Comment>
-                <Code.Line>
-                  for i in range(1000): 
+                <Code.Line tabs={0}>
+                bob_the_turtle.pensize(30)
                 </Code.Line>
-                
-                <Code.Line tabs={1}>
-                  <Code.Comment># Move the turtle forward 10</Code.Comment>
-                </Code.Line>
-
-                <Code.Line tabs={1}>
-                  bob_the_turtle.forward(10)
-                </Code.Line>
-                <Code.Line tabs={1}>
-                  <Code.Comment># Turn the turtle right degrees 5</Code.Comment>
-                </Code.Line>
-                <Code.Line tabs={1}>
-                  bob_the_turtle.left(5)
+                <Code.Line tabs={0}>
+                bob_the_turtle.pencolor("red")
                 </Code.Line>
                 <br/>
-                <Code.Line>
-                  <Code.Comment> # Increase the forward distance by one every time to create a circle. </Code.Comment>
+                <Code.Line tabs={0}>
+                  <Code.Comment># Set initial forward distance movement</Code.Comment>
+                </Code.Line>
+                <Code.Line tabs={0}>
+                forward_distance = 20
+                </Code.Line>
+                <br/>
+                <Code.Line tabs={0}>
+                for i in range(1000):
                 </Code.Line>
                 <Code.Line tabs={1}>
-                  foward_distance += 1 
+                  <Code.Comment>
+                    # Move turtle foward and turn
+                  </Code.Comment>
                 </Code.Line>
-                <Code.Line>
-                  turtle.done()
+                <Code.Line tabs={1}>
+                  bob_the_turtle.forward(forward_distance)
                 </Code.Line>
-              </Code.Code>
+                <Code.Line tabs={1}>
+                  bob_the_turtle.left(29)
+                </Code.Line>
+                <br/>
+                <Code.Line tabs={1}>
+                  <Code.Comment># Calculate color_index</Code.Comment>
+                </Code.Line>
+                <Code.Line tabs={1}>
+                  <Code.Comment># Using modules on i, the movement counter, changes it into a value </Code.Comment>
+                </Code.Line>
+                <Code.Line tabs={1}>
+                  <Code.Comment># between 0 and 5 to index into the color list</Code.Comment>
+                </Code.Line>
+                <Code.Line tabs={1}>
+                color_index = i % len(colors)
+                </Code.Line>
+                <br/>
+                <Code.Line tabs={1}>
+                  <Code.Comment>
+                    # Set color by accessing the color_index value of colors
+                  </Code.Comment>
+                </Code.Line>
+                <Code.Line tabs={1}>
+                bob_the_turtle.pencolor(colors[color_index])
+                </Code.Line>
+                <br/>
+                <Code.Line tabs={1}>
+                  <Code.Comment>
+                    # Increase foward distance by 1 to create spiral
+                  </Code.Comment>
+                </Code.Line>
+                <Code.Line tabs={1}>
+                forward_distance += 1
+                </Code.Line>
+                <br/>
+                <Code.Line tabs={0}>
+                <Code.Comment># Make program wait before closing</Code.Comment>
+                </Code.Line>
+                <Code.Line tabs={0}>
+                turtle.done()
+                </Code.Line>
+                </Code.Code>
             </Code.Wrapper>
           </SubSection>
         </TableOfContents>
@@ -1215,7 +1271,7 @@ export default function IntroPython(props) {
           <CardDeck>
             <CodeSnip.Snip title='import time' subtitle="Time Module" 
             subtitleLink="https://docs.python.org/3/library/time.html?highlight=time#module-time">
-              Used for any calculations that require time. Can be used to get the current time, or format time to make it more readable. Go <Link href="https://dev.to/zenulabidin/digesting-python-date-and-time-at-lightspeed-2c19">here</Link> for a good underestanding of the time module 
+              Used for any calculations that require time. Can be used to get the current time, or format time to make it more readable. Go <Link href="https://dev.to/zenulabidin/digesting-python-date-and-time-at-lightspeed-2c19">here</Link> for a good tutorial of the time module.
             </CodeSnip.Snip>
             <CodeSnip.Snip title='import statistics' subtitle="Statistics Module" subtitleLink="https://docs.python.org/3/library/statistics.html?highlight=statistics#module-statistics">
               Calculate various statistics on a list. Some of the available functions cover mean, median, mode, quantiles, standard deviation, and variance. 
@@ -1368,9 +1424,12 @@ export default function IntroPython(props) {
           </Table>
         </Section>
         <Section link="nextsteps" label="Next Steps">
-        <p>
-          You now have a good idea of the basic components of Python. Try to work through the easy projects above and if you feel good go for the medium projects. Move on to the Advanced Python Tutorial (Coming Soon!) to learn more about what python can do. 
-        </p>
+          <p>
+            You now have a good idea of the basic components of Python. Try to work through the easy projects above and if you feel good go for the medium projects. Move on to the Advanced Python Tutorial (Coming Soon!) to learn more about what Python can do. 
+          </p>
+          <p>
+            If you have another project in mind that requires any of the following categories, look at or anything like that look through the links to find a library to help you. Most good libraries have a descent learning curve, but once learned they are very powerful.
+          </p>
           <p>
             Python has many faces. It is capable at web development and and state of the art Deep Learning. Python's huge amount of open source libraries allow it to do almost anything. Django is used for backend web development. Pytorch and Tensorflow are used for deep learning. Numpy is for linear algebra. Python Image Library (PIL) is for image processing. Pandas and Matplotlib are for data science. Here is a list of plugins to learn based on the topics you're interested in.
           </p>
@@ -1395,6 +1454,9 @@ export default function IntroPython(props) {
             </li>
             <li>
               <Link href="https://docs.python.org/3/library/urllib.html">urllib module- HTTP request</Link>
+            </li>
+            <li>
+              <Link href="">os - File/Folder processing</Link>
             </li>
           </ul>
           <Code.Title>

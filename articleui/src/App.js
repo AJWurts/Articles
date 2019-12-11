@@ -10,7 +10,8 @@ import {
 import {
     IntroWebDev,
     IntroPython,
-    HowToGoogle
+    HowToGoogle,
+    AdvPython
 } from './components';
 
 
@@ -55,6 +56,8 @@ function App(props) {
         var content = <IntroPython width={size.width } />
     } else if (frame === 2) {
         var content = <HowToGoogle width={size.width } />
+    } else if (frame == 3) {
+        var content = <AdvPython width={size.width} />
     }
 
 
@@ -70,6 +73,9 @@ function App(props) {
                     <SideBar.Item onClick={() => setWindow(1)}>
                         Intro to Python
                     </SideBar.Item>
+                    <SideBar.Item onClick={() => setWindow(3)}>
+                        Advanced Python
+                    </SideBar.Item> 
                     <SideBar.Item onClick={() => setWindow(2)}>
                         How to Google
                     </SideBar.Item>

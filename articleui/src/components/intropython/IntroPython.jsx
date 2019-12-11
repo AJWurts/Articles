@@ -26,10 +26,13 @@ export default function IntroPython(props) {
       <TableOfContents>
         <Section link="starting" label="Getting Started">
           <p>
-            So you want to learn Python. You made a good choice. From my experience teaching undergrad
+            So you want to learn Python. You made a good choice. From my experience being a teaching assistant undergrad
             classes, Python is the language people pick up most easily. Partially because it is much harder to get stuck on
-            small issues, like types, and incorrect syntax. It's simple syntax greatly helps learners. There are a few languages where a valid line if code creates a readable
+            small issues, like types, and difficult syntax. There are a few languages where a valid line if code creates a readable
             english sentence. Python is one of them.
+          </p>
+          <p>
+            This tutorial goes over the python concepts to start programming simple apps. At the bottom there is a list of projects to attempt, and a follow up with libraries you can start exploring. 
           </p>
         </Section>
         <Section link="downloading" label="How to download and run Python">
@@ -1088,7 +1091,7 @@ export default function IntroPython(props) {
             </CardDeck>
             <CardDeck>
               <CodeSnip.Snip title="pencolor(color)" label="Pen Color" >
-                Changes the turtle pen color. Takes in a color string such as "blue", "red", "green", or "yellow".
+                Changes the turtle pen color. Takes in a color string such as "blue", "red", "green", or "yellow". <Link href="https://ecsdtech.com/8-pages/121-python-turtle-colors">Here</Link> is a list of all available colors
                 <CodeSnip.Example>
                   bob_the_turtle.pencolor("blue")
                 </CodeSnip.Example>
@@ -1431,7 +1434,7 @@ export default function IntroPython(props) {
             If you have another project in mind that requires any of the following categories, look at or anything like that look through the links to find a library to help you. Most good libraries have a descent learning curve, but once learned they are very powerful.
           </p>
           <p>
-            Python has many faces. It is capable at web development and and state of the art Deep Learning. Python's huge amount of open source libraries allow it to do almost anything. Django is used for backend web development. Pytorch and Tensorflow are used for deep learning. Numpy is for linear algebra. Python Image Library (PIL) is for image processing. Pandas and Matplotlib are for data science. Here is a list of plugins to learn based on the topics you're interested in.
+            Python has many faces. It is capable at web development and and state of the art Deep Learning. Python's huge amount of open source libraries allow it to do almost anything. Django is used for backend web development. Pytorch and Tensorflow are used for deep learning. Numpy is for linear algebra. Python Image Library (PIL) is for image processing. Pandas and Matplotlib are for data science. Continue to my next tutorial to start using these tools.
           </p>
           <Code.Title>
             Data Aquisition, Processing, and Manipulation
@@ -1456,7 +1459,7 @@ export default function IntroPython(props) {
               <Link href="https://docs.python.org/3/library/urllib.html">urllib module- HTTP request</Link>
             </li>
             <li>
-              <Link href="">os - File/Folder processing</Link>
+              <Link href="">os - File/Folder/Command line processing</Link>
             </li>
           </ul>
           <Code.Title>
@@ -1519,7 +1522,23 @@ export default function IntroPython(props) {
             <li>
               <Link href="https://bottlepy.org/docs/dev/">Bottle.py - Lighweight micro web framework</Link>
             </li>
-         
+          </ul>
+          <Code.Title>
+            User Interfaces
+          </Code.Title>
+          <ul>
+            <li>
+              <Link href="https://docs.python.org/3/library/tkinter.html">Tkinter - Built-in user interface module</Link>
+            </li>
+            <li>
+              <Link href="https://www.pygame.org/news">Pygame - Intro to game programming</Link>
+            </li>
+            <li>
+              <Link href="https://kivy.org/#home">Kivy - Cross platform </Link>
+            </li>
+            <li>
+              <Link href="https://wxpython.org/">wxpython - Cross-platform GUI toolkit</Link>
+            </li>
           </ul>
         </Section>
       </TableOfContents>

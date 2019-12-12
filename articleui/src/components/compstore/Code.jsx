@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Button } from 'react-bootstrap';
 
 function Wrapper(props) {
 
@@ -10,18 +11,34 @@ function Wrapper(props) {
 }
 
 function Code(props) {
-    return (
-        <pre style={{ backgroundColor: "lightgray", padding: "5px", borderRadius: "6px", margin: "5px"}}>
-            <code>
-                {props.children}
-            </code>
-        </pre>
-    )
+
+    var [visible, setVisible] = useState(!props.notVisible);
+
+    if (visible) {
+        return (<div>
+            <div>
+                {props.notVisible ? <Button onClick={() => setVisible(false)} variant="dark">Hide Code</Button> : null}
+                
+            </div>
+            <pre style={{ backgroundColor: "lightgray", padding: "5px", borderRadius: "6px", margin: "5px" }}>
+                <code>
+                    {props.children}
+                </code>
+            </pre>
+        </div>);
+    } else {
+        return (<div>
+                    <Button onClick={() => setVisible(true)} variant="dark">Show Code</Button>
+                </div>
+        );
+    }
+
+
 }
 
 function Comment(props) {
     return (
-        <span style={{ color: "darkgreen"}}>
+        <span style={{ color: "darkgreen" }}>
             {props.children}
         </span>
     )

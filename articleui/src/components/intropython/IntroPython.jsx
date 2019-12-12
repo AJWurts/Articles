@@ -32,8 +32,7 @@ export default function IntroPython(props) {
         <Section link="starting" label="Getting Started">
           <p>
             So you want to learn Python. You made a good choice. From my experience being a TA for undergrad CS
-            classes, Python is the language people pick up most easily. Partially because it is much harder to get stuck on
-            small issues, like types, and difficult syntax. It is great for beginners because it allows them to start working with concepts immediately and not worry about the small stuff. There are a few languages where a valid line of code creates a readable
+            classes, Python is the language people pick up most easily. In part due to it's dynamic typing and simple syntax. It is great for beginners because it allows them to start working with concepts immediately and not worry about the small stuff. There are a few languages where a valid line of code creates a readable
             english sentence. Python is one of them.
           </p>
           <p>
@@ -43,30 +42,32 @@ export default function IntroPython(props) {
             Here are some tips to get through learning the basics.
             <ul>
               <li>
-                Trial and error is the best way to learn. If you aren't sure how a certain function or element works, try writing code that tests multiple ways of using it. Look at the output and see if it aligns with what you expected. 
+                Trial and error is the best way to learn. If you aren't sure how a certain function or library works, try writing code that tests multiple ways of using it. Look at the output and see if it aligns with what you expected. 
               </li>
-                <li>
-                  Start by modifying projects then move on to making your own.
-                </li>
+              <li>
+                Start by modifying projects then move on to making your own. It's must easier to modify code than write it from scratch.
+              </li>
               <li>
                 Google is your best friend, or it will be soon. Use it whenever you are stuck. 
               </li>
               <li>
-                Learning to program takes time and persistence as well as plenty of breaks. If you go 8hrs straight the last few are probably less effective than the first few.
+                Learning to program takes time and persistence as well as plenty of breaks. If you go 8hrs straight the last few will probably be less effective than the first few. 
               </li>
               <li>
-                Learn your IDE's keyboard shortcuts, it will save you a lot of time.
+                Learn your IDE's or text editor's keyboard shortcuts, it will save you a lot of time.
               </li>
               <li>
-                Take the time to learn simple command line operations. It will make your life much easier. Check <Link href="https://tutorial.djangogirls.org/en/intro_to_command_line/">this tutorial</Link> out
+                Take the time to learn simple command line operations. It will make your life much easier. Check <Link href="https://tutorial.djangogirls.org/en/intro_to_command_line/">this tutorial</Link> out.
               </li>
               <li>
                 Projects are the best motivation. Try to create a project that aligns with one of your hobbies. 
               </li>
               <li>
-                Take the time to understand every line of code in this tutorial. Go line by line and tell yourself what that specific line is doing. 
+                Take the time to understand every line of code in this tutorial. Go line by line and answer the question:  What does this line of code do?
               </li>
-
+              <li>
+                Find a friend to learn with, it helps to have someone in the same situation as you. 
+              </li>
             </ul>
           </p>
 

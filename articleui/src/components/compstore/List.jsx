@@ -16,8 +16,9 @@ function List(props) {
     return (
         <Nav defaultActiveKey="/" className="flex-column">
             {children ? children.map((child, index) => {
+                let href = (props.newPage ? "" : "#") + child.props.link;
                 return (
-                    <Nav.Link key={index} href={'#' + child.props.link} target={props.newPage ? "_blank" : ""}>
+                    <Nav.Link key={index} href={href} target={props.newPage ? "_blank" : ""}>
                         {props.noNumbers ? "" : index + 1 + "."} {child.props.label || child.props.children} {child.props.badge}
                     </Nav.Link>
                 )

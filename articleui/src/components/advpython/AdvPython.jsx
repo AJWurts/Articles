@@ -21,6 +21,10 @@ export default function IntroPython(props) {
         Welcome to Advanced Python
       </h1>
       <h3>By Alexander Wurts</h3>
+      <p>
+          If you have any questions, comments, or think there is an error please email me at
+          <b> alexwurtsfeedback@gmail.com</b>.
+      </p>
       <h4>
         This is where it gets fun.
       </h4>

@@ -22,6 +22,7 @@ export default function IntroWebDev(props) {
             <h1>
                 Welcome to Intro to Web Dev.
             </h1>
+            <h3>By Alexander Wurts</h3>
             <h4>
                 A minimal guide to get started.
             </h4>
@@ -56,7 +57,7 @@ export default function IntroWebDev(props) {
                         </p>
                         <ul>
                         <li>
-                            Trial and error is the best way to learn. If you aren't sure how a certain function or element works. try writing code that tests multiple ways of using it, and see what works. Using the browser console can allow for rapid testing. I'll tell you how below.
+                            Trial and error is the best way to learn. If you aren't sure how a certain function or element works, try writing code that tests multiple ways of using it. Look at the output and see if it aligns with what you expected. Using the browser console can allow for rapid testing. I'll tell you how below.
                         </li>
                             <li>Programming is difficult, you can't expect to pick it up in only a few hours. It will
                                 require practice and time.
@@ -67,7 +68,7 @@ export default function IntroWebDev(props) {
                             <li>For frontend find simple website and try to remake them. Don't worry about interaction
                                 or colors at the start, try to replicate the structure and move up from there.
                             </li>
-                            <li>Having a project to motivate your work is key. Check out the project ideas.</li>
+                            <li>Having a project to motivate your work is key. Check out the project ideas, or make a project that aligns with one of your hobbies.</li>
                             <li>If you start with web development and aren't sure you like it try exploring Python. It
                                 allows you to dive into the code faster without needing to learn as much syntax. I'll be
                                 making a tutorial soon.
@@ -1097,7 +1098,7 @@ export default function IntroWebDev(props) {
                             Hosting is a whole problem in itself. If you are working on simple web pages <a target="_blank" rel="noopener noreferrer" 
                             href={"https://github.com"}>Github</a> offers free hosting for small pages. </p>
                             <p>
-                                PC Magazing has a good <a href="https://www.pcmag.com/roundup/316108/the-best-web-hosting-services">article</a> about places to host your website. I think most of them, for a small website, are between $2-5/month.
+                                PC Magazine has a good <a href="https://www.pcmag.com/roundup/316108/the-best-web-hosting-services">article</a> about places to host your website. I think most of them, for a small website, are between $2-5/month.
                             </p>
                             <p>Amazon, Google,
                             and Microsoft all offer hosting services. They are free for small website.  I personally use <a target="_blank" rel="noopener noreferrer" 

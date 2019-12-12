@@ -1,13 +1,16 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
 import {CodeSnip} from "./index";
+import Link from './Link';
 
 function Snip(props) {
     return (
         <Card style={{width: '18rem'}}>
             <Card.Body>
                 <Card.Title>{props.title}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">{props.subtitle}</Card.Subtitle>
+                <Card.Subtitle className="mb-2 text-muted">
+                {props.subtitleLink ? <Link href={props.subtitleLink}>{props.subtitle}</Link> : props.subtitle}
+                </Card.Subtitle>
                 {/* <Card.Text> */}
                     {props.children}
                 {/* </Card.Text> */}

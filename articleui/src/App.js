@@ -7,11 +7,7 @@ import {
     SideBar
 } from './components/compstore';
 
-import {
-    IntroWebDev,
-    IntroPython,
-    HowToGoogle
-} from './components';
+import pages from './components';
 
 
 import './App.css';
@@ -49,33 +45,23 @@ function App(props) {
 
     const size = useWindowSize();
 
-    if (frame === 0) {
-        var content = <IntroWebDev width={size.width } />
-    } else if (frame === 1) {
-        var content = <IntroPython width={size.width } />
-    } else if (frame === 2) {
-        var content = <HowToGoogle width={size.width } />
-    }
+    let Page = pages[frame].component;
 
 
     console.log(size.width);
     return (
         <div className="App" style={{backgroundColor: "white"}}>
             <NavBar width={size.width}/>
-            <div style={{display: size.width < 900 ?  "block": "flex", maxWidth: Math.min(size.width , 1000) + "px", marginLeft: size.width > 900 ? "auto" : "0px", marginRight:  size.width > 900 ? "auto" : "0px"}}>
+            <div style={{display: size.width < 900 ?  "block": "flex", maxWidth: Math.min(size.width , 900) + "px", marginLeft: size.width > 900 ? "auto" : "0px", marginRight:  size.width > 900 ? "auto" : "0px"}}>
                 <SideBar.Wrapper style={{minWidth: "150px", maxWidth: "250px", marginLeft: "auto", marginRight: "auto"}}>
-                    <SideBar.Item onClick={() => setWindow(0)}>
-                        Intro to Web Dev
-                    </SideBar.Item>
-                    <SideBar.Item onClick={() => setWindow(1)}>
-                        Intro to Python
-                    </SideBar.Item>
-                    <SideBar.Item onClick={() => setWindow(2)}>
-                        How to Google
-                    </SideBar.Item>
+                    {pages.map((val, index) => {
+                        return <SideBar.Item key={index} onClick={() => setWindow(index)}>
+                            {val.title}
+                        </SideBar.Item>
+                    })}
                 </SideBar.Wrapper>
-                <div>
-                    {content}
+                <div style={{maxWidth: Math.min(size.width , 750) + "px"}}>
+                    <Page width={size.width}/>
                 </div>
             </div>
 

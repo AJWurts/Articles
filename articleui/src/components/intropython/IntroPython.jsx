@@ -78,7 +78,7 @@ export default function IntroPython(props) {
             <li><Link href="https://docs.python.org/">Python Documentation - Has the most up to date information, but can be overwhelming.</Link></li>
             <li>
               <Link href="https://stackoverflow.com/questions/tagged/python?tab=Votes">
-                Stackoverflow's most asked python questions - Chances are yours is here
+                Stackoverflow's most up voted Python questions - Chances are yours is here
               </Link>
             </li>
             <li>

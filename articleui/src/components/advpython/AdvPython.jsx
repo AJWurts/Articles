@@ -29,7 +29,7 @@ export default function IntroPython(props) {
         This is where it gets fun.
       </h4>
       <TableOfContents>
-      <Section link="nextsteps" label="Next Steps">
+      {/* <Section link="nextsteps" label="Next Steps">
           <p>
             You now have a good idea of the basic components of Python. Try to work through the easy projects above and if you feel good go for the medium projects. Move on to the Advanced Python Tutorial (Coming Soon!) to learn more about what Python can do. 
           </p>
@@ -143,7 +143,7 @@ export default function IntroPython(props) {
               <Link href="https://wxpython.org/">wxpython - Cross-platform GUI toolkit</Link>
             </li>
           </ul>
-        </Section>
+        </Section> */}
       </TableOfContents>
       </div>
   )

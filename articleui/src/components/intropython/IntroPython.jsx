@@ -103,11 +103,10 @@ export default function IntroPython(props) {
         <Section link="ides" label="Integrated Developer Environments">
         <p>
             IDEs are applications used for editing code. They improve over simple text editors by adding
-            shortcuts, templates, or other features that make writing code faster and easier. Finding the right IDE
-            requires trying a lot of different ones.
+            shortcuts, templates, or other features that make writing code faster and easier. Try a few IDE's before you decide on one. They all have their pros and cons, so find one that works for you.
           </p>
           <p>
-            Here are a list of IDEs that I recommend. I personally use Visual Studio code because it works
+            Here are a list of IDE's that I recommend. I personally use Visual Studio Code because it works
             well with Python and Javascript, my two main languages. I will be using Visual Studio Code (VS Code) for the remainder of this tutorial. 
           </p>
           <List newPage={true}>
@@ -140,10 +139,10 @@ export default function IntroPython(props) {
           </p>
           <h5>Part 2: Create a new Python file</h5>
           <ol>
-            <li> In VS Code  press: command + n on mac, or control + n on windows to create a new file. A new untitled file will open.</li> 
-            <li> Press command + s on mac, or control + s to save the file.</li> 
+            <li> In VS Code go to the menu bar at the top and click file, then new file to create a new file.</li> 
+            <li>Then go to file again and click save to save the file.</li> 
             <li>
-            A box will popup asking you to name the file. Name it <C>main.py</C>. "<C>.py</C>" denotes a Python file.
+              A box will popup asking you to name the file. Name it <C>main.py</C>. "<C>.py</C>" denotes a Python file.
             </li>
           </ol>
           <h5>Part 3: Run the Python file </h5>
@@ -202,50 +201,78 @@ export default function IntroPython(props) {
               <p>
                 Variables are used to store values, much like algebra. In Python you don't need to explicity define what
                 type a variable is. A variable can hold any type of data. Once created you can perform
-                calculations on variables using operators.
+                calculations with variables using operators.
               </p>
               <p>
                 All variables have a data type based on what data they store. Below is an example of how you would create each data type and what they are. 
               </p>
               <Code.Wrapper>
                 <Code.Title>
-                  Variable Creation
+                  Variable Creation and Types
                 </Code.Title>
                 Variables are created or updated using the assignment operator <C>=</C>. The value on the right is saved to the variable on the left. 
                 When choosing variable names the standard method in Python is underscores between words, such as <C>number_of_cats</C> for a variable that counts the number of cats.
                 <Code.Code>
                   <Code.Line>
-                    number_of_cats = 10 # An <span
-                    style={{color: 'rgb(40, 116, 166)'}}>Integer</span> is any number with out
-                    decimals.
+                  # An <span
+                      style={{color: 'rgb(40, 116, 166)'}}>Integer</span> is any number with out
+                      decimals.
                   </Code.Line>
                   <Code.Line>
-                    user_name = "dan456" # A <span
-                    style={{color: 'rgb(40, 116, 166)'}}>String</span> is a sequence of characters, surrounded by <C>""</C> or <C>''</C>.
+                    number_of_cats = 10 
+                  </Code.Line>
+                </Code.Code>
+                <Code.Code>
+                  <Code.Line>
+                    # A <span
+                      style={{color: 'rgb(40, 116, 166)'}}>String</span> is a sequence of characters, surrounded by <C>""</C> or <C>''</C>.
                   </Code.Line>
                   <Code.Line>
-                    user_avg_ratings = 1.88 # A <span
+                    user_name = "dan456" 
+                  </Code.Line>
+                </Code.Code>
+                <Code.Code>
+                  <Code.Line>
+                    # A <span
                     style={{color: 'rgb(40, 116, 166)'}}>Float</span> is any number with decimal
                     places.
                   </Code.Line>
                   <Code.Line>
-                    has_visited = True # A <span
+                    user_avg_ratings = 1.88 
+                  </Code.Line>
+                </Code.Code>
+                <Code.Code>
+                  <Code.Line>
+                  # A <span
                     style={{color: 'rgb(40, 116, 166)'}}>Boolean</span> is either True or False.
                   </Code.Line>
                   <Code.Line>
-                    ratings = [0,1,2,3,4,5] # A <span
+                    has_visited = True 
+                  </Code.Line>
+                </Code.Code>
+                <Code.Code>
+                  <Code.Line>
+                  # A <span
                     style={{color: 'rgb(40, 116, 166)'}}>List</span> contains a sequence of values. <C>list1</C> is a list of integers.
                   </Code.Line>
                   <Code.Line>
-                    food = {`{`}"Apple": "Fruit", "Corn": "Vegetable"} # A <span
-                    style={{color: 'rgb(40, 116, 166)'}}>Dictionary</span> contains Key and Value pairs.
+                    ratings = [0,1,2,3,4,5] 
+                  </Code.Line>
+                </Code.Code>
+                <Code.Code>
+                  <Code.Line>
+                    # A <span
+                      style={{color: 'rgb(40, 116, 166)'}}>Dictionary</span> contains Key and Value pairs.
+                  </Code.Line>
+                  <Code.Line>
+                    food = {`{`}"Apple": "Fruit", "Corn": "Vegetable"} 
                   </Code.Line>
                 </Code.Code>
               </Code.Wrapper>
             </SubSection>
             <SubSection link="syntax-operators" label="Operators">
               <p>
-                Operators are used to combine and maniuplate variables. Python has the bitwise operators: <C>|, &, ~, ^, >>, {`<<`}</C> which operate on the bits themselves, but they are out of the scope of this tutorial. Here are the four main types you need to know.
+                Operators are used to combine and manipulate variables. Python has the bitwise operators: <C>|, &, ~, ^, >>, {`<<`}</C> which operate on the bits themselves, but they are out of the scope of this tutorial. Here are the four main types you need to know.
               </p>
               Math operators behave like the standard math operations.
               <ul>
@@ -303,31 +330,31 @@ export default function IntroPython(props) {
             </SubSection>
             <SubSection link={'syntax-functions'} label={"Functions"}>
               <p>
-                Functions are used to perform multiple operations on variables. They are also used to group sections of code together that are repeated often. Functions are used on tasks repeated
-                often to reduce writing the same code more than once.A example function <C>print</C> prints text to the console. Every function has input values, called parameters or arguments, and most
+                Functions are used to perform multiple operations on variables. They are also used to group sections of code together that are repeated often. A example function <C>print(text)</C> prints text to the console. Every function has input values, called parameters or arguments, and most
                 have
-                output values, called return values.
+                output values, called return values. If no return value is specified the function returns <C>None</C>. <C>None</C> is a special type in Python.
               </p>
               <p>
-                Arguments are values passed to the function, so it can perform a calculation or task. Once the function is complete it returns a value. Functions can have multiple
-                arguments.
+                Arguments are values passed to the function, so it can perform a calculation or task. Functions can have multiple arguments. Once the function is complete it returns a value. 
               </p>
               <Code.Wrapper>
                 <Code.Title>
                   Defining a Function
                 </Code.Title>
-                All functions start with <C>def</C> followed by the function name and then parantheses with arguments inside.
+                All functions start with <C>def</C> followed by the function name and then parentheses with arguments inside.
                 <Code.Code>
                   <Code.Line>
                     def add_a_cat(number_of_cats):
                   </Code.Line>
                   <Code.Line tabs={1}>
-                    return number_of_cats + 1
+                    result = number_of_cats + 1
+                  </Code.Line>
+                  <Code.Line tabs={1}>
+                    return result
                   </Code.Line>
                 </Code.Code>
                 <Code.Description>
-                  The function is named <C>add_a_cat</C>. It takes an argument, number_of_cats, and returns the number
-                  plus 1.
+                  The function is named <C>add_a_cat</C>. It takes an argument, number_of_cats, adds 1 to the number and saves it in result, then returns result.
                   This function assumes the input value is a number.
                 </Code.Description>
               </Code.Wrapper>
@@ -336,7 +363,7 @@ export default function IntroPython(props) {
                   Calling a Function
                 </Code.Title>
                 Running a function is referred to as calling a function. If I called <C>add_a_cat</C> it means
-                I am running the function by passing in a variable. The input variable name does not need to match the argument name. They are linked based on their position. These types of parameters are also known as positional arguments.
+                I am running the function by passing in a variable. The input variable name does not need to match the argument name. They are linked based on their position. These types of parameters are known as positional arguments.
                 <Code.Code>
                   <Code.Line>
                     cats = 10
@@ -362,12 +389,14 @@ export default function IntroPython(props) {
                 Built-in functions are functions defined in the standard Python library. They are accessible without any imports. Below are popular ones, and <Link href="https://docs.Python.org/3/library/functions.html">here</Link> are all of them
                 <CardDeck>
                   <CodeSnip.Snip title="print(value)" subtitle="Print">
-                    Prints the value to the console
+                    Prints the value to the console followed by a return character.  To print multiple values on the same line, separate them by commas like <C>print(var1, var2, var3)</C>. This will  automatically add spaces  between them.
                     <CodeSnip.Example>
                       print("Hello World")
+                      <br/>
+                      print("Hello", "World")
                     </CodeSnip.Example>
                     <CodeSnip.Result>
-                      Prints <C>Hello World</C> to the console.
+                      Prints <C>Hello World</C> to the console. Both print the same thing.
                     </CodeSnip.Result>
                   </CodeSnip.Snip>
                 </CardDeck>
@@ -381,7 +410,7 @@ export default function IntroPython(props) {
                       The code would return an integer with the length of the list.
                     </CodeSnip.Result>
                   </CodeSnip.Snip>
-                  <CodeSnip.Snip title="min(item1, ..., itemN)" subtitle="Minimum">
+                  <CodeSnip.Snip title="min(item1, ...)" subtitle="Minimum">
                     Returns the minimum of a list, or min of all arguments.
                     <CodeSnip.Example>
                       min(var1, var2, var3)
@@ -392,7 +421,7 @@ export default function IntroPython(props) {
                       Both are valid ways to call min. Example one will return either var1, var2, or var3 based on which is smallest. Example 2 will return the smallest value in list1.
                     </CodeSnip.Result>
                   </CodeSnip.Snip>
-                  <CodeSnip.Snip title="max(item1, ..., itemN)" subtitle="Maximum">
+                  <CodeSnip.Snip title="max(item1, ...)" subtitle="Maximum">
                     Returns the maximum of a list, or max of all arguments.
                     <CodeSnip.Example>
                       max(var1, var2, var3)
@@ -440,7 +469,7 @@ export default function IntroPython(props) {
                 </CardDeck>
                 <CardDeck>
                 <CodeSnip.Snip title="sorted(list)" subtitle="Sorting">
-                  Sorts list and returns the sorted list. Sorted has an optional argument <C>reverse</C>, which when set to true sorted in descending order.
+                  Sorts list and returns the sorted list. The list is sorted in ascending order (smallest to largest). <C>sorted</C> has an optional argument <C>reverse</C>, which when set to True sorts in descending order (largest to smallest).
                   <CodeSnip.Example>
                     result = sorted([1,3,4,2,0])
                   </CodeSnip.Example>
@@ -449,16 +478,19 @@ export default function IntroPython(props) {
                     <C> [0,1,2,3,4]</C>
                   </CodeSnip.Result>
                 </CodeSnip.Snip>
-                <CodeSnip.Snip title={"input(string)"} subtitle={"Input Function"}>
-                  Takes in a string, displays the string to the user in the console and waits for the user to type something in the console. Once the user finishes typing and presses return, it reads the input and returns the value as a <b>string</b>.
-                  <CodeSnip.Example>
-                    user_input = input("Enter your name:")
-                  </CodeSnip.Example>
-                  <CodeSnip.Result>
-                    <C>user_input</C> is now equal to what the user typed in the console.
-                  </CodeSnip.Result>
-                </CodeSnip.Snip>
+               
                 </CardDeck> 
+                <CardDeck>
+                  <CodeSnip.Snip title={"input(string)"} subtitle={"Input Function"}>
+                    Takes in a string, displays the string to the user in the console and waits for the user to type something in the console. Once the user finishes typing and presses return, it reads the input and returns the value as a <b>string</b>. If you want to input numbers make sure to use <C>float(val)</C>, or <C>int(val)</C> to process the input to numbers.
+                    <CodeSnip.Example>
+                      user_input = input("Enter your name:")
+                    </CodeSnip.Example>
+                    <CodeSnip.Result>
+                      <C>user_input</C> is now equal to what the user typed in the console.
+                    </CodeSnip.Result>
+                  </CodeSnip.Snip>
+                </CardDeck>
                 <CardDeck>
           
                 <CodeSnip.Snip title="range(start, stop, diff)" subtitle="Range Function">
@@ -476,7 +508,7 @@ export default function IntroPython(props) {
                 <Code.Title>
                   Optional Arguments
                 </Code.Title>
-                  Optional arguments are used when a function has default values that don't need to be set everytime a function runs. They can also be used to name the arguments to make the code more clear. Optional arguments always come after positional arguments.
+                  Optional arguments are used when a function has default values that don't need to be set every time the function runs. They can also be used to name the arguments to clarify the arguments. Optional arguments always come after positional arguments.
                 <Code.Code>
                   <Code.Line>
                     def equation(x, m=2, b=10):
@@ -517,7 +549,7 @@ export default function IntroPython(props) {
                 <Code.Title>
                   Creating a List
                 </Code.Title>
-                Lists are defined by a set of square brackets <C>[]</C>, one at the start and one at the end.
+                Lists are defined by a set of square brackets <C>[]</C>, one at the start and one at the end. Items are separated by commas.
                 <Code.Code>
                 <Code.Line>
                   <Code.Comment># Create a list with values 0,1,2,3,4,5</Code.Comment>
@@ -569,7 +601,7 @@ export default function IntroPython(props) {
                 <Code.Title>
                   Access an item in a list
                 </Code.Title>
-                The list name followed by square brackets and a number inside is used to access values in a list. Indexes in the list start at 0 and go up. To get the first item in the list use index 0.
+                The list name followed by square brackets and a number inside is used to access values in a list. Indexes in the list start at 0 and go up. To get the first item in the list use index 0. You can index into list using integer as a variable or a hard coded number. A hard coded number is when you place a number directly in your code. The example below uses two hard coded numbers, 0, and 2, to index into the array. 
                 <Code.Code>
                   <Code.Line>
                     letters = ["a", "b", "c", "d", "e"]
@@ -607,8 +639,8 @@ export default function IntroPython(props) {
                       Adds <C>10</C> to the end of <C>list1</C>. <C>list1</C> now equals: <C>[10,20,30,40,10]</C>
                     </CodeSnip.Result>
                   </CodeSnip.Snip>
-                  <CodeSnip.Snip title="index(item)" subtitle="Find Item Index">
-                    <C>index</C> is used to find the index of an item in a list. It takes in a object, and returns the index of that item if found. If it is not found it returns -1.
+                  <CodeSnip.Snip title="index(value)" subtitle="Find Item Index">
+                    <C>index</C> is used to find the index of an item in a list. It takes in a value, and returns the index of that value if found. If it is not found it returns -1.
                     <CodeSnip.Example>
                     list1 = [10,20,30,40]
                     <br/>
@@ -621,7 +653,7 @@ export default function IntroPython(props) {
               </CardDeck>
               <CardDeck>
                 <CodeSnip.Snip title="sort()" subtitle="Sort list">
-                  <C>sort</C> sorts the values in the list, in ascending order. Ascending means smallest first, and largest last. Descending is oppsite, largest first, and smallest last. Sort has an optional argument <C>reverse</C>, which when set to true sorted in descending order.
+                  <C>sort</C> sorts the values in the list, in ascending order. Ascending means smallest first, and largest last. Descending is opposite, largest first, and smallest last. Sort has an optional argument <C>reverse</C>, which when set to true sorted in descending order. Works the same as <C>sorted</C> except it updates the list directly instead of returning a new sorted copy.
                   <CodeSnip.Example>
                     list1 = [40,20,10,30]
                     <br/>
@@ -660,14 +692,14 @@ export default function IntroPython(props) {
             </SubSection>
             <SubSection link="syntax-dicts" label="Dictionaries">
               <p>
-                Dictionaries are used to link two items together using key and value pairs. If you wanted to count the occurences of letters in a sentence, a dictionary is a good data structure to use. Dictionaries are also refered to as HashMaps in Java.
+                Dictionaries are used to link two items together using key and value pairs. If you wanted to count the occurrences of letters in a sentence, a dictionary is a good data structure to use. Dictionaries are also referred to as HashMaps in Java.
               </p>
               <p>
-                Dictionaries in Python are created using curly brackets. <C>{`{}`}</C> defines an empty dictionary. key and value pairs can be added. Keys cannot be repeated, but values can be repeated. Look at the code example below. The key and value can be different data types. Any data type can be a key, and the and data type can be a value. 
+                Dictionaries in Python are created using curly brackets. <C>{`{}`}</C> defines an empty dictionary. Key and value pairs can be added. Keys cannot be repeated, but values can be repeated. Look at the code example below. The key and value can be different data types. Any data type can be a key, and the and data type can be a value. 
               </p>
               <Code.Wrapper>
                 <Code.Title>
-                  Creating a dictionary
+                  Creating a dict(tionary)
                 </Code.Title>
                 <Code.Code>
                   <Code.Line>
@@ -701,7 +733,7 @@ export default function IntroPython(props) {
                   </Code.Line>
                 </Code.Code>
                 <Code.Description>
-                  Line 1creates an empty dictionary, <C>dict1</C> . Then the key <C>"apple"</C> is added with the value <C>"fruit"</C>. After the above code runs, <C>dict1</C> will have two key pair values, one for apple, one for 10. 
+                  Line 1 creates an empty dictionary, <C>dict1</C> . Then the key <C>"apple"</C> is added with the value <C>"fruit"</C>. After the above code runs, <C>dict1</C> will have two key pair values, one for apple, one for 10. 
                 </Code.Description>
               </Code.Wrapper>
               <Code.Wrapper>
@@ -714,7 +746,7 @@ export default function IntroPython(props) {
                     <Code.Comment># Create test dictionary</Code.Comment>
                   </Code.Line>
                   <Code.Line>
-                    dict1 = {`{"apple": "fruit", "broccoli": "vegetable"}`}
+                  dict1 = {`{`}<S color="rgb(40, 116, 166)">"apple"</S>: <S color="rgb(230, 126, 34)">"fruit"</S>, <S color="rgb(40, 116, 166)">"broccoli"</S>: <S color="rgb(230, 126, 34)">"vegetable"</S>}
                   </Code.Line>
                   <Code.Line>
                     apple_val = dict1['apple']
@@ -726,7 +758,7 @@ export default function IntroPython(props) {
               </Code.Wrapper>
               <Code.Wrapper>
                 <Code.Title>
-                  Checking to see if key already exists
+                  Check if a key already exists 
                 </Code.Title>
                 When creating a dictionary you often want to know whether a key already exists. The <C>in</C> keyword does that for you. It only checks the keys, not the values.
                 <Code.Code>
@@ -827,11 +859,10 @@ export default function IntroPython(props) {
                   </Code.Line>
                 </Code.Code>
                 <Code.Description>
-                  The above code is used find the sum of the <C>numbers</C>. The for loop
+                  The above code is used to find the sum of the <C>numbers</C>. The for loop
                   iterates over <C>array1</C>. The first time the loop runs <S
                   color='#922B21'>val</S> is set to 0. <S color='#922B21'>val</S> is added to sum, and
-                  sum is updated to 1. On the second iteration the <S color='#922B21'>val</S> is set
-                  to 2, and sum is updated to 3. After the final iteration sum will be 18.
+                  <C> sum</C> is updated to 1. On the second iteration the <S color='#922B21'>val</S> is <C>sum</C> to 2, and <C>sum</C> is updated to 3. After the final iteration <C>sum</C> will be 18.
                 </Code.Description>
               </Code.Wrapper>
               <Code.Wrapper>
@@ -869,7 +900,7 @@ export default function IntroPython(props) {
             <p>
               There are multiple parts to an if statement: 
               <C> if</C>, <C>else</C>, and <C>elif</C>. 
-              <C> if</C> is always at the start of the if statement. After the <C>if</C> keyword is a boolean expression. If the boolean expression is True the code within the if statement runs. If False, the code doesn't run. <C>elif</C> can be used after the first <C>if</C>. It will run when all of the conditionals above are False. If none of the <C>if</C> or <C>elif</C> statements are True above the <C>else</C> code will run. It can be used as a default if nothing is True. 
+              <C> if</C> is always at the start. After the <C>if</C> keyword is a boolean expression. If the boolean expression is True the code within the section is run. If False, the code doesn't run. <C>elif</C> can be used after the first <C>if</C>. It will run when all of the conditionals above are False. If none of the <C>if</C> or <C>elif</C> statements are True above, the <C>else</C> code will run. It can be used as a default if nothing is True. 
             </p>
             <Code.Wrapper>
               <Code.Title>
@@ -907,7 +938,7 @@ export default function IntroPython(props) {
         </Section>
         <Section link="commandline" label="Practice App 1: Command Line Calculator">
           <p>
-            Command line programs are very common in Python.  Scripts are small programs, such as command line programs, that do a set of tasks. Scripts are most often used to save time doing repetitive tasks. Python is good for writing scripts, because it doesn't require a class framework like Java, and it can be run without compiling for faster iterations.
+            Command line programs are very common in Python.  Scripts are small programs, such as command line programs, that do a set of tasks. Scripts are most often used to save time doing repetitive tasks. Python is good for writing scripts, because it doesn't require a class framework like Java, and it can be run without compiling for faster iterations. It also has a very simple set of commands for reading and writing files. 
           </p>
           {/* <p>
             When I was a TA for an undergrad class we downloaded all the homework files for grading in a
@@ -918,7 +949,7 @@ export default function IntroPython(props) {
           </p> */}
           <p>
             Start out by downloading the <Link href={"/files/commandline.py"} download >template file</Link>.
-            The template file contains boiler plate code to get you started. Move the file into the folder you created earlier to run the Hello World program.
+            The template file contains boiler plate code to get you started. Move the file into the folder you created earlier to run the Hello World program. Then double click the file inside VS Code to edit.
           </p>
           <p>
             The Calculator will take in two numbers and an operator from the user and calculate the output. In order to take in user input we use the <C>input</C> function.
@@ -928,7 +959,7 @@ export default function IntroPython(props) {
               <Code.Title>
                 Part 1: Read User Input
               </Code.Title>
-              We start by downloading the template and adding three lines of code. Each code uses input to retrieve one piece of information from the user. Then we display the data in the console using <C>print</C> to verify they were entered properly.
+              We start by downloading the template and adding three lines of code. Each code uses <C>input</C> to retrieve one piece of information from the user. Then we display the data in the console using <C>print</C> to verify they were entered properly.
               <Code.Code>
                 <Code.Line >
                   number1 = input("Enter Number 1: ")

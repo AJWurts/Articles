@@ -28,7 +28,37 @@ export default function IntroPython(props) {
       <h4>
         This is where it gets fun.
       </h4>
+      <p>
+        This tutorial works on top of the Intro Python tutorial. Make sure you read through that one first. 
+      </p>
+      <p>
+        The order of this tutorial is less important than the intro tutorial. The first section, Classes and Objects, should be read first, and the rest can be read in any order.
+      </p>
       <TableOfContents>
+      <Section link="classes" label="Classes and Objects">
+        
+      </Section>
+      <Section link="lists" label="List Processing">
+        
+      </Section>
+      <Section link='files' label="File Reading and Writing">
+
+      </Section>
+      <Section link="mapandfilter" label="Map and Filter using Lambda">
+        
+      </Section>    
+      <Section link="yield" label="Iterators">
+
+      </Section>
+      <Section link="importing" label="Downloading Modules with PyPI">
+
+      </Section>
+      <Section link="sets" label="Sets">
+
+      </Section>
+      <Section link="nextsteps" label="Next Steps">
+
+      </Section>
       {/* <Section link="nextsteps" label="Next Steps">
           <p>
             You now have a good idea of the basic components of Python. Try to work through the easy projects above and if you feel good go for the medium projects. Move on to the Advanced Python Tutorial (Coming Soon!) to learn more about what Python can do. 

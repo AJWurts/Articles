@@ -32,11 +32,11 @@ export default function IntroPython(props) {
         <Section link="starting" label="Getting Started">
           <p>
             So you want to learn Python. You made a good choice. From my experience being a TA for undergrad CS
-            classes, Python is the language people pick up most easily. In part due to it's dynamic typing and simple syntax. It is great for beginners because it allows them to start working with concepts immediately and not worry about the small stuff. There are a few languages where a valid line of code creates a readable
-            english sentence. Python is one of them.
+            classes, Python is the language people pick up most easily. It is in part due to it's dynamic typing and simple syntax. It is great for beginners because it allows them to start working with concepts immediately and not worry about the small things. There are a few languages where a valid line of code creates a readable
+            English sentence. Python is one of them.
           </p>
           <p>
-            This tutorial goes over the Python concepts to start programming simple apps. At the bottom there is a list of projects to attempt, and a follow up with libraries you can start exploring. You probably won't be able to use them before doing the Advanced Tutorial and a few projects, but it's good to see what's next.
+            This tutorial goes over the Python concepts to start programming simple apps. At the bottom there is a list of projects ideas to try, and a follow up with libraries you can start exploring. You probably won't be able to use them before doing the Advanced Tutorial and a few projects, but it's good to see what's next.
           </p>
           <p>
             Here are some tips to get through learning the basics.
@@ -51,7 +51,7 @@ export default function IntroPython(props) {
                 Google is your best friend, or it will be soon. Use it whenever you are stuck. 
               </li>
               <li>
-                Learning to program takes time and persistence as well as plenty of breaks. If you go 8hrs straight the last few will probably be less effective than the first few. 
+                Learning to program takes time and persistence as well as plenty of breaks. If you go 8 hrs straight the last few will probably be less effective than the first few. 
               </li>
               <li>
                 Learn your IDE's or text editor's keyboard shortcuts, it will save you a lot of time.
@@ -78,7 +78,7 @@ export default function IntroPython(props) {
             <li><Link href="https://docs.python.org/">Python Documentation - Has the most up to date information, but can be overwhelming.</Link></li>
             <li>
               <Link href="https://stackoverflow.com/questions/tagged/python?tab=Votes">
-                Stackoverflow's most up voted Python questions - Chances are yours is here
+                Stackoverflow's most up voted Python questions - Chances are your question is here
               </Link>
             </li>
             <li>
@@ -89,8 +89,7 @@ export default function IntroPython(props) {
         <Section link="downloading" label="How to download and run Python">
           <p>
             This tutorial uses Python 3.6, but 3.7, and 3.8 will work too. Some programs use Python 2.7, but
-            a large majority use Python 3+. The differences are minmal, and as of 2019 Python 3 is the
-            better one to learn.
+            a large majority use Python 3+. Python 2 cannot be run by Python3 and vice versa. For a beginner the differences are minimal. As of 2019 Python 3 is the better one to learn.
           </p>
           <p>
             Click <Link href="https://www.Python.org/downloads/">here</Link> to download Python. Download
@@ -98,7 +97,7 @@ export default function IntroPython(props) {
             installation wizard. <b>On Windows make sure to check the box to add Python to your PATH variable.</b> This is very important.
           </p>
           <p>
-            Once complete you should have access to the Python3 command in your console. We will go through how to run a Python file soon. 
+            Once complete you should have access to the python3 command in your console. We will go through how to run a Python file later. 
           </p>
         </Section>
         <Section link="ides" label="Integrated Developer Environments">

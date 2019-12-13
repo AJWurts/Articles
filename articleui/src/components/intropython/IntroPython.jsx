@@ -1239,7 +1239,7 @@ export default function IntroPython(props) {
             </Code.Wrapper>
           </SubSection>
           <SubSection link="turtlespiral" label="Turtle Project 2: Colored Spiral">
-          <div style={{backgroundImage: "url(/files/turtlespiral.png)", width: "100%", "height": "200px", backgroundPosition: "center"}}>
+          <div style={{backgroundImage: "url(http://www.alexwurts.com/Articles/files/turtlespiral.png)", width: "100%", "height": "200px", backgroundPosition: "center"}}>
           </div>
           <p>
             Let's make the circle a little more exciting. We are going to turn it into a spiral that changes colors. A spiral is created by a drawing a circle of increasing radius or size. We are actually drawing a many sided shape that looks like a circle. In a many sided shape two values that determine size are side length and corner angle. If we increase side length every time we move the size increases. The new code below shows this change. 

@@ -22,5 +22,4 @@ export default [
         title: "How to Google" ,
         component: HowToGoogle
     },
-
 ]

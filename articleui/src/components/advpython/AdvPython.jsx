@@ -38,7 +38,7 @@ export default function IntroPython(props) {
       <TableOfContents>
         <Section link="syntax-classes" label="Classes">
           <p>
-            Object orientated programming is a progrmaming method that organizes the program around
+            Object orientated programming is a programming method that organizes the program around
             code and objects as opposed to functions and logic. Python is built on top of objects,
             every object except for some primitive types are objects. Strings are objects built
             on top of lists, also objects, or chars (not objects).
@@ -269,15 +269,20 @@ export default function IntroPython(props) {
         <Section link='files' label="File Reading and Writing">
           <p>
             Reading and writing to files allows data to be stored between program runs. For example, a
-            config file could be stored and loaded every time an app starts. For data science data is often
+            config file could be stored and loaded every time an app starts. For data science, data is often
             stored in comma separated value files (CSVs), and reading and writing is used extensively. The
-            three main functions used are <C>open</C>, <C>close</C>, and <C>write</C>.
+            two main functions used are <C>open</C>, and <C>write</C>. After you have finished using the file make sure
+            to close it. Alternatively use the <C>with</C> keyword to automatically close it.
           </p>
           <SubSection link="files-open" label="open function">
-            Opens <C>filename</C> using the <C>how</C> method and returns a File Object. There are multiple
-            ways to open a file. Here are the most common. After the file is open use <C>read</C> to access the file
-            text. Use <C>.split</C><Link
-            href="https://docs.python.org/3/library/functions.html#open">Full documentation is here.</Link>
+            Opens <C>filename</C> using the <C>how</C> method and returns a <Link
+            href="https://docs.python.org/3/library/io.html#io.IOBase">File Object</Link>. There are multiple
+            methods to open a file. Below are the most common. After the file is open use <C>read</C> to access the file
+            text. Use <C>text.split('\n')</C> to turn the text into a list for each line. <Link
+              href="https://docs.python.org/3/library/functions.html#open">Full documentation is here.</Link>
+            <Code.Title>
+              Reading and Writing Methods
+            </Code.Title>
             <CardDeck>
               <CodeSnip.Snip title='"r"' subtitle="Read Only">
                 Only allows reading access.
@@ -311,6 +316,9 @@ export default function IntroPython(props) {
                 </Code.Line>
                 <Code.Line>
                   text = input_file.read()
+                </Code.Line>
+                <Code.Line>
+                  input_file.close()
                 </Code.Line>
               </Code.Code>
               Better Example 1:
@@ -496,5 +504,5 @@ export default function IntroPython(props) {
         </Section>
       </TableOfContents>
     </div>
-  )
+)
 }

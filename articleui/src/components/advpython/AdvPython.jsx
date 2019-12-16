@@ -11,7 +11,7 @@ import {
   List,
   ListItem
 } from "../compstore";
-import { CardDeck, Table } from 'react-bootstrap';
+import {CardDeck, Table} from 'react-bootstrap';
 
 export default function IntroPython(props) {
 
@@ -23,7 +23,7 @@ export default function IntroPython(props) {
       <h3>By Alexander Wurts</h3>
       <p>
         If you have any questions, comments, or think there is an error please email me at
-          <b> alexwurtsfeedback@gmail.com</b>.
+        <b> alexwurtsfeedback@gmail.com</b>.
       </p>
       <h4>
         This is where it gets fun.
@@ -32,7 +32,8 @@ export default function IntroPython(props) {
         This tutorial works on top of the Intro Python tutorial. Make sure you read through that one first.
       </p>
       <p>
-        The order of this tutorial is less important than the intro tutorial. The first section, Classes and Objects, should be read first, and the rest can be read in any order.
+        The order of this tutorial is less important than the intro tutorial. The first section, Classes and
+        Objects, should be read first, and the rest can be read in any order.
       </p>
       <TableOfContents>
         <Section link="syntax-classes" label="Classes">
@@ -41,12 +42,13 @@ export default function IntroPython(props) {
             code and objects as opposed to functions and logic. Python is built on top of objects,
             every object except for some primitive types are objects. Strings are objects built
             on top of lists, also objects, or chars (not objects).
-                            </p>
+          </p>
           <p>
             Classes are used to define objects. A class can contains variables and methods
             (functions in a class). Methods are special because they have access to the object
-            variables. Therefore it is common for a method to have no parameters because it can use the object variables to do calculations.
-                            </p>
+            variables. Therefore it is common for a method to have no parameters because it can use the
+            object variables to do calculations.
+          </p>
           <Code.Wrapper>
             <Code.Title>
               Example Dog Class
@@ -60,186 +62,289 @@ export default function IntroPython(props) {
               </Code.Line>
               <Code.Line tabs={2}>
                 self.name = name
-               </Code.Line>
+              </Code.Line>
               <Code.Line tabs={2}>
                 self.dog_years = human_years * 7
               </Code.Line>
               <Code.Line tabs={2}>
                 self.breed = breed
               </Code.Line>
-              <br />
+              <br/>
               <Code.Line tabs={1}>
                 def pet(self):
               </Code.Line>
               <Code.Line tabs={2}>
                 print(name, "wags their tail.")
               </Code.Line>
-              <br />
+              <br/>
               <Code.Line tabs={1}>
                 def feed(self, food_amount):
               </Code.Line>
               <Code.Line tabs={2}>
                 print(name, "eats")
               </Code.Line>
-              <br />
+              <br/>
               <Code.Line tabs={1}>
                 def getBreed(self):
               </Code.Line>
               <Code.Line tabs={2}>
                 return self.breed
               </Code.Line>
-              <br />
+              <br/>
               <Code.Line tabs={1}>
                 def setAge(self, human_years):
               </Code.Line>
               <Code.Line tabs={2}>
                 self.dog_years = human_years * 7
-                </Code.Line>
-              <br />
+              </Code.Line>
+              <br/>
             </Code.Code>
             <Code.Result>
-              The code creates a template for the Dog class. To use the class you create a Dog Object. It is an instance of the Dog class. The object will have it own set of values for name, dog_years, and breed.  
+              The code creates a template for the Dog class. To use the class you create a Dog Object. It
+              is an instance of the Dog class. The object will have it own set of values for name,
+              dog_years, and breed.
             </Code.Result>
           </Code.Wrapper>
           <SubSection label='Methods'>
             <p>
-              Methods are functions inside an object. Their parameters always start with self to provide access to the object
+              Methods are functions inside an object. Their parameters always start with self to provide
+              access to the object
             </p>
           </SubSection>
         </Section>
-        <Section link="lists" label="List and String Processing">
-        <p>
-        Lists are a way of holding data in a sequence, where order matters. It is a type of data structure. Accessing and manipulating one item in a list, as the intro tutorial teaches, is adequate for most problems. However, in a lot of cases you need to do more. Python has a comprehensive set of operations to do pretty much anything to a list. A string, or a list of characters, shares a lot of operations with list. I'll label which operations work for both.
-        </p>
-        <TableOfContents>
-          <SubSection link="slicing" label="Slicing">
-            <p>
-              Slicing in Python requires a special, but powerful syntax. Slicing is used to access and edit values within a list. 
-              
-            </p>
-            <p>
-              Slicing uses the same syntax for lists and strings. If the start index is not specified, it starts at the beginning of the string. If the end index is not specified it slices until the end of the string. If step is not specified it defaults to 1. <br/>
-            </p>
-            <p>
-            
-              <b>Syntax:</b> <C>list[start: stop: step]</C> <br/>
-              <C>start</C> defines the starting index, it is included.<br/>
-              <C>end</C> defines the finishing index, it is not included. <br/>
-              <C>step</C> defines the difference between each index.
-            </p>
-            <Code.Wrapper>
-              <Code.Title>
-                Example Slicing (Lists and Strings)
-              </Code.Title>
-             Shows the different ways of slicing lists and strings. Not all arguments need to be included. Even no arguments is still valid.
-              <Code.Code> 
-                <Code.Line>
-                  list1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
-                </Code.Line>
-                <Code.Line>
-                  str1 = 'abcdefg'
-                </Code.Line>
-                <br/>
-                <Code.Line>
-                  <Code.Comment>
-                    # Only start and finish index.
-                  </Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  list[2:4] <Code.Comment># == ['c', 'd']</Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  str1[2:4] <Code.Comment># == 'cd'</Code.Comment>
-                </Code.Line>
-                <br/>
-                <Code.Line>
-                  <Code.Comment>
-                    # No starting index
-                  </Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  list[:4] <Code.Comment># == ['a', 'b', 'c', 'd']</Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  str1[:4] <Code.Comment># == 'abcd'</Code.Comment>
-                </Code.Line>
-                <br/>
-                <Code.Line>
-                  <Code.Comment>
-                    # No end index
-                  </Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  list[2:] <Code.Comment># == ['c', 'd', 'e', 'f', 'g']</Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  str1[2:] <Code.Comment># == 'cdefg'</Code.Comment>
-                </Code.Line>
-                <br/>
-                <Code.Line>
-                  <Code.Comment>
-                    # Using step without end
-                  </Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  list[2::2] <Code.Comment># == ['c', 'e', 'g']</Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  str1[2::-1] <Code.Comment># == 'ceg'</Code.Comment>
-                </Code.Line>
-                <br/>
-                <Code.Line>
-                  <Code.Comment>
-                    # Only step to Revere String/List
-                  </Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  list[::-1] <Code.Comment># == ['g', 'f', 'e', 'd', 'c', 'b', 'a']</Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  str1[::-1] <Code.Comment># == 'gfedcba'</Code.Comment>
-                </Code.Line>
-                <br/>
-                <Code.Line>
-                  <Code.Comment>
-                    # Shallow copy with no arguments
-                  </Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  list[:] <Code.Comment># == ['a', 'b', 'c', 'd', 'e', 'f', 'g'] </Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  str1[:] <Code.Comment># == 'abcdefg</Code.Comment>
-                </Code.Line>
-                
-              </Code.Code>
-            </Code.Wrapper>
-            <Code.Wrapper>
-              <Code.Title>
-                Negative Indices (Lists and Strings)
-              </Code.Title>
-              Python supports negative indices for slicing. The last value in the list is -1, and it counts down from there. Negative indices can be used for indexing and slicing into lists
-              <Code.Code>
-                <Code.Line>
-                  example_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
-                </Code.Line>
-                <Code.Line>
-                  <Code.Comment>
-                  # Indices:       0,   1,   2,   3,   4,   5,   6
-                  </Code.Comment>
-                </Code.Line>
-                <Code.Line>
-                  <Code.Comment>
-                    # Negative:     -7,  -6,  -5,  -4,  -3,  -2,  -1
-                  </Code.Comment>
-                </Code.Line>
-              </Code.Code>
-            </Code.Wrapper>
-          </SubSection>
-        </TableOfContents>
+        <Section link="lists" label="List and String Slicing">
+          <p>
+            Lists are a way of holding data in a sequence, where order matters. It is a type of data
+            structure. Accessing and manipulating one item in a list, as the intro tutorial teaches, is
+            adequate for most problems. However, in a lot of cases you need to do more. Python has a
+            comprehensive set of operations to do pretty much anything to a list. A string, or a list of
+            characters, shares a lot of operations with list. I'll label which operations work for both.
+          </p>
+          <TableOfContents>
+            <SubSection link="slicing" label="Slicing">
+              <p>
+                Slicing in Python requires a special, but powerful syntax. Slicing is used to access and
+                edit values within a list.
+
+              </p>
+              <p>
+                Slicing uses the same syntax for lists and strings. If the start index is not specified,
+                it starts at the beginning of the string. If the end index is not specified it slices
+                until the end of the string. If step is not specified it defaults to 1. <br/>
+              </p>
+              <p>
+
+                <b>Syntax:</b> <C>list[start: stop: step]</C> <br/>
+                <C>start</C> defines the starting index, it is included.<br/>
+                <C>end</C> defines the finishing index, it is not included. <br/>
+                <C>step</C> defines the difference between each index.
+              </p>
+              <Code.Wrapper>
+                <Code.Title>
+                  Example Slicing (Lists and Strings)
+                </Code.Title>
+                Shows the different ways of slicing lists and strings. Not all arguments need to be
+                included. Even no arguments is still valid.
+                <Code.Code>
+                  <Code.Line>
+                    list1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+                  </Code.Line>
+                  <Code.Line>
+                    str1 = 'abcdefg'
+                  </Code.Line>
+                  <br/>
+                  <Code.Line>
+                    <Code.Comment>
+                      # Only start and finish index.
+                    </Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    list[2:4] <Code.Comment># == ['c', 'd']</Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    str1[2:4] <Code.Comment># == 'cd'</Code.Comment>
+                  </Code.Line>
+                  <br/>
+                  <Code.Line>
+                    <Code.Comment>
+                      # No starting index
+                    </Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    list[:4] <Code.Comment># == ['a', 'b', 'c', 'd']</Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    str1[:4] <Code.Comment># == 'abcd'</Code.Comment>
+                  </Code.Line>
+                  <br/>
+                  <Code.Line>
+                    <Code.Comment>
+                      # No end index
+                    </Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    list[2:] <Code.Comment># == ['c', 'd', 'e', 'f', 'g']</Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    str1[2:] <Code.Comment># == 'cdefg'</Code.Comment>
+                  </Code.Line>
+                  <br/>
+                  <Code.Line>
+                    <Code.Comment>
+                      # Using step without end
+                    </Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    list[2::2] <Code.Comment># == ['c', 'e', 'g']</Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    str1[2::-1] <Code.Comment># == 'ceg'</Code.Comment>
+                  </Code.Line>
+                  <br/>
+                  <Code.Line>
+                    <Code.Comment>
+                      # Only step to Revere String/List
+                    </Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    list[::-1] <Code.Comment># == ['g', 'f', 'e', 'd', 'c', 'b', 'a']</Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    str1[::-1] <Code.Comment># == 'gfedcba'</Code.Comment>
+                  </Code.Line>
+                  <br/>
+                  <Code.Line>
+                    <Code.Comment>
+                      # Shallow copy with no arguments
+                    </Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    list[:] <Code.Comment># == ['a', 'b', 'c', 'd', 'e', 'f', 'g'] </Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    str1[:] <Code.Comment># == 'abcdefg</Code.Comment>
+                  </Code.Line>
+
+                </Code.Code>
+              </Code.Wrapper>
+              <Code.Wrapper>
+                <Code.Title>
+                  Negative Indices (Lists and Strings)
+                </Code.Title>
+                Python supports negative indices for slicing. The last value in the list is -1, and it
+                counts down from there. Negative indices can be used for indexing and slicing into
+                lists. String examples not shown.
+                <Code.Code>
+                  <Code.Line>
+                    example_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+                  </Code.Line>
+                  <Code.Line>
+                    <Code.Comment>
+                      # Indices: 0, 1, 2, 3, 4, 5, 6
+                    </Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    <Code.Comment>
+                      # Negative: -7, -6, -5, -4, -3, -2, -1
+                    </Code.Comment>
+                  </Code.Line>
+                  <br/>
+                  <Code.Line>
+                    <Code.Comment>
+                      # Slicing with Negative Indices
+                    </Code.Comment>
+                  </Code.Line>
+                  <Code.Line>
+                    example_list[2:-1] <Code.Comment># == ['c', 'd', 'e', 'f'] All but last
+                    value </Code.Comment>
+                  </Code.Line>
+                </Code.Code>
+              </Code.Wrapper>
+            </SubSection>
+          </TableOfContents>
+        </Section>
+        <Section link="string-processing" label={"String Processing"}>
+
         </Section>
         <Section link='files' label="File Reading and Writing">
-
+          <p>
+            Reading and writing to files allows data to be stored between program runs. For example, a
+            config file could be stored and loaded every time an app starts. For data science data is often
+            stored in comma separated value files (CSVs), and reading and writing is used extensively. The
+            three main functions used are <C>open</C>, <C>close</C>, and <C>write</C>.
+          </p>
+          <SubSection link="files-open" label="open function">
+            Opens <C>filename</C> using the <C>how</C> method and returns a File Object. There are multiple
+            ways to open a file. Here are the most common. After the file is open use <C>read</C> to access the file
+            text. Use <C>.split</C><Link
+            href="https://docs.python.org/3/library/functions.html#open">Full documentation is here.</Link>
+            <CardDeck>
+              <CodeSnip.Snip title='"r"' subtitle="Read Only">
+                Only allows reading access.
+              </CodeSnip.Snip>
+              <CodeSnip.Snip title='"r+"' subtitle="Read and Write">
+                Read and write access.
+              </CodeSnip.Snip>
+              <CodeSnip.Snip title='"a"' subtitle="Write Append">
+                Open for writing. Adds to end of file if exists.
+              </CodeSnip.Snip>
+            </CardDeck>
+            <CardDeck>
+              <CodeSnip.Snip title='"w"' subtitle="Write">
+                Only allows writing. Creates file if it doesn't exist. Overwrite entire file if it does.
+              </CodeSnip.Snip>
+              <CodeSnip.Snip title='"w+"' subtitle="Write and Truncate">
+                Read and write. Creates file if it doesn't exist. Overwrite entire file if it does.
+              </CodeSnip.Snip>
+              <CodeSnip.Snip title='"rb" and "wb"' subtitle="Read and Write Bytes">
+                Read or write in binary. Used for raw files.
+              </CodeSnip.Snip>
+            </CardDeck>
+            <Code.Wrapper>
+              <Code.Title>
+                <C>open</C> example
+              </Code.Title>
+              Example 1:
+              <Code.Code>
+                <Code.Line>
+                  input_file = open("datafile.txt", "r")
+                </Code.Line>
+                <Code.Line>
+                  text = input_file.read()
+                </Code.Line>
+              </Code.Code>
+              Better Example 1:
+              <Code.Code>
+                <Code.Line>
+                  <C>with</C> open("datafile.txt", "r") as input_file:
+                </Code.Line>
+                <Code.Line tabs={1}>
+                  text = input_file.read()
+                </Code.Line>
+                <Code.Line tabs={1}>
+                  <Code.Comment># Do processing here.</Code.Comment>
+                </Code.Line>
+                <Code.Line tabs={1}>
+                  <Code.Comment># When the <C>with</C> block exits the file will automatically close.</Code.Comment>
+                </Code.Line>
+              </Code.Code>
+            </Code.Wrapper>
+          </SubSection>
+          <SubSection label="write function">
+            The <C>write</C> is run on a File Object produced by <C>open</C> to write data to the file. The file needs
+            to have write access to work. It only takes in a string. If you want to write numbers make sure to wrap them
+            in <C>str</C>. Use <C>\n</C> to add new lines.
+            <Code.Wrapper>
+              <Code.Wrapper>
+                <Code.Title>
+                  Example Write
+                </Code.Title>
+                <Code.Code>
+                  file_object.write("Hello World")
+                </Code.Code>
+              </Code.Wrapper>
+            </Code.Wrapper>
+          </SubSection>
         </Section>
         <Section link="mapandfilter" label="Map and Filter using Lambda">
 
@@ -258,13 +363,20 @@ export default function IntroPython(props) {
         </Section>
         <Section link="nextsteps" label="Next Steps">
           <p>
-            You now have a good idea of the basic components of Python. Try to work through some of the projects above. Checkout the libraries below to work on more advanced projects. 
+            You now have a good idea of the basic components of Python. Try to work through some of the
+            projects above. Checkout the libraries below to work on more advanced projects.
           </p>
           <p>
-            If you have another project in mind that requires any of the following categories, look at or anything like that look through the links to find a library to help you. Most good libraries have a descent learning curve, but once learned they are very powerful.
+            If you have another project in mind that requires any of the following categories, look at or
+            anything like that look through the links to find a library to help you. Most good libraries
+            have a descent learning curve, but once learned they are very powerful.
           </p>
           <p>
-            Python has many faces. It is capable at web development and and state of the art Deep Learning. Python's huge amount of open source libraries allow it to do almost anything. Django is used for backend web development. Pytorch and Tensorflow are used for deep learning. Numpy is for linear algebra. Python Image Library (PIL) is for image processing. Pandas and Matplotlib are for data science. Continue to my next tutorial to start using these tools.
+            Python has many faces. It is capable at web development and and state of the art Deep Learning.
+            Python's huge amount of open source libraries allow it to do almost anything. Django is used for
+            backend web development. Pytorch and Tensorflow are used for deep learning. Numpy is for linear
+            algebra. Python Image Library (PIL) is for image processing. Pandas and Matplotlib are for data
+            science. Continue to my next tutorial to start using these tools.
           </p>
           <Code.Title>
             Data Aquisition, Processing, and Manipulation
@@ -274,7 +386,8 @@ export default function IntroPython(props) {
               <Link href="https://pandas.pydata.org//">Pandas - Read/Write/Editing csv's and data</Link>
             </li>
             <li>
-              <Link href="https://docs.python.org/3/library/csv.html">csv module - read and write csv</Link>
+              <Link href="https://docs.python.org/3/library/csv.html">csv module - read and write
+                csv</Link>
             </li>
             <li>
               <Link href="https://openpyxl.readthedocs.io/en/stable/">openpyxl - Excel Changing</Link>
@@ -283,10 +396,12 @@ export default function IntroPython(props) {
               <Link href="https://requests.readthedocs.io/en/master/">Requests - HTTP requests</Link>
             </li>
             <li>
-              <Link href="https://docs.python.org/3/library/json.html">JSON Module - Reading, Writing, and Parsing JSON </Link>
+              <Link href="https://docs.python.org/3/library/json.html">JSON Module - Reading, Writing, and
+                Parsing JSON </Link>
             </li>
             <li>
-              <Link href="https://docs.python.org/3/library/urllib.html">urllib module- HTTP request</Link>
+              <Link href="https://docs.python.org/3/library/urllib.html">urllib module- HTTP
+                request</Link>
             </li>
             <li>
               <Link href="">os - File/Folder/Command line processing</Link>
@@ -300,7 +415,8 @@ export default function IntroPython(props) {
               <Link href="https://pytorch.org/">Pytorch - Deep Learning and Autograd</Link>
             </li>
             <li>
-              <Link href="https://www.tensorflow.org/">Tensorflow - Deep Learning and Machine Learning</Link>
+              <Link href="https://www.tensorflow.org/">Tensorflow - Deep Learning and Machine
+                Learning</Link>
             </li>
             <li>
               <Link href="https://keras.io/">Keras - Built on top of Tensorflow</Link>
@@ -312,7 +428,8 @@ export default function IntroPython(props) {
               <Link href="https://scikit-learn.org/stable/">Scikit-Learn - Machine Learning </Link>
             </li>
             <li>
-              <Link href="http://deeplearning.net/software/theano/">Theano - Array calculations heavily optimized</Link>
+              <Link href="http://deeplearning.net/software/theano/">Theano - Array calculations heavily
+                optimized</Link>
             </li>
           </ul>
           <Code.Title>
@@ -329,28 +446,33 @@ export default function IntroPython(props) {
               <Link href="https://plot.ly/python/">Plotly - Graphing</Link>
             </li>
             <li>
-              <Link href="https://py.processing.org/">Processing - simple but powerful graphics library</Link>
+              <Link href="https://py.processing.org/">Processing - simple but powerful graphics
+                library</Link>
             </li>
-         
+
           </ul>
           <Code.Title>
             Web Development
           </Code.Title>
           <ul>
             <li>
-              <Link href="https://matplotlib.org/">Django - Backend server framework, interfaces with databases</Link>
+              <Link href="https://matplotlib.org/">Django - Backend server framework, interfaces with
+                databases</Link>
             </li>
             <li>
-              <Link href="https://www.fullstackpython.com/flask.html">Flask - Lightweight server framework</Link>
+              <Link href="https://www.fullstackpython.com/flask.html">Flask - Lightweight server
+                framework</Link>
             </li>
             <li>
               <Link href="https://cherrypy.org/">CherryPy - Minimalist Web Framework</Link>
             </li>
             <li>
-              <Link href="https://py.processing.org/">Processing - simple but powerful graphics library</Link>
+              <Link href="https://py.processing.org/">Processing - simple but powerful graphics
+                library</Link>
             </li>
             <li>
-              <Link href="https://bottlepy.org/docs/dev/">Bottle.py - Lighweight micro web framework</Link>
+              <Link href="https://bottlepy.org/docs/dev/">Bottle.py - Lighweight micro web
+                framework</Link>
             </li>
           </ul>
           <Code.Title>
@@ -358,7 +480,8 @@ export default function IntroPython(props) {
           </Code.Title>
           <ul>
             <li>
-              <Link href="https://docs.python.org/3/library/tkinter.html">Tkinter - Built-in user interface module</Link>
+              <Link href="https://docs.python.org/3/library/tkinter.html">Tkinter - Built-in user
+                interface module</Link>
             </li>
             <li>
               <Link href="https://www.pygame.org/news">Pygame - Intro to game programming</Link>

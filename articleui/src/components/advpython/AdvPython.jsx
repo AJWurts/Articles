@@ -35,12 +35,12 @@ export default function IntroPython(props) {
         The order of this tutorial is less important than the intro tutorial. The first section, Classes and Objects, should be read first, and the rest can be read in any order.
       </p>
       <TableOfContents>
-        <SubSection link="syntax-classes" label="Classes">
+        <Section link="syntax-classes" label="Classes">
           <p>
             Object orientated programming is a progrmaming method that organizes the program around
             code and objects as opposed to functions and logic. Python is built on top of objects,
             every object except for some primitive types are objects. Strings are objects built
-            ontop of lists, also objects, or chars (not objects).
+            on top of lists, also objects, or chars (not objects).
                             </p>
           <p>
             Classes are used to define objects. A class can contains variables and methods
@@ -97,10 +97,146 @@ export default function IntroPython(props) {
                 </Code.Line>
               <br />
             </Code.Code>
+            <Code.Result>
+              The code creates a template for the Dog class. To use the class you create a Dog Object. It is an instance of the Dog class. The object will have it own set of values for name, dog_years, and breed.  
+            </Code.Result>
           </Code.Wrapper>
-        </SubSection>
-        <Section link="lists" label="List Processing">
-
+          <SubSection label='Methods'>
+            <p>
+              Methods are functions inside an object. Their parameters always start with self to provide access to the object
+            </p>
+          </SubSection>
+        </Section>
+        <Section link="lists" label="List and String Processing">
+        <p>
+        Lists are a way of holding data in a sequence, where order matters. It is a type of data structure. Accessing and manipulating one item in a list, as the intro tutorial teaches, is adequate for most problems. However, in a lot of cases you need to do more. Python has a comprehensive set of operations to do pretty much anything to a list. A string, or a list of characters, shares a lot of operations with list. I'll label which operations work for both.
+        </p>
+        <TableOfContents>
+          <SubSection link="slicing" label="Slicing">
+            <p>
+              Slicing in Python requires a special, but powerful syntax. Slicing is used to access and edit values within a list. 
+              
+            </p>
+            <p>
+              Slicing uses the same syntax for lists and strings. If the start index is not specified, it starts at the beginning of the string. If the end index is not specified it slices until the end of the string. If step is not specified it defaults to 1. <br/>
+            </p>
+            <p>
+            
+              <b>Syntax:</b> <C>list[start: stop: step]</C> <br/>
+              <C>start</C> defines the starting index, it is included.<br/>
+              <C>end</C> defines the finishing index, it is not included. <br/>
+              <C>step</C> defines the difference between each index.
+            </p>
+            <Code.Wrapper>
+              <Code.Title>
+                Example Slicing (Lists and Strings)
+              </Code.Title>
+             Shows the different ways of slicing lists and strings. Not all arguments need to be included. Even no arguments is still valid.
+              <Code.Code> 
+                <Code.Line>
+                  list1 = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+                </Code.Line>
+                <Code.Line>
+                  str1 = 'abcdefg'
+                </Code.Line>
+                <br/>
+                <Code.Line>
+                  <Code.Comment>
+                    # Only start and finish index.
+                  </Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  list[2:4] <Code.Comment># == ['c', 'd']</Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  str1[2:4] <Code.Comment># == 'cd'</Code.Comment>
+                </Code.Line>
+                <br/>
+                <Code.Line>
+                  <Code.Comment>
+                    # No starting index
+                  </Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  list[:4] <Code.Comment># == ['a', 'b', 'c', 'd']</Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  str1[:4] <Code.Comment># == 'abcd'</Code.Comment>
+                </Code.Line>
+                <br/>
+                <Code.Line>
+                  <Code.Comment>
+                    # No end index
+                  </Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  list[2:] <Code.Comment># == ['c', 'd', 'e', 'f', 'g']</Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  str1[2:] <Code.Comment># == 'cdefg'</Code.Comment>
+                </Code.Line>
+                <br/>
+                <Code.Line>
+                  <Code.Comment>
+                    # Using step without end
+                  </Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  list[2::2] <Code.Comment># == ['c', 'e', 'g']</Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  str1[2::-1] <Code.Comment># == 'ceg'</Code.Comment>
+                </Code.Line>
+                <br/>
+                <Code.Line>
+                  <Code.Comment>
+                    # Only step to Revere String/List
+                  </Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  list[::-1] <Code.Comment># == ['g', 'f', 'e', 'd', 'c', 'b', 'a']</Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  str1[::-1] <Code.Comment># == 'gfedcba'</Code.Comment>
+                </Code.Line>
+                <br/>
+                <Code.Line>
+                  <Code.Comment>
+                    # Shallow copy with no arguments
+                  </Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  list[:] <Code.Comment># == ['a', 'b', 'c', 'd', 'e', 'f', 'g'] </Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  str1[:] <Code.Comment># == 'abcdefg</Code.Comment>
+                </Code.Line>
+                
+              </Code.Code>
+            </Code.Wrapper>
+            <Code.Wrapper>
+              <Code.Title>
+                Negative Indices (Lists and Strings)
+              </Code.Title>
+              Python supports negative indices for slicing. The last value in the list is -1, and it counts down from there. Negative indices can be used for indexing and slicing into lists
+              <Code.Code>
+                <Code.Line>
+                  example_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+                </Code.Line>
+                <Code.Line>
+                  <Code.Comment>
+                  # Indices:       0,   1,   2,   3,   4,   5,   6
+                  </Code.Comment>
+                </Code.Line>
+                <Code.Line>
+                  <Code.Comment>
+                    # Negative:     -7,  -6,  -5,  -4,  -3,  -2,  -1
+                  </Code.Comment>
+                </Code.Line>
+              </Code.Code>
+            </Code.Wrapper>
+          </SubSection>
+        </TableOfContents>
         </Section>
         <Section link='files' label="File Reading and Writing">
 
@@ -120,9 +256,9 @@ export default function IntroPython(props) {
         <Section link="nextsteps" label="Next Steps">
 
         </Section>
-        {/* <Section link="nextsteps" label="Next Steps">
+        <Section link="nextsteps" label="Next Steps">
           <p>
-            You now have a good idea of the basic components of Python. Try to work through the easy projects above and if you feel good go for the medium projects. Move on to the Advanced Python Tutorial (Coming Soon!) to learn more about what Python can do. 
+            You now have a good idea of the basic components of Python. Try to work through some of the projects above. Checkout the libraries below to work on more advanced projects. 
           </p>
           <p>
             If you have another project in mind that requires any of the following categories, look at or anything like that look through the links to find a library to help you. Most good libraries have a descent learning curve, but once learned they are very powerful.
@@ -234,7 +370,7 @@ export default function IntroPython(props) {
               <Link href="https://wxpython.org/">wxpython - Cross-platform GUI toolkit</Link>
             </li>
           </ul>
-        </Section> */}
+        </Section>
       </TableOfContents>
     </div>
   )
